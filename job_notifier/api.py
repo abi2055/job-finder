@@ -1,0 +1,94 @@
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel, Field
+
+from job_notifier.config import load_config
+from job_notifier.http_client import HttpClient
+from job_notifier.service import build_output_payload, enabled_sources, fetch_sources, write_output
+
+
+class FetchRequest(BaseModel):
+    config_path: str | None = Field(
+        default=None,
+        description="Optional path to a JSON source config.",
+    )
+    output_path: str | None = Field(
+        default=None,
+        description="Optional path where the raw aggregate JSON should be written.",
+    )
+    continue_on_error: bool = Field(
+        default=True,
+        description="Return successful payloads even if some sources fail.",
+    )
+    include_closed: bool = Field(
+        default=False,
+        description="Keep jobs marked inactive, closed, archived, filled, or expired.",
+    )
+    prioritize_latest: bool = Field(
+        default=True,
+        description="Sort structured job lists newest-first where date fields are present.",
+    )
+
+
+def create_app() -> FastAPI:
+    app = FastAPI(
+        title="Job Notifier",
+        version="0.1.0",
+        description="Fetch raw internship and early-career job data from public sources.",
+    )
+
+    @app.get("/health")
+    def health() -> dict[str, str]:
+        return {"status": "ok"}
+
+    @app.get("/sources")
+    def list_sources(config_path: str | None = Query(default=None)) -> dict[str, Any]:
+        config = _load_api_config(config_path)
+        sources = enabled_sources(config)
+        return {"count": len(sources), "sources": sources}
+
+    @app.post("/fetch")
+    def fetch_jobs(request: FetchRequest) -> dict[str, Any]:
+        config = _load_api_config(request.config_path)
+        client = HttpClient()
+
+        try:
+            results, errors = fetch_sources(
+                config,
+                client=client,
+                continue_on_error=request.continue_on_error,
+                include_closed=request.include_closed,
+                prioritize_latest=request.prioritize_latest,
+            )
+        except Exception as error:
+            raise HTTPException(status_code=502, detail=str(error)) from error
+
+        if request.output_path:
+            write_output(Path(request.output_path), results, errors)
+
+        payload = build_output_payload(results, errors)
+        payload["summary"] = {
+            "source_count": len(enabled_sources(config)),
+            "result_count": len(results),
+            "error_count": len(errors),
+            "output_path": request.output_path,
+            "include_closed": request.include_closed,
+            "prioritize_latest": request.prioritize_latest,
+        }
+        return payload
+
+    return app
+
+
+def _load_api_config(config_path: str | None) -> dict[str, Any]:
+    try:
+        return load_config(Path(config_path) if config_path else None)
+    except Exception as error:
+        raise HTTPException(status_code=400, detail=f"Invalid config: {error}") from error
+
+
+app = create_app()

@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "type": "github_raw",
+      "name": "simplifyjobs_summer_2026_listings",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json"
+    },
+    {
+      "type": "github_raw",
+      "name": "simplifyjobs_summer_2026_readme",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/README.md"
+    },
+    {
+      "type": "github_raw",
+      "name": "simplifyjobs_new_grad_listings",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json"
+    },
+    {
+      "type": "github_raw",
+      "name": "simplifyjobs_new_grad_readme",
+      "url": "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/README.md"
+    },
+    {
+      "type": "github_raw",
+      "name": "pitt_csc_summer_2024_readme",
+      "url": "https://raw.githubusercontent.com/pittcsc/Summer2024-Internships/dev/README.md"
+    },
+    {
+      "type": "greenhouse",
+      "name": "example_greenhouse_board",
+      "board_token": "stripe",
+      "enabled": false
+    },
+    {
+      "type": "lever",
+      "name": "example_lever_board",
+      "company": "netflix",
+      "enabled": false
+    }
+  ]
+}
+

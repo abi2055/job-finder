@@ -13,6 +13,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from job_notifier.models import SourceResult
+from job_notifier.normalizer import iter_normalized_jobs
 from job_notifier.notification_preferences import NotificationProfile, filter_jobs_by_profile
 
 RESEND_EMAILS_URL = "https://api.resend.com/emails"
@@ -38,15 +39,16 @@ def load_dotenv(path: Path = Path(".env")) -> None:
 
 
 def collect_latest_jobs(results: list[SourceResult], *, limit: int) -> list[dict[str, Any]]:
-    jobs: list[dict[str, Any]] = []
+    jobs_by_key: dict[str, dict[str, Any]] = {}
+    seen_at = datetime.now(timezone.utc)
     for result in results:
-        payload = result.payload
-        if isinstance(payload, list):
-            jobs.extend(job for job in payload if isinstance(job, dict))
-        elif isinstance(payload, dict) and isinstance(payload.get("jobs"), list):
-            jobs.extend(job for job in payload["jobs"] if isinstance(job, dict))
+        for normalized_job in iter_normalized_jobs(result, seen_at=seen_at):
+            email_job = _email_job(normalized_job)
+            existing_job = jobs_by_key.get(normalized_job.record_key)
+            if existing_job is None or _latest_timestamp(email_job) >= _latest_timestamp(existing_job):
+                jobs_by_key[normalized_job.record_key] = email_job
 
-    return sorted(jobs, key=_latest_timestamp, reverse=True)[:limit]
+    return sorted(jobs_by_key.values(), key=_latest_timestamp, reverse=True)[:limit]
 
 
 def build_email_payload(
@@ -58,8 +60,9 @@ def build_email_payload(
     attach_raw: bool,
     profile: NotificationProfile | None = None,
 ) -> dict[str, Any]:
-    job_count = sum(_job_count(result.payload) for result in results)
-    matching_jobs = filter_jobs_by_profile(collect_latest_jobs(results, limit=job_count), profile)
+    raw_job_count = sum(_job_count(result.payload) for result in results)
+    unique_jobs = collect_latest_jobs(results, limit=raw_job_count)
+    matching_jobs = filter_jobs_by_profile(unique_jobs, profile)
     latest_jobs = matching_jobs[:top_jobs]
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     profile_label = profile.name if profile else "all_open_jobs"
@@ -70,7 +73,7 @@ def build_email_payload(
         "subject": f"Job Notifier: {len(matching_jobs):,} matching jobs",
         "html": _render_html(
             fetched_at=fetched_at,
-            job_count=job_count,
+            job_count=len(unique_jobs),
             matching_job_count=len(matching_jobs),
             source_count=len(results),
             errors=errors,
@@ -80,7 +83,7 @@ def build_email_payload(
         ),
         "text": _render_text(
             fetched_at=fetched_at,
-            job_count=job_count,
+            job_count=len(unique_jobs),
             matching_job_count=len(matching_jobs),
             source_count=len(results),
             errors=errors,
@@ -136,9 +139,10 @@ def _render_html(
         <tr>
           <td>{html.escape(_job_date(job))}</td>
           <td>{html.escape(str(job.get("company_name") or ""))}</td>
-          <td><a href="{html.escape(str(job.get("url") or ""))}">{html.escape(str(job.get("title") or ""))}</a></td>
+          <td><a href="{html.escape(str(job.get("job_url") or ""))}">{html.escape(str(job.get("title") or ""))}</a></td>
           <td>{html.escape(", ".join(map(str, job.get("locations") or [])))}</td>
           <td>{html.escape(str(job.get("category") or ""))}</td>
+          <td>{html.escape(str(job.get("source_type") or ""))}</td>
         </tr>
         """
         for job in latest_jobs
@@ -169,6 +173,7 @@ def _render_html(
               <th>Role</th>
               <th>Location</th>
               <th>Category</th>
+              <th>Source</th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
@@ -202,7 +207,7 @@ def _render_text(
             " - "
             f"{_job_date(job)} | {job.get('company_name') or ''} | "
             f"{job.get('title') or ''} | {', '.join(map(str, job.get('locations') or []))} | "
-            f"{job.get('url') or ''}"
+            f"{job.get('source_type') or ''} | {job.get('job_url') or ''}"
         )
     if errors:
         lines.extend(["", "Errors:"])
@@ -237,7 +242,9 @@ def _job_count(payload: Any) -> int:
 
 
 def _latest_timestamp(job: dict[str, Any]) -> float:
-    value = job.get("date_updated") or job.get("updatedAt") or job.get("date_posted") or job.get("createdAt")
+    value = job.get("date_updated_at") or job.get("date_posted_at")
+    if isinstance(value, datetime):
+        return value.timestamp()
     if isinstance(value, int | float):
         return float(value / 1000 if value > 10_000_000_000 else value)
     return 0.0
@@ -248,6 +255,24 @@ def _job_date(job: dict[str, Any]) -> str:
     if not timestamp:
         return ""
     return datetime.fromtimestamp(timestamp, timezone.utc).strftime("%Y-%m-%d")
+
+
+def _email_job(job: Any) -> dict[str, Any]:
+    return {
+        "record_key": job.record_key,
+        "source_name": job.source_name,
+        "source_type": job.source_type,
+        "company_name": job.company_name,
+        "title": job.title,
+        "job_url": job.job_url,
+        "category": job.category,
+        "locations": job.locations,
+        "terms": job.terms,
+        "degrees": job.degrees,
+        "sponsorship": job.sponsorship,
+        "date_posted_at": job.date_posted_at,
+        "date_updated_at": job.date_updated_at,
+    }
 
 
 def _required_env(name: str) -> str:

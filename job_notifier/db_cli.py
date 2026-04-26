@@ -24,6 +24,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help="Path to a raw output file, for example data/raw_jobs.json.",
     )
+    import_parser.add_argument(
+        "--stale-after-days",
+        type=int,
+        default=14,
+        help="Delete database jobs not seen again after this many days. Use -1 to disable.",
+    )
     return parser
 
 
@@ -39,7 +45,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "import-json":
         data = json.loads(args.path.read_text(encoding="utf-8"))
         results = [SourceResult(**result) for result in data.get("results", [])]
-        summary = save_fetch_results(engine, results=results, errors=data.get("errors", []))
+        summary = save_fetch_results(
+            engine,
+            results=results,
+            errors=data.get("errors", []),
+            stale_after_days=args.stale_after_days,
+        )
         total = count_job_records(engine)
         print(f"Imported {summary['job_record_count']} job record(s).")
         print(f"Database now has {total} unique job record(s).")
@@ -50,4 +61,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -44,6 +44,15 @@ DEFAULT_CONFIG: dict[str, Any] = {
             "name": "pitt_csc_summer_2024_readme",
             "url": "https://raw.githubusercontent.com/pittcsc/Summer2024-Internships/dev/README.md",
         },
+        {"type": "greenhouse", "name": "stripe_greenhouse", "board_token": "stripe"},
+        {"type": "greenhouse", "name": "databricks_greenhouse", "board_token": "databricks"},
+        {"type": "greenhouse", "name": "figma_greenhouse", "board_token": "figma"},
+        {"type": "greenhouse", "name": "roblox_greenhouse", "board_token": "roblox"},
+        {"type": "greenhouse", "name": "airbnb_greenhouse", "board_token": "airbnb"},
+        {"type": "greenhouse", "name": "doordash_greenhouse", "board_token": "doordashusa"},
+        {"type": "greenhouse", "name": "coinbase_greenhouse", "board_token": "coinbase"},
+        {"type": "lever", "name": "netflix_lever", "company": "netflix"},
+        {"type": "lever", "name": "wealthsimple_lever", "company": "wealthsimple"},
     ]
 }
 
@@ -54,4 +63,3 @@ def load_config(path: Path | None) -> dict[str, Any]:
 
     with path.open("r", encoding="utf-8") as config_file:
         return json.load(config_file)
-

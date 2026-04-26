@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-import hashlib
-import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from sqlalchemy import (
@@ -31,6 +29,7 @@ from sqlalchemy.engine import Engine
 from sqlalchemy.types import JSON
 
 from job_notifier.models import SourceResult
+from job_notifier.normalizer import NormalizedJob, iter_normalized_jobs
 
 DATABASE_URL_ENV = "DATABASE_URL"
 DEFAULT_DATABASE_URL = "sqlite:///data/job_notifier.db"
@@ -123,6 +122,7 @@ def save_fetch_results(
     *,
     results: list[SourceResult],
     errors: list[dict[str, str]],
+    stale_after_days: int = 14,
 ) -> dict[str, int]:
     create_database(engine)
     started_at = _utcnow()
@@ -153,10 +153,23 @@ def save_fetch_results(
                 row["last_seen_at"] = completed_at
             _upsert_job_rows(connection, engine, job_rows)
 
+        deleted_duplicate_count = _delete_duplicate_jobs(connection)
+        deleted_stale_count = _delete_stale_jobs(
+            connection,
+            completed_at=completed_at,
+            stale_after_days=stale_after_days,
+        )
+        unique_job_record_count = int(
+            connection.execute(select(func.count()).select_from(raw_job_records)).scalar_one()
+        )
+
     return {
         "fetch_run_id": int(fetch_run_id),
         "source_snapshot_count": len(snapshot_rows),
         "job_record_count": len(job_rows),
+        "unique_job_record_count": unique_job_record_count,
+        "deleted_duplicate_count": deleted_duplicate_count,
+        "deleted_stale_count": deleted_stale_count,
     }
 
 
@@ -329,10 +342,7 @@ def _iter_snapshot_rows(results: list[SourceResult]) -> list[dict[str, Any]]:
 def _iter_job_rows(results: list[SourceResult], seen_at: datetime) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for result in results:
-        for index, payload in enumerate(_job_payloads(result.payload)):
-            if not isinstance(payload, dict):
-                continue
-            rows.append(_build_job_row(result, payload, index, seen_at))
+        rows.extend(_job_row(normalized_job) for normalized_job in iter_normalized_jobs(result, seen_at=seen_at))
     return rows
 
 
@@ -352,62 +362,80 @@ def _record_count(payload: Any) -> int:
     return 1
 
 
-def _build_job_row(
-    result: SourceResult,
-    payload: dict[str, Any],
-    index: int,
-    seen_at: datetime,
-) -> dict[str, Any]:
-    fetched_at = _parse_datetime(result.fetched_at) or seen_at
-    external_id = _string_or_none(payload.get("id") or payload.get("job_id") or payload.get("postingId"))
-    job_url = _string_or_none(payload.get("url") or payload.get("absolute_url") or payload.get("hostedUrl"))
-
+def _job_row(job: NormalizedJob) -> dict[str, Any]:
     return {
-        "record_key": _record_key(result.source_name, external_id, job_url, payload),
-        "source_name": result.source_name,
-        "source_type": result.source_type,
-        "source_url": result.url,
-        "source_record_index": index,
-        "upstream_source": _string_or_none(payload.get("source")),
-        "external_id": external_id,
-        "company_name": _string_or_none(
-            payload.get("company_name") or payload.get("company") or payload.get("companyName")
-        ),
-        "company_url": _string_or_none(payload.get("company_url")),
-        "title": _string_or_none(payload.get("title") or payload.get("text")),
-        "job_url": job_url,
-        "category": _string_or_none(payload.get("category") or payload.get("department")),
-        "locations": _list_value(payload.get("locations") or payload.get("location")),
-        "terms": _list_value(payload.get("terms")),
-        "degrees": _list_value(payload.get("degrees")),
-        "sponsorship": _string_or_none(payload.get("sponsorship")),
-        "active": _bool_or_none(payload.get("active")),
-        "is_visible": _bool_or_none(payload.get("is_visible")),
-        "date_posted_at": _parse_datetime(payload.get("date_posted") or payload.get("createdAt")),
-        "date_updated_at": _parse_datetime(payload.get("date_updated") or payload.get("updatedAt")),
-        "fetched_at": fetched_at,
-        "last_seen_at": seen_at,
-        "raw_payload": payload,
+        "record_key": job.record_key,
+        "source_name": job.source_name,
+        "source_type": job.source_type,
+        "source_url": job.source_url,
+        "source_record_index": job.source_record_index,
+        "upstream_source": job.upstream_source,
+        "external_id": job.external_id,
+        "company_name": job.company_name,
+        "company_url": job.company_url,
+        "title": job.title,
+        "job_url": job.job_url,
+        "category": job.category,
+        "locations": job.locations,
+        "terms": job.terms,
+        "degrees": job.degrees,
+        "sponsorship": job.sponsorship,
+        "active": job.active,
+        "is_visible": job.is_visible,
+        "date_posted_at": job.date_posted_at,
+        "date_updated_at": job.date_updated_at,
+        "fetched_at": job.fetched_at,
+        "raw_payload": job.raw_payload,
     }
 
 
-def _record_key(
-    source_name: str,
-    external_id: str | None,
-    job_url: str | None,
-    payload: dict[str, Any],
-) -> str:
-    stable_parts = [
-        source_name,
-        external_id or "",
-        job_url or "",
-        _string_or_none(payload.get("company_name")) or "",
-        _string_or_none(payload.get("title")) or "",
-    ]
-    digest_input = "|".join(stable_parts)
-    if not external_id and not job_url:
-        digest_input = json.dumps(payload, sort_keys=True, default=str)
-    return hashlib.sha256(digest_input.encode("utf-8")).hexdigest()
+def _delete_stale_jobs(connection: Any, *, completed_at: datetime, stale_after_days: int) -> int:
+    if stale_after_days < 0:
+        return 0
+    cutoff = completed_at - timedelta(days=stale_after_days)
+    result = connection.execute(raw_job_records.delete().where(raw_job_records.c.last_seen_at < cutoff))
+    return int(result.rowcount or 0)
+
+
+def _delete_duplicate_jobs(connection: Any) -> int:
+    rows = connection.execute(
+        select(
+            raw_job_records.c.record_key,
+            raw_job_records.c.job_url,
+            raw_job_records.c.last_seen_at,
+            raw_job_records.c.date_updated_at,
+        ).where(raw_job_records.c.job_url.is_not(None))
+    ).mappings()
+
+    by_url: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        normalized_url = str(row["job_url"]).strip().casefold().rstrip("/")
+        if not normalized_url:
+            continue
+        by_url.setdefault(normalized_url, []).append(dict(row))
+
+    duplicate_keys: list[str] = []
+    for grouped_rows in by_url.values():
+        if len(grouped_rows) < 2:
+            continue
+        grouped_rows.sort(
+            key=lambda row: (
+                row.get("last_seen_at") or datetime.min.replace(tzinfo=timezone.utc),
+                row.get("date_updated_at") or datetime.min.replace(tzinfo=timezone.utc),
+            ),
+            reverse=True,
+        )
+        duplicate_keys.extend(row["record_key"] for row in grouped_rows[1:])
+
+    if not duplicate_keys:
+        return 0
+
+    deleted_count = 0
+    for chunk in _chunks([{"record_key": key} for key in duplicate_keys], size=500):
+        keys = [row["record_key"] for row in chunk]
+        result = connection.execute(raw_job_records.delete().where(raw_job_records.c.record_key.in_(keys)))
+        deleted_count += int(result.rowcount or 0)
+    return deleted_count
 
 
 def _parse_datetime(value: Any) -> datetime | None:
@@ -430,24 +458,6 @@ def _parse_datetime(value: Any) -> datetime | None:
             return None
         return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
     return None
-
-
-def _list_value(value: Any) -> list[Any]:
-    if value is None:
-        return []
-    if isinstance(value, list):
-        return value
-    return [value]
-
-
-def _bool_or_none(value: Any) -> bool | None:
-    return value if isinstance(value, bool) else None
-
-
-def _string_or_none(value: Any) -> str | None:
-    if value is None:
-        return None
-    return str(value)
 
 
 def _utcnow() -> datetime:

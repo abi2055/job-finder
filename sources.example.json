@@ -27,16 +27,48 @@
     },
     {
       "type": "greenhouse",
-      "name": "example_greenhouse_board",
-      "board_token": "stripe",
-      "enabled": false
+      "name": "stripe_greenhouse",
+      "board_token": "stripe"
+    },
+    {
+      "type": "greenhouse",
+      "name": "databricks_greenhouse",
+      "board_token": "databricks"
+    },
+    {
+      "type": "greenhouse",
+      "name": "figma_greenhouse",
+      "board_token": "figma"
+    },
+    {
+      "type": "greenhouse",
+      "name": "roblox_greenhouse",
+      "board_token": "roblox"
+    },
+    {
+      "type": "greenhouse",
+      "name": "airbnb_greenhouse",
+      "board_token": "airbnb"
+    },
+    {
+      "type": "greenhouse",
+      "name": "doordash_greenhouse",
+      "board_token": "doordashusa"
+    },
+    {
+      "type": "greenhouse",
+      "name": "coinbase_greenhouse",
+      "board_token": "coinbase"
     },
     {
       "type": "lever",
-      "name": "example_lever_board",
-      "company": "netflix",
-      "enabled": false
+      "name": "netflix_lever",
+      "company": "netflix"
+    },
+    {
+      "type": "lever",
+      "name": "wealthsimple_lever",
+      "company": "wealthsimple"
     }
   ]
 }
-

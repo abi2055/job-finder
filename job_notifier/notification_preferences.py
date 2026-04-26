@@ -104,6 +104,7 @@ def _searchable_job_text(job: dict[str, Any]) -> str:
             "degrees",
             "sponsorship",
             "url",
+            "job_url",
         )
     )
 
@@ -117,9 +118,18 @@ def _within_age(job: dict[str, Any], max_age_hours: int, *, now: datetime) -> bo
 
 
 def _latest_timestamp(job: dict[str, Any]) -> float | None:
-    value = job.get("date_updated") or job.get("updatedAt") or job.get("date_posted") or job.get("createdAt")
+    value = (
+        job.get("date_updated_at")
+        or job.get("date_posted_at")
+        or job.get("date_updated")
+        or job.get("updatedAt")
+        or job.get("date_posted")
+        or job.get("createdAt")
+    )
     if isinstance(value, bool) or value is None:
         return None
+    if isinstance(value, datetime):
+        return value.timestamp()
     if isinstance(value, int | float):
         return float(value / 1000 if value > 10_000_000_000 else value)
     if isinstance(value, str) and value.strip().isdigit():

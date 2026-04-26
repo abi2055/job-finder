@@ -47,6 +47,12 @@ def build_parser() -> argparse.ArgumentParser:
         "--database-url",
         help="Database URL. Defaults to DATABASE_URL or sqlite:///data/job_notifier.db.",
     )
+    parser.add_argument(
+        "--stale-after-days",
+        type=int,
+        default=14,
+        help="Delete database jobs not seen again after this many days. Use -1 to disable.",
+    )
     return parser
 
 
@@ -75,11 +81,15 @@ def main(argv: list[str] | None = None) -> int:
             build_engine(args.database_url),
             results=results,
             errors=errors,
+            stale_after_days=args.stale_after_days,
         )
         print(
             "Saved "
             f"{db_summary['job_record_count']} job record(s) "
-            f"to database fetch_run_id={db_summary['fetch_run_id']}"
+            f"({db_summary['unique_job_record_count']} unique in database) "
+            f"to database fetch_run_id={db_summary['fetch_run_id']} "
+            f"deleted_duplicates={db_summary['deleted_duplicate_count']} "
+            f"deleted_stale={db_summary['deleted_stale_count']}"
         )
 
     if errors:

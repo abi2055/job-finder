@@ -117,8 +117,10 @@ Main tables:
 ## Source Types
 
 - `github_raw`: fetches raw JSON, Markdown, or text files from public GitHub repositories.
-- `greenhouse`: fetches a public Greenhouse board through `boards-api.greenhouse.io`.
-- `lever`: fetches a public Lever postings board through `api.lever.co`.
+- `greenhouse`: fetches published public jobs from Greenhouse Job Board API via `boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true`.
+- `lever`: fetches published public jobs from Lever Postings API via `api.lever.co/v0/postings/{company}?mode=json`.
+
+The database writer normalizes GitHub, Greenhouse, and Lever jobs into the same query columns while preserving the original record in `raw_payload`. Dedupe is based on a canonical job key, preferring canonical job URLs when available, so repeated fetches and overlapping GitHub/ATS postings do not flood the database or email digest. Jobs marked closed/inactive are filtered before storage, and database rows not seen again are removed after `--stale-after-days` days, defaulting to `14`.
 
 ## Scheduled Email Notifications
 

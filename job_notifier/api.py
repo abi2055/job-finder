@@ -44,6 +44,10 @@ class FetchRequest(BaseModel):
         default=None,
         description="Optional database URL. Defaults to DATABASE_URL or sqlite:///data/job_notifier.db.",
     )
+    stale_after_days: int = Field(
+        default=14,
+        description="Delete database jobs not seen again after this many days. Use -1 to disable.",
+    )
 
 
 def create_app() -> FastAPI:
@@ -124,6 +128,7 @@ def create_app() -> FastAPI:
                 build_engine(request.database_url),
                 results=results,
                 errors=errors,
+                stale_after_days=request.stale_after_days,
             )
 
         payload = build_output_payload(results, errors)

@@ -119,3 +119,33 @@ Main tables:
 - `github_raw`: fetches raw JSON, Markdown, or text files from public GitHub repositories.
 - `greenhouse`: fetches a public Greenhouse board through `boards-api.greenhouse.io`.
 - `lever`: fetches a public Lever postings board through `api.lever.co`.
+
+## Scheduled Email Notifications
+
+The GitHub Actions workflow in `.github/workflows/fetch-and-email.yml` runs every 3 hours and can also be triggered manually from the Actions tab.
+
+Add these repository secrets in GitHub:
+
+```text
+RESEND_API_KEY
+RESEND_TO_EMAIL
+RESEND_FROM_EMAIL
+```
+
+`RESEND_FROM_EMAIL` must be a sender allowed by your Resend account. For early testing, Resend examples use:
+
+```text
+Job Notifier <onboarding@resend.dev>
+```
+
+Run a local dry run:
+
+```bash
+python -m job_notifier.notify_jobs --dry-run --top-jobs 5
+```
+
+Send locally using `.env`:
+
+```bash
+python -m job_notifier.notify_jobs --top-jobs 25 --attach-raw
+```

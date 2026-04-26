@@ -149,3 +149,45 @@ Send locally using `.env`:
 ```bash
 python -m job_notifier.notify_jobs --top-jobs 25 --attach-raw
 ```
+
+### Email Preferences
+
+The scheduled workflow reads `notification_preferences.json` each time it runs. The cron stays fixed at every 3 hours, while the email content changes based on the active profile in that file.
+
+Example active profile:
+
+```json
+{
+  "active_profile": "canada_or_sponsorship",
+  "profiles": {
+    "canada_or_sponsorship": {
+      "description": "Email jobs that are in Canada or mention sponsorship.",
+      "max_age_hours": null,
+      "include_any": [
+        {
+          "locations": ["Canada", "Toronto", "Vancouver", "Montreal", "Ottawa", "Calgary", "Waterloo"]
+        },
+        {
+          "sponsorship": ["Sponsorship", "Offers Sponsorship", "Visa"]
+        }
+      ],
+      "include_all": [],
+      "exclude_text": []
+    }
+  }
+}
+```
+
+Use `max_age_hours: 24` to only email jobs updated or posted in the last 24 hours. Use `include_any` for OR-style rules, and `include_all` for AND-style rules.
+
+Preview your current profile:
+
+```bash
+python -m job_notifier.notify_jobs --dry-run --preferences notification_preferences.json --top-jobs 10
+```
+
+Preview a different profile without changing `active_profile`:
+
+```bash
+python -m job_notifier.notify_jobs --dry-run --preferences notification_preferences.example.json --profile last_24_hours --top-jobs 10
+```

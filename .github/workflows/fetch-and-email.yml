@@ -28,7 +28,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
-        run: python -m job_notifier.notify_jobs --output data/raw_jobs.json --top-jobs 25 --attach-raw
+        run: python -m job_notifier.notify_jobs --output data/raw_jobs.json --preferences notification_preferences.json --top-jobs 25 --attach-raw
 
       - name: Upload raw job data artifact
         uses: actions/upload-artifact@v4
@@ -36,4 +36,3 @@ jobs:
           name: raw-jobs
           path: data/raw_jobs.json
           retention-days: 7
-

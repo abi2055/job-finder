@@ -12,6 +12,7 @@ from job_notifier.email_notifier import (
     send_resend_email,
 )
 from job_notifier.http_client import HttpClient
+from job_notifier.notification_preferences import load_notification_profile
 from job_notifier.service import fetch_sources, write_output
 
 
@@ -33,6 +34,16 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=25,
         help="Number of latest jobs to include in the email body.",
+    )
+    parser.add_argument(
+        "--preferences",
+        type=Path,
+        default=Path("notification_preferences.json"),
+        help="Path to notification preferences JSON. Omit the file to email all open jobs.",
+    )
+    parser.add_argument(
+        "--profile",
+        help="Override the active profile from the notification preferences file.",
     )
     parser.add_argument(
         "--attach-raw",
@@ -61,6 +72,7 @@ def main(argv: list[str] | None = None) -> int:
         prioritize_latest=True,
     )
     write_output(args.output, results, errors)
+    profile = load_notification_profile(args.preferences, profile_name=args.profile)
 
     payload = build_email_payload(
         results=results,
@@ -68,6 +80,7 @@ def main(argv: list[str] | None = None) -> int:
         output_path=args.output,
         top_jobs=args.top_jobs,
         attach_raw=args.attach_raw,
+        profile=profile,
     )
 
     if args.dry_run:
@@ -81,4 +94,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

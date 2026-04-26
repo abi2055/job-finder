@@ -1,0 +1,67 @@
+{
+  "active_profile": "canada_or_sponsorship",
+  "profiles": {
+    "canada_or_sponsorship": {
+      "description": "Email jobs that are in Canada or mention sponsorship.",
+      "max_age_hours": null,
+      "include_any": [
+        {
+          "locations": [
+            "Canada",
+            "Toronto",
+            "Vancouver",
+            "Montreal",
+            "Ottawa",
+            "Calgary",
+            "Waterloo",
+            "Remote - Canada"
+          ]
+        },
+        {
+          "sponsorship": [
+            "Sponsorship",
+            "Offers Sponsorship",
+            "Visa"
+          ]
+        }
+      ],
+      "include_all": [],
+      "exclude_text": []
+    },
+    "last_24_hours": {
+      "description": "Email only jobs updated or posted in the last 24 hours.",
+      "max_age_hours": 24,
+      "include_any": [],
+      "include_all": [],
+      "exclude_text": []
+    },
+    "canada_or_sponsorship_last_24_hours": {
+      "description": "Email jobs from the last 24 hours that are in Canada or mention sponsorship.",
+      "max_age_hours": 24,
+      "include_any": [
+        {
+          "locations": [
+            "Canada",
+            "Toronto",
+            "Vancouver",
+            "Montreal",
+            "Ottawa",
+            "Calgary",
+            "Waterloo",
+            "Remote - Canada"
+          ]
+        },
+        {
+          "sponsorship": [
+            "Sponsorship",
+            "Offers Sponsorship",
+            "Visa"
+          ]
+        }
+      ],
+      "include_all": [],
+      "exclude_text": []
+    }
+  }
+}
+

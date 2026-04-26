@@ -13,6 +13,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from job_notifier.models import SourceResult
+from job_notifier.notification_preferences import NotificationProfile, filter_jobs_by_profile
 
 RESEND_EMAILS_URL = "https://api.resend.com/emails"
 DEFAULT_FROM_EMAIL = "Job Notifier <onboarding@resend.dev>"
@@ -55,28 +56,37 @@ def build_email_payload(
     output_path: Path,
     top_jobs: int,
     attach_raw: bool,
+    profile: NotificationProfile | None = None,
 ) -> dict[str, Any]:
-    latest_jobs = collect_latest_jobs(results, limit=top_jobs)
     job_count = sum(_job_count(result.payload) for result in results)
+    matching_jobs = filter_jobs_by_profile(collect_latest_jobs(results, limit=job_count), profile)
+    latest_jobs = matching_jobs[:top_jobs]
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    profile_label = profile.name if profile else "all_open_jobs"
 
     payload: dict[str, Any] = {
         "from": os.getenv("RESEND_FROM_EMAIL") or DEFAULT_FROM_EMAIL,
         "to": [_required_env("RESEND_TO_EMAIL")],
-        "subject": f"Job Notifier: {job_count:,} open jobs fetched",
+        "subject": f"Job Notifier: {len(matching_jobs):,} matching jobs",
         "html": _render_html(
             fetched_at=fetched_at,
             job_count=job_count,
+            matching_job_count=len(matching_jobs),
             source_count=len(results),
             errors=errors,
             latest_jobs=latest_jobs,
+            profile_label=profile_label,
+            profile_description=profile.description if profile else "",
         ),
         "text": _render_text(
             fetched_at=fetched_at,
             job_count=job_count,
+            matching_job_count=len(matching_jobs),
             source_count=len(results),
             errors=errors,
             latest_jobs=latest_jobs,
+            profile_label=profile_label,
+            profile_description=profile.description if profile else "",
         ),
     }
 
@@ -114,9 +124,12 @@ def _render_html(
     *,
     fetched_at: str,
     job_count: int,
+    matching_job_count: int,
     source_count: int,
     errors: list[dict[str, str]],
     latest_jobs: list[dict[str, Any]],
+    profile_label: str,
+    profile_description: str,
 ) -> str:
     rows = "\n".join(
         f"""
@@ -144,7 +157,8 @@ def _render_html(
       <body style="font-family: Arial, sans-serif; color: #1d211f;">
         <h1>Job Notifier</h1>
         <p>Fetched at {html.escape(fetched_at)}.</p>
-        <p><strong>{job_count:,}</strong> open structured jobs from <strong>{source_count}</strong> source payloads.</p>
+        <p><strong>{matching_job_count:,}</strong> matching jobs from <strong>{job_count:,}</strong> open structured jobs and <strong>{source_count}</strong> source payloads.</p>
+        <p>Profile: <strong>{html.escape(profile_label)}</strong>{_profile_description_html(profile_description)}</p>
         {error_html}
         <h2>Latest jobs</h2>
         <table cellpadding="8" cellspacing="0" border="1" style="border-collapse: collapse;">
@@ -168,14 +182,18 @@ def _render_text(
     *,
     fetched_at: str,
     job_count: int,
+    matching_job_count: int,
     source_count: int,
     errors: list[dict[str, str]],
     latest_jobs: list[dict[str, Any]],
+    profile_label: str,
+    profile_description: str,
 ) -> str:
     lines = [
         "Job Notifier",
         f"Fetched at {fetched_at}.",
-        f"{job_count:,} open structured jobs from {source_count} source payloads.",
+        f"{matching_job_count:,} matching jobs from {job_count:,} open structured jobs and {source_count} source payloads.",
+        f"Profile: {profile_label}" + (f" - {profile_description}" if profile_description else ""),
         "",
         "Latest jobs:",
     ]
@@ -193,6 +211,12 @@ def _render_text(
             for error in errors
         )
     return "\n".join(lines)
+
+
+def _profile_description_html(description: str) -> str:
+    if not description:
+        return ""
+    return f" - {html.escape(description)}"
 
 
 def _build_gzip_attachment(output_path: Path) -> dict[str, str]:

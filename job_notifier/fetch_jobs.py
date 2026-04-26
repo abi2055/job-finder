@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 from job_notifier.config import load_config
+from job_notifier.database import build_engine, save_fetch_results
 from job_notifier.http_client import HttpClient
 from job_notifier.service import fetch_sources, write_output
 
@@ -37,6 +38,15 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Do not sort structured job lists newest-first.",
     )
+    parser.add_argument(
+        "--save-to-db",
+        action="store_true",
+        help="Save structured job records and source snapshots to the database.",
+    )
+    parser.add_argument(
+        "--database-url",
+        help="Database URL. Defaults to DATABASE_URL or sqlite:///data/job_notifier.db.",
+    )
     return parser
 
 
@@ -59,6 +69,19 @@ def main(argv: list[str] | None = None) -> int:
 
     write_output(args.output, results, errors)
     print(f"Wrote {len(results)} source payload(s) to {args.output}")
+
+    if args.save_to_db:
+        db_summary = save_fetch_results(
+            build_engine(args.database_url),
+            results=results,
+            errors=errors,
+        )
+        print(
+            "Saved "
+            f"{db_summary['job_record_count']} job record(s) "
+            f"to database fetch_run_id={db_summary['fetch_run_id']}"
+        )
+
     if errors:
         print(f"Encountered {len(errors)} source error(s); see output JSON.", file=sys.stderr)
     return 0 if not errors else 2

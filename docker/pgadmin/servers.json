@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "job-notifier-postgres",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "job_notifier",
+      "Username": "job_notifier",
+      "SSLMode": "prefer"
+    }
+  }
+}
+

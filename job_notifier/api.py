@@ -7,6 +7,7 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from job_notifier.config import load_config
+from job_notifier.database import build_engine, save_fetch_results
 from job_notifier.http_client import HttpClient
 from job_notifier.service import build_output_payload, enabled_sources, fetch_sources, write_output
 
@@ -31,6 +32,14 @@ class FetchRequest(BaseModel):
     prioritize_latest: bool = Field(
         default=True,
         description="Sort structured job lists newest-first where date fields are present.",
+    )
+    save_to_db: bool = Field(
+        default=False,
+        description="Save structured job records and source snapshots to the database.",
+    )
+    database_url: str | None = Field(
+        default=None,
+        description="Optional database URL. Defaults to DATABASE_URL or sqlite:///data/job_notifier.db.",
     )
 
 
@@ -70,6 +79,14 @@ def create_app() -> FastAPI:
         if request.output_path:
             write_output(Path(request.output_path), results, errors)
 
+        db_summary = None
+        if request.save_to_db:
+            db_summary = save_fetch_results(
+                build_engine(request.database_url),
+                results=results,
+                errors=errors,
+            )
+
         payload = build_output_payload(results, errors)
         payload["summary"] = {
             "source_count": len(enabled_sources(config)),
@@ -78,6 +95,7 @@ def create_app() -> FastAPI:
             "output_path": request.output_path,
             "include_closed": request.include_closed,
             "prioritize_latest": request.prioritize_latest,
+            "database": db_summary,
         }
         return payload
 

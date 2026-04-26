@@ -1,0 +1,50 @@
+services:
+  api:
+    build: .
+    command: >
+      sh -c "python -m job_notifier.db_cli init &&
+             python -m uvicorn job_notifier.api:app --host 0.0.0.0 --port 8000 --reload"
+    environment:
+      DATABASE_URL: postgresql+psycopg://job_notifier:job_notifier@postgres:5432/job_notifier
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: job_notifier
+      POSTGRES_USER: job_notifier
+      POSTGRES_PASSWORD: job_notifier
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U job_notifier -d job_notifier"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  pgadmin:
+    image: dpage/pgadmin4:8
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./docker/pgadmin/servers.json:/pgadmin4/servers.json:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  pgadmin_data:

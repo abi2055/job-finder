@@ -55,6 +55,7 @@ docker compose up --build
 
 Access:
 
+- Dashboard: `http://127.0.0.1:8000/dashboard`
 - FastAPI docs: `http://127.0.0.1:8000/docs`
 - API health: `http://127.0.0.1:8000/health`
 - pgAdmin: `http://127.0.0.1:5050`

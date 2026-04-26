@@ -4,12 +4,15 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse, RedirectResponse
 from pydantic import BaseModel, Field
 
 from job_notifier.config import load_config
-from job_notifier.database import build_engine, save_fetch_results
+from job_notifier.database import build_engine, list_job_records, save_fetch_results
 from job_notifier.http_client import HttpClient
 from job_notifier.service import build_output_payload, enabled_sources, fetch_sources, write_output
+
+DASHBOARD_PATH = Path(__file__).parent / "static" / "dashboard.html"
 
 
 class FetchRequest(BaseModel):
@@ -53,6 +56,42 @@ def create_app() -> FastAPI:
     @app.get("/health")
     def health() -> dict[str, str]:
         return {"status": "ok"}
+
+    @app.get("/")
+    def root() -> RedirectResponse:
+        return RedirectResponse(url="/dashboard")
+
+    @app.get("/dashboard")
+    def dashboard() -> FileResponse:
+        return FileResponse(DASHBOARD_PATH)
+
+    @app.get("/api/jobs")
+    def list_jobs(
+        q: str | None = Query(default=None),
+        company: str | None = Query(default=None),
+        location: str | None = Query(default=None),
+        category: str | None = Query(default=None),
+        sponsorship: str | None = Query(default=None),
+        active_only: bool = Query(default=True),
+        include_raw: bool = Query(default=False),
+        limit: int = Query(default=100, ge=1, le=500),
+        offset: int = Query(default=0, ge=0),
+    ) -> dict[str, Any]:
+        try:
+            return list_job_records(
+                build_engine(),
+                search=q,
+                company=company,
+                location=location,
+                category=category,
+                sponsorship=sponsorship,
+                active_only=active_only,
+                include_raw=include_raw,
+                limit=limit,
+                offset=offset,
+            )
+        except Exception as error:
+            raise HTTPException(status_code=500, detail=str(error)) from error
 
     @app.get("/sources")
     def list_sources(config_path: str | None = Query(default=None)) -> dict[str, Any]:

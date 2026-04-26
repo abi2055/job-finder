@@ -17,8 +17,11 @@ from sqlalchemy import (
     String,
     Table,
     Text,
+    cast,
     create_engine,
+    desc,
     func,
+    or_,
     select,
 )
 from sqlalchemy.dialects.postgresql import JSONB
@@ -160,6 +163,108 @@ def save_fetch_results(
 def count_job_records(engine: Engine) -> int:
     with engine.connect() as connection:
         return int(connection.execute(select(func.count()).select_from(raw_job_records)).scalar_one())
+
+
+def list_job_records(
+    engine: Engine,
+    *,
+    search: str | None = None,
+    company: str | None = None,
+    location: str | None = None,
+    category: str | None = None,
+    sponsorship: str | None = None,
+    active_only: bool = True,
+    include_raw: bool = False,
+    limit: int = 100,
+    offset: int = 0,
+) -> dict[str, Any]:
+    filters = _job_filters(
+        search=search,
+        company=company,
+        location=location,
+        category=category,
+        sponsorship=sponsorship,
+        active_only=active_only,
+    )
+    base_query = raw_job_records.select()
+    count_query = select(func.count()).select_from(raw_job_records)
+
+    if filters:
+        base_query = base_query.where(*filters)
+        count_query = count_query.where(*filters)
+
+    base_query = (
+        base_query.order_by(
+            desc(raw_job_records.c.date_updated_at).nulls_last(),
+            desc(raw_job_records.c.date_posted_at).nulls_last(),
+            raw_job_records.c.company_name,
+        )
+        .limit(limit)
+        .offset(offset)
+    )
+
+    with engine.connect() as connection:
+        total = int(connection.execute(count_query).scalar_one())
+        rows = [dict(row) for row in connection.execute(base_query).mappings()]
+
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "jobs": [_serialize_job_row(row, include_raw=include_raw) for row in rows],
+    }
+
+
+def _job_filters(
+    *,
+    search: str | None,
+    company: str | None,
+    location: str | None,
+    category: str | None,
+    sponsorship: str | None,
+    active_only: bool,
+) -> list[Any]:
+    filters: list[Any] = []
+    if active_only:
+        filters.append(raw_job_records.c.active.is_not(False))
+        filters.append(raw_job_records.c.is_visible.is_not(False))
+    if search:
+        pattern = f"%{search.strip()}%"
+        filters.append(
+            or_(
+                raw_job_records.c.company_name.ilike(pattern),
+                raw_job_records.c.title.ilike(pattern),
+                raw_job_records.c.category.ilike(pattern),
+                raw_job_records.c.sponsorship.ilike(pattern),
+                raw_job_records.c.job_url.ilike(pattern),
+            )
+        )
+    if company:
+        filters.append(raw_job_records.c.company_name.ilike(f"%{company.strip()}%"))
+    if location:
+        filters.append(cast(raw_job_records.c.locations, Text).ilike(f"%{location.strip()}%"))
+    if category:
+        filters.append(raw_job_records.c.category.ilike(f"%{category.strip()}%"))
+    if sponsorship:
+        filters.append(raw_job_records.c.sponsorship.ilike(f"%{sponsorship.strip()}%"))
+    return filters
+
+
+def _serialize_job_row(row: dict[str, Any], *, include_raw: bool) -> dict[str, Any]:
+    serialized = {
+        key: _serialize_value(value)
+        for key, value in row.items()
+        if key not in {"raw_payload"}
+    }
+    if include_raw:
+        serialized["raw_payload"] = row.get("raw_payload")
+    return serialized
+
+
+def _serialize_value(value: Any) -> Any:
+    if isinstance(value, datetime):
+        return value.isoformat()
+    return value
 
 
 def _upsert_job_rows(connection: Any, engine: Engine, rows: list[dict[str, Any]]) -> None:

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Notifier</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f7f5;
+        --panel: #ffffff;
+        --line: #d9ded8;
+        --text: #1d211f;
+        --muted: #636b67;
+        --accent: #256f5b;
+        --accent-strong: #17493d;
+        --danger: #9b3b35;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.92);
+        position: sticky;
+        top: 0;
+        z-index: 3;
+      }
+
+      .shell {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 64px;
+        gap: 16px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      main {
+        padding: 20px 0 36px;
+      }
+
+      .filters {
+        display: grid;
+        grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr)) auto;
+        gap: 10px;
+        align-items: end;
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: grid;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      button {
+        min-height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--panel);
+        color: var(--text);
+        font: inherit;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px 10px;
+      }
+
+      button {
+        padding: 8px 13px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      button.primary {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #ffffff;
+      }
+
+      button.primary:hover {
+        background: var(--accent-strong);
+      }
+
+      .table-wrap {
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      table {
+        width: 100%;
+        min-width: 980px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #f0f3ef;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      a {
+        color: var(--accent-strong);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .job-title {
+        max-width: 340px;
+        font-weight: 700;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 2px 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #f9faf8;
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .status {
+        margin-top: 14px;
+        color: var(--muted);
+      }
+
+      .status.error {
+        color: var(--danger);
+      }
+
+      .pager {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      @media (max-width: 920px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 12px 0;
+        }
+
+        .summary {
+          white-space: normal;
+        }
+
+        .filters {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100vw - 20px, 1180px);
+        }
+
+        .filters {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell topbar">
+        <h1>Job Notifier</h1>
+        <div class="summary" id="summary">Latest jobs first</div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <form class="filters" id="filters">
+        <label>
+          Search
+          <input id="q" name="q" />
+        </label>
+        <label>
+          Company
+          <input id="company" name="company" />
+        </label>
+        <label>
+          Location
+          <input id="location" name="location" />
+        </label>
+        <label>
+          Category
+          <input id="category" name="category" />
+        </label>
+        <label>
+          Sponsorship
+          <input id="sponsorship" name="sponsorship" />
+        </label>
+        <button class="primary" type="submit">Filter</button>
+      </form>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Updated</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Location</th>
+              <th>Category</th>
+              <th>Terms</th>
+              <th>Sponsorship</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="jobs"></tbody>
+        </table>
+      </div>
+
+      <div class="status" id="status"></div>
+      <div class="pager">
+        <button id="prev" type="button">Previous</button>
+        <button id="next" type="button">Next</button>
+      </div>
+    </main>
+
+    <script>
+      const state = {
+        limit: 100,
+        offset: 0,
+        total: 0,
+      };
+
+      const form = document.querySelector("#filters");
+      const tbody = document.querySelector("#jobs");
+      const statusEl = document.querySelector("#status");
+      const summaryEl = document.querySelector("#summary");
+      const prevBtn = document.querySelector("#prev");
+      const nextBtn = document.querySelector("#next");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        state.offset = 0;
+        loadJobs();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        state.offset = Math.max(0, state.offset - state.limit);
+        loadJobs();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (state.offset + state.limit < state.total) {
+          state.offset += state.limit;
+          loadJobs();
+        }
+      });
+
+      async function loadJobs() {
+        statusEl.textContent = "Loading jobs...";
+        statusEl.classList.remove("error");
+        const params = new URLSearchParams({
+          limit: String(state.limit),
+          offset: String(state.offset),
+          active_only: "true",
+        });
+
+        for (const field of ["q", "company", "location", "category", "sponsorship"]) {
+          const value = document.querySelector(`#${field}`).value.trim();
+          if (value) params.set(field, value);
+        }
+
+        try {
+          const response = await fetch(`/api/jobs?${params.toString()}`);
+          if (!response.ok) throw new Error(await response.text());
+          const data = await response.json();
+          state.total = data.total;
+          renderJobs(data.jobs);
+          updateSummary(data);
+        } catch (error) {
+          tbody.innerHTML = "";
+          statusEl.textContent = `Could not load jobs: ${error.message}`;
+          statusEl.classList.add("error");
+        }
+      }
+
+      function renderJobs(jobs) {
+        tbody.innerHTML = jobs
+          .map((job) => {
+            const url = escapeHtml(job.job_url || "");
+            const title = escapeHtml(job.title || "Untitled role");
+            const company = escapeHtml(job.company_name || "Unknown company");
+            const source = escapeHtml(job.source_name || "");
+            const category = escapeHtml(job.category || "");
+            const sponsorship = escapeHtml(job.sponsorship || "");
+            const locations = formatList(job.locations);
+            const terms = formatList(job.terms);
+            const updated = formatDate(job.date_updated_at || job.date_posted_at);
+            const titleHtml = url
+              ? `<a href="${url}" target="_blank" rel="noreferrer">${title}</a>`
+              : title;
+
+            return `
+              <tr>
+                <td class="muted">${updated}</td>
+                <td>${company}</td>
+                <td class="job-title">${titleHtml}</td>
+                <td>${locations}</td>
+                <td>${category ? `<span class="pill">${category}</span>` : ""}</td>
+                <td>${terms}</td>
+                <td>${sponsorship}</td>
+                <td class="muted">${source}</td>
+              </tr>
+            `;
+          })
+          .join("");
+
+        if (!jobs.length) {
+          tbody.innerHTML = `<tr><td colspan="8" class="muted">No matching jobs found.</td></tr>`;
+        }
+      }
+
+      function updateSummary(data) {
+        const start = data.total === 0 ? 0 : data.offset + 1;
+        const end = Math.min(data.offset + data.limit, data.total);
+        summaryEl.textContent = `${data.total.toLocaleString()} open jobs, latest first`;
+        statusEl.textContent = `Showing ${start.toLocaleString()}-${end.toLocaleString()} of ${data.total.toLocaleString()}`;
+        prevBtn.disabled = data.offset === 0;
+        nextBtn.disabled = data.offset + data.limit >= data.total;
+      }
+
+      function formatList(value) {
+        if (!Array.isArray(value) || value.length === 0) return "";
+        return value.map((item) => `<span class="pill">${escapeHtml(String(item))}</span>`).join(" ");
+      }
+
+      function formatDate(value) {
+        if (!value) return "";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return "";
+        return date.toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+      }
+
+      function escapeHtml(value) {
+        return value.replace(/[&<>"']/g, (char) => {
+          const escapes = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;",
+          };
+          return escapes[char];
+        });
+      }
+
+      loadJobs();
+    </script>
+  </body>
+</html>

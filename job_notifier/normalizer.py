@@ -47,7 +47,6 @@ TECH_TERMS = (
     "devops",
     "sre",
     "site reliability",
-    "product",
     "technical",
     "technology",
     "systems",
@@ -68,6 +67,7 @@ SENIORITY_EXCLUSIONS = (
 )
 NON_TECH_EXCLUSIONS = (
     "account executive",
+    "mba",
     "sales",
     "marketing",
     "finance",
@@ -328,8 +328,9 @@ def _is_open_job(job: NormalizedJob) -> bool:
 
 def _is_tech_early_career_job(job: NormalizedJob) -> bool:
     text = _job_search_text(job)
+    title_text = (job.title or "").casefold()
     has_early_career_signal = any(term in text for term in EARLY_CAREER_TERMS)
-    has_tech_signal = any(term in text for term in TECH_TERMS)
+    has_tech_signal = any(term in title_text for term in TECH_TERMS)
     has_seniority_exclusion = any(term in text for term in SENIORITY_EXCLUSIONS)
     has_non_tech_exclusion = any(term in text for term in NON_TECH_EXCLUSIONS)
 

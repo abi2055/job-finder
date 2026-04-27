@@ -1,6 +1,50 @@
 {
-  "active_profile": "canada_or_sponsorship",
+  "active_profile": "north_america_internships",
   "profiles": {
+    "north_america_internships": {
+      "description": "Email internship, co-op, and student roles located in Canada or the United States.",
+      "max_age_hours": null,
+      "include_any": [],
+      "include_all": [
+        {
+          "title": [
+            "Intern",
+            "Internship",
+            "Co-op",
+            "Coop",
+            "Student"
+          ]
+        },
+        {
+          "locations": [
+            "Canada",
+            "United States",
+            "USA",
+            "U.S.",
+            "Remote - US",
+            "Remote - USA",
+            "Remote - Canada",
+            "Toronto",
+            "Vancouver",
+            "Montreal",
+            "Ottawa",
+            "Calgary",
+            "Waterloo",
+            "New York",
+            "San Francisco",
+            "Seattle",
+            "San Mateo",
+            "Sunnyvale",
+            "Mountain View",
+            "Los Angeles",
+            "Boston",
+            "Austin",
+            "Chicago"
+          ]
+        }
+      ],
+      "exclude_text": []
+    },
     "canada_or_sponsorship": {
       "description": "Email jobs that are in Canada or mention sponsorship.",
       "max_age_hours": null,
@@ -64,4 +108,3 @@
     }
   }
 }
-

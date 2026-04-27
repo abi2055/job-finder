@@ -4,9 +4,19 @@ import json
 from pathlib import Path
 from typing import Any
 
+ATS_SOURCES_PATH = Path(__file__).with_name("ats_sources.json")
 
-DEFAULT_CONFIG: dict[str, Any] = {
-    "sources": [
+
+def _load_bundled_ats_sources() -> list[dict[str, Any]]:
+    if not ATS_SOURCES_PATH.exists():
+        return []
+
+    with ATS_SOURCES_PATH.open("r", encoding="utf-8") as source_file:
+        data = json.load(source_file)
+    return list(data.get("sources", []))
+
+
+DEFAULT_GITHUB_SOURCES: list[dict[str, Any]] = [
         {
             "type": "github_raw",
             "name": "simplifyjobs_summer_2026_listings",
@@ -44,16 +54,11 @@ DEFAULT_CONFIG: dict[str, Any] = {
             "name": "pitt_csc_summer_2024_readme",
             "url": "https://raw.githubusercontent.com/pittcsc/Summer2024-Internships/dev/README.md",
         },
-        {"type": "greenhouse", "name": "stripe_greenhouse", "board_token": "stripe"},
-        {"type": "greenhouse", "name": "databricks_greenhouse", "board_token": "databricks"},
-        {"type": "greenhouse", "name": "figma_greenhouse", "board_token": "figma"},
-        {"type": "greenhouse", "name": "roblox_greenhouse", "board_token": "roblox"},
-        {"type": "greenhouse", "name": "airbnb_greenhouse", "board_token": "airbnb"},
-        {"type": "greenhouse", "name": "doordash_greenhouse", "board_token": "doordashusa"},
-        {"type": "greenhouse", "name": "coinbase_greenhouse", "board_token": "coinbase"},
-        {"type": "lever", "name": "netflix_lever", "company": "netflix"},
-        {"type": "lever", "name": "wealthsimple_lever", "company": "wealthsimple"},
-    ]
+]
+
+
+DEFAULT_CONFIG: dict[str, Any] = {
+    "sources": [*DEFAULT_GITHUB_SOURCES, *_load_bundled_ats_sources()]
 }
 
 

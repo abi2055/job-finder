@@ -120,6 +120,8 @@ Main tables:
 - `greenhouse`: fetches published public jobs from Greenhouse Job Board API via `boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true`.
 - `lever`: fetches published public jobs from Lever Postings API via `api.lever.co/v0/postings/{company}?mode=json`.
 
+Default fetches include the GitHub internship repos plus a curated set of verified Greenhouse/Lever boards in `job_notifier/ats_sources.json`. That ATS list was seeded from `big_tech_internship_companies.txt`; companies without a public Greenhouse/Lever board, or with ambiguous board slugs, are intentionally omitted.
+
 The database writer normalizes GitHub, Greenhouse, and Lever jobs into the same query columns while preserving the original record in `raw_payload`. Dedupe is based on a canonical job key, preferring canonical job URLs when available, so repeated fetches and overlapping GitHub/ATS postings do not flood the database or email digest. Jobs marked closed/inactive are filtered before storage, and database rows not seen again are removed after `--stale-after-days` days, defaulting to `14`.
 
 Company ATS boards are broad, so Greenhouse and Lever jobs pass an additional relevance gate before storage/email: they must look like tech internships, co-ops, new-grad, graduate, or early-career roles. Senior/staff/manager/director and non-tech sales, finance, legal, HR, support, and operations roles are excluded.

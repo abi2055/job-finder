@@ -18,6 +18,9 @@ notify-jobs = "job_notifier.notify_jobs:main"
 [tool.setuptools.packages.find]
 include = ["job_notifier*"]
 
+[tool.setuptools.package-data]
+job_notifier = ["*.json", "static/*.html"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"

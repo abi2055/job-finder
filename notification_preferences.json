@@ -43,7 +43,19 @@
           ]
         }
       ],
-      "exclude_text": []
+      "exclude_text": [
+        "CFO",
+        "Finance",
+        "Financial",
+        "Accounting",
+        "Sales",
+        "Marketing",
+        "Legal",
+        "HR",
+        "Human Resources",
+        "Customer Success",
+        "Operations"
+      ]
     }
   }
 }

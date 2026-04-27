@@ -26,8 +26,6 @@ EARLY_CAREER_TERMS = (
 )
 TECH_TERMS = (
     "software",
-    "engineer",
-    "engineering",
     "developer",
     "frontend",
     "front end",
@@ -52,6 +50,24 @@ TECH_TERMS = (
     "systems",
     "quant",
     "robotics",
+)
+NON_SOFTWARE_TECH_EXCLUSIONS = (
+    "electrical",
+    "mechanical",
+    "hardware",
+    "manufacturing",
+    "industrial",
+    "civil",
+    "aerospace",
+    "chemical",
+    "materials",
+    "firmware",
+    "embedded hardware",
+    "silicon",
+    "asic",
+    "fpga",
+    "pcb",
+    "interconnect",
 )
 SENIORITY_EXCLUSIONS = (
     "senior",
@@ -333,10 +349,11 @@ def _is_tech_early_career_job(job: NormalizedJob) -> bool:
     has_tech_signal = any(term in title_text for term in TECH_TERMS)
     has_seniority_exclusion = any(term in text for term in SENIORITY_EXCLUSIONS)
     has_non_tech_exclusion = any(term in text for term in NON_TECH_EXCLUSIONS)
+    has_non_software_exclusion = any(term in title_text for term in NON_SOFTWARE_TECH_EXCLUSIONS)
 
     if not has_early_career_signal or not has_tech_signal:
         return False
-    if has_seniority_exclusion or has_non_tech_exclusion:
+    if has_seniority_exclusion or has_non_tech_exclusion or has_non_software_exclusion:
         return False
     return True
 

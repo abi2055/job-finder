@@ -10,6 +10,80 @@ from urllib.parse import parse_qs, urlparse
 
 from job_notifier.models import SourceResult
 
+EARLY_CAREER_TERMS = (
+    "intern",
+    "internship",
+    "co-op",
+    "coop",
+    "student",
+    "university",
+    "new grad",
+    "new college grad",
+    "graduate",
+    "early career",
+    "entry level",
+    "apprentice",
+)
+TECH_TERMS = (
+    "software",
+    "engineer",
+    "engineering",
+    "developer",
+    "frontend",
+    "front end",
+    "backend",
+    "back end",
+    "fullstack",
+    "full stack",
+    "data",
+    "machine learning",
+    "ml",
+    "ai",
+    "artificial intelligence",
+    "security",
+    "infrastructure",
+    "platform",
+    "cloud",
+    "devops",
+    "sre",
+    "site reliability",
+    "product",
+    "technical",
+    "technology",
+    "systems",
+    "quant",
+    "robotics",
+)
+SENIORITY_EXCLUSIONS = (
+    "senior",
+    "sr.",
+    "staff",
+    "principal",
+    "lead ",
+    "manager",
+    "director",
+    "head of",
+    "vp ",
+    "vice president",
+)
+NON_TECH_EXCLUSIONS = (
+    "account executive",
+    "sales",
+    "marketing",
+    "finance",
+    "accountant",
+    "counsel",
+    "legal",
+    "recruiter",
+    "people partner",
+    "human resources",
+    "customer success",
+    "support",
+    "operations",
+    "policy",
+    "communications",
+    "payroll",
+)
 
 @dataclass(frozen=True)
 class NormalizedJob:
@@ -83,7 +157,7 @@ def _normalize_greenhouse(
     external_id = _string_or_none(payload.get("id"))
     job_url = _string_or_none(payload.get("absolute_url"))
 
-    return _build_job(
+    job = _build_job(
         result,
         payload,
         index=index,
@@ -104,6 +178,7 @@ def _normalize_greenhouse(
         date_posted_at=None,
         date_updated_at=_parse_datetime(payload.get("updated_at")),
     )
+    return job if _is_tech_early_career_job(job) else None
 
 
 def _normalize_lever(
@@ -120,7 +195,7 @@ def _normalize_lever(
     external_id = _string_or_none(payload.get("id"))
     job_url = _string_or_none(payload.get("hostedUrl") or payload.get("applyUrl"))
 
-    return _build_job(
+    job = _build_job(
         result,
         payload,
         index=index,
@@ -141,6 +216,7 @@ def _normalize_lever(
         date_posted_at=_parse_datetime(payload.get("createdAt")),
         date_updated_at=_parse_datetime(payload.get("updatedAt") or payload.get("createdAt")),
     )
+    return job if _is_tech_early_career_job(job) else None
 
 
 def _normalize_generic(
@@ -248,6 +324,35 @@ def _is_open_job(job: NormalizedJob) -> bool:
         if value
     ).casefold()
     return not any(value in searchable for value in ("closed", "inactive", "archived", "filled", "expired"))
+
+
+def _is_tech_early_career_job(job: NormalizedJob) -> bool:
+    text = _job_search_text(job)
+    has_early_career_signal = any(term in text for term in EARLY_CAREER_TERMS)
+    has_tech_signal = any(term in text for term in TECH_TERMS)
+    has_seniority_exclusion = any(term in text for term in SENIORITY_EXCLUSIONS)
+    has_non_tech_exclusion = any(term in text for term in NON_TECH_EXCLUSIONS)
+
+    if not has_early_career_signal or not has_tech_signal:
+        return False
+    if has_seniority_exclusion or has_non_tech_exclusion:
+        return False
+    return True
+
+
+def _job_search_text(job: NormalizedJob) -> str:
+    return " ".join(
+        str(value)
+        for value in (
+            job.title,
+            job.category,
+            " ".join(map(str, job.locations)),
+            " ".join(map(str, job.terms)),
+            " ".join(map(str, job.degrees)),
+            job.sponsorship,
+        )
+        if value
+    ).casefold()
 
 
 def _job_payloads(payload: Any) -> list[Any]:
@@ -393,4 +498,3 @@ def _string_or_none(value: Any) -> str | None:
     if value is None:
         return None
     return str(value)
-

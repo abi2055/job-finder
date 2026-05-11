@@ -12,7 +12,7 @@ from job_notifier.email_notifier import (
     send_resend_email,
 )
 from job_notifier.http_client import HttpClient
-from job_notifier.notification_preferences import load_notification_profile
+from job_notifier.notification_preferences import load_notification_profile, load_notification_sections
 from job_notifier.service import fetch_sources, write_output
 
 
@@ -73,6 +73,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     write_output(args.output, results, errors)
     profile = load_notification_profile(args.preferences, profile_name=args.profile)
+    sections = [] if args.profile else load_notification_sections(args.preferences)
 
     payload = build_email_payload(
         results=results,
@@ -81,6 +82,7 @@ def main(argv: list[str] | None = None) -> int:
         top_jobs=args.top_jobs,
         attach_raw=args.attach_raw,
         profile=profile,
+        sections=sections,
     )
 
     if args.dry_run:

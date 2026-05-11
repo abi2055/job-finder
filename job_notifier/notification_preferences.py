@@ -16,7 +16,15 @@ class NotificationProfile:
     max_age_hours: int | None
     include_any: list[dict[str, list[str]]]
     include_all: list[dict[str, list[str]]]
+    include_any_all: list[list[dict[str, list[str]]]]
     exclude_text: list[str]
+
+
+@dataclass(frozen=True)
+class NotificationSection:
+    title: str
+    profile: NotificationProfile
+    limit: int | None
 
 
 def load_notification_profile(
@@ -36,12 +44,37 @@ def load_notification_profile(
 
     return NotificationProfile(
         name=str(selected_profile),
-        description=str(profile_data.get("description") or ""),
-        max_age_hours=_optional_int(profile_data.get("max_age_hours")),
-        include_any=_groups(profile_data.get("include_any")),
-        include_all=_groups(profile_data.get("include_all")),
-        exclude_text=[str(value) for value in profile_data.get("exclude_text", [])],
+        **_profile_kwargs(profile_data),
     )
+
+
+def load_notification_sections(path: Path | None = None) -> list[NotificationSection]:
+    preferences_path = path or DEFAULT_PREFERENCES_PATH
+    if not preferences_path.exists():
+        return []
+
+    data = json.loads(preferences_path.read_text(encoding="utf-8"))
+    profiles = data.get("profiles", {})
+    sections = data.get("email_sections", [])
+    if not isinstance(profiles, dict) or not isinstance(sections, list):
+        return []
+
+    loaded_sections: list[NotificationSection] = []
+    for section_data in sections:
+        if not isinstance(section_data, dict):
+            continue
+        profile_name = section_data.get("profile")
+        profile_data = profiles.get(profile_name)
+        if not profile_name or not isinstance(profile_data, dict):
+            continue
+        loaded_sections.append(
+            NotificationSection(
+                title=str(section_data.get("title") or profile_name),
+                profile=NotificationProfile(name=str(profile_name), **_profile_kwargs(profile_data)),
+                limit=_optional_int(section_data.get("limit")),
+            )
+        )
+    return loaded_sections
 
 
 def filter_jobs_by_profile(
@@ -69,6 +102,11 @@ def _matches_profile(job: dict[str, Any], profile: NotificationProfile, *, now: 
         return False
 
     if profile.include_any and not any(_matches_group(job, group) for group in profile.include_any):
+        return False
+
+    if profile.include_any_all and not any(
+        all(_matches_group(job, group) for group in branch) for branch in profile.include_any_all
+    ):
         return False
 
     return True
@@ -159,7 +197,30 @@ def _groups(value: Any) -> list[dict[str, list[str]]]:
     return groups
 
 
+def _group_branches(value: Any) -> list[list[dict[str, list[str]]]]:
+    if not isinstance(value, list):
+        return []
+
+    branches: list[list[dict[str, list[str]]]] = []
+    for branch in value:
+        groups = _groups(branch)
+        if groups:
+            branches.append(groups)
+    return branches
+
+
 def _optional_int(value: Any) -> int | None:
     if value is None:
         return None
     return int(value)
+
+
+def _profile_kwargs(profile_data: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "description": str(profile_data.get("description") or ""),
+        "max_age_hours": _optional_int(profile_data.get("max_age_hours")),
+        "include_any": _groups(profile_data.get("include_any")),
+        "include_all": _groups(profile_data.get("include_all")),
+        "include_any_all": _group_branches(profile_data.get("include_any_all")),
+        "exclude_text": [str(value) for value in profile_data.get("exclude_text", [])],
+    }

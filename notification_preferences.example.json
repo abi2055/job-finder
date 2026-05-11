@@ -1,10 +1,49 @@
 {
   "active_profile": "north_america_internships",
+  "email_sections": [
+    {
+      "title": "North America Software Internships",
+      "profile": "north_america_internships",
+      "limit": 25
+    },
+    {
+      "title": "Canada + US Sponsorship",
+      "profile": "canada_or_us_sponsorship",
+      "limit": 25
+    }
+  ],
   "profiles": {
     "north_america_internships": {
       "description": "Email internship, co-op, and student roles located in Canada or the United States.",
       "max_age_hours": null,
-      "include_any": [],
+      "include_any": [
+        {
+          "title": [
+            "Software",
+            "Developer",
+            "Frontend",
+            "Backend",
+            "Full Stack",
+            "Data",
+            "Machine Learning",
+            "ML",
+            "AI",
+            "Artificial Intelligence",
+            "Computer Science",
+            "Product Manager",
+            "Product Management",
+            "QA",
+            "Quality Assurance",
+            "Test",
+            "Research",
+            "Security",
+            "Cloud",
+            "DevOps",
+            "SRE",
+            "Infrastructure"
+          ]
+        }
+      ],
       "include_all": [
         {
           "title": [
@@ -54,7 +93,130 @@
         "HR",
         "Human Resources",
         "Customer Success",
-        "Operations"
+        "Operations",
+        "Hardware",
+        "Electrical",
+        "Mechanical",
+        "Manufacturing",
+        "Industrial",
+        "Aerospace",
+        "Firmware",
+        "Silicon",
+        "ASIC",
+        "FPGA",
+        "PCB",
+        "Interconnect"
+      ]
+    },
+    "canada_or_us_sponsorship": {
+      "description": "Canadian software internships plus US software internships that mention sponsorship or visa support.",
+      "max_age_hours": null,
+      "include_any": [],
+      "include_all": [
+        {
+          "title": [
+            "Intern",
+            "Internship",
+            "Co-op",
+            "Coop",
+            "Student"
+          ]
+        },
+        {
+          "title": [
+            "Software",
+            "Developer",
+            "Frontend",
+            "Backend",
+            "Full Stack",
+            "Data",
+            "Machine Learning",
+            "ML",
+            "AI",
+            "Artificial Intelligence",
+            "Computer Science",
+            "Product Manager",
+            "Product Management",
+            "QA",
+            "Quality Assurance",
+            "Test",
+            "Research",
+            "Security",
+            "Cloud",
+            "DevOps",
+            "SRE",
+            "Infrastructure"
+          ]
+        }
+      ],
+      "include_any_all": [
+        [
+          {
+            "locations": [
+              "Canada",
+              "Toronto",
+              "Vancouver",
+              "Montreal",
+              "Ottawa",
+              "Calgary",
+              "Waterloo",
+              "Remote - Canada"
+            ]
+          }
+        ],
+        [
+          {
+            "locations": [
+              "United States",
+              "USA",
+              "U.S.",
+              "Remote - US",
+              "Remote - USA",
+              "New York",
+              "San Francisco",
+              "Seattle",
+              "San Mateo",
+              "Sunnyvale",
+              "Mountain View",
+              "Los Angeles",
+              "Boston",
+              "Austin",
+              "Chicago"
+            ]
+          },
+          {
+            "sponsorship": [
+              "Sponsorship",
+              "Offers Sponsorship",
+              "Visa"
+            ]
+          }
+        ]
+      ],
+      "exclude_text": [
+        "CFO",
+        "Finance",
+        "Financial",
+        "Accounting",
+        "Sales",
+        "Marketing",
+        "Legal",
+        "HR",
+        "Human Resources",
+        "Customer Success",
+        "Operations",
+        "Hardware",
+        "Electrical",
+        "Mechanical",
+        "Manufacturing",
+        "Industrial",
+        "Aerospace",
+        "Firmware",
+        "Silicon",
+        "ASIC",
+        "FPGA",
+        "PCB",
+        "Interconnect"
       ]
     },
     "canada_or_sponsorship": {

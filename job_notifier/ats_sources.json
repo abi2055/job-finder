@@ -11,7 +11,6 @@
     {"type": "greenhouse", "name": "canonical_greenhouse", "board_token": "canonical"},
     {"type": "greenhouse", "name": "chime_greenhouse", "board_token": "chime"},
     {"type": "greenhouse", "name": "cloudflare_greenhouse", "board_token": "cloudflare"},
-    {"type": "greenhouse", "name": "coinbase_greenhouse", "board_token": "coinbase"},
     {"type": "greenhouse", "name": "d2l_greenhouse", "board_token": "d2l"},
     {"type": "greenhouse", "name": "databricks_greenhouse", "board_token": "databricks"},
     {"type": "greenhouse", "name": "deepmind_greenhouse", "board_token": "deepmind"},
@@ -69,4 +68,3 @@
     {"type": "lever", "name": "zoox_lever", "company": "zoox"}
   ]
 }
-

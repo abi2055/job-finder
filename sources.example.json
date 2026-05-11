@@ -56,11 +56,6 @@
       "board_token": "doordashusa"
     },
     {
-      "type": "greenhouse",
-      "name": "coinbase_greenhouse",
-      "board_token": "coinbase"
-    },
-    {
       "type": "lever",
       "name": "netflix_lever",
       "company": "netflix"

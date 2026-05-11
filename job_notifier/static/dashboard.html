@@ -397,11 +397,29 @@
         if (!value) return "";
         const date = new Date(value);
         if (Number.isNaN(date.getTime())) return "";
-        return date.toLocaleDateString(undefined, {
+        const options = {
           month: "short",
           day: "numeric",
           year: "numeric",
-        });
+        };
+        if (hasTimeComponent(date)) {
+          options.hour = "numeric";
+          options.minute = "2-digit";
+          options.timeZoneName = "short";
+          options.timeZone = "America/Toronto";
+        } else {
+          options.timeZone = "UTC";
+        }
+        return date.toLocaleString(undefined, options);
+      }
+
+      function hasTimeComponent(date) {
+        return Boolean(
+          date.getUTCHours() ||
+            date.getUTCMinutes() ||
+            date.getUTCSeconds() ||
+            date.getUTCMilliseconds()
+        );
       }
 
       function escapeHtml(value) {

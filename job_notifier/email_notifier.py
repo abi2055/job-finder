@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
 
 from job_notifier.models import SourceResult
 from job_notifier.normalizer import iter_normalized_jobs
@@ -22,6 +23,7 @@ from job_notifier.notification_preferences import (
 
 RESEND_EMAILS_URL = "https://api.resend.com/emails"
 DEFAULT_FROM_EMAIL = "Job Notifier <onboarding@resend.dev>"
+DISPLAY_TIMEZONE = ZoneInfo(os.getenv("JOB_NOTIFIER_TIMEZONE", "America/Toronto"))
 
 
 class EmailNotificationError(RuntimeError):
@@ -74,7 +76,7 @@ def build_email_payload(
         fallback_limit=top_jobs,
     )
     matching_job_count = sum(section["total"] for section in email_sections)
-    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    fetched_at = _format_datetime(datetime.now(timezone.utc))
 
     payload: dict[str, Any] = {
         "from": os.getenv("RESEND_FROM_EMAIL") or DEFAULT_FROM_EMAIL,
@@ -305,10 +307,43 @@ def _latest_timestamp(job: dict[str, Any]) -> float:
 
 
 def _job_date(job: dict[str, Any]) -> str:
-    timestamp = _latest_timestamp(job)
-    if not timestamp:
+    value = job.get("date_updated_at") or job.get("date_posted_at")
+    job_datetime = _datetime_value(value)
+    if job_datetime is None:
         return ""
-    return datetime.fromtimestamp(timestamp, timezone.utc).strftime("%Y-%m-%d")
+    return _format_datetime(job_datetime)
+
+
+def _format_datetime(value: datetime) -> str:
+    if not _has_time_component(value):
+        return value.strftime("%Y-%m-%d")
+    display_value = value.astimezone(DISPLAY_TIMEZONE)
+    return display_value.strftime("%Y-%m-%d %H:%M %Z")
+
+
+def _datetime_value(value: Any) -> datetime | None:
+    if isinstance(value, datetime):
+        return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+    if isinstance(value, int | float):
+        seconds = float(value / 1000 if value > 10_000_000_000 else value)
+        return datetime.fromtimestamp(seconds, timezone.utc)
+    if isinstance(value, str):
+        stripped = value.strip()
+        if not stripped:
+            return None
+        if stripped.isdigit():
+            return _datetime_value(int(stripped))
+        try:
+            parsed = datetime.fromisoformat(stripped.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+        return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+    return None
+
+
+def _has_time_component(value: datetime) -> bool:
+    utc_value = value.astimezone(timezone.utc)
+    return any((utc_value.hour, utc_value.minute, utc_value.second, utc_value.microsecond))
 
 
 def _email_job(job: Any) -> dict[str, Any]:

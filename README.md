@@ -128,7 +128,7 @@ Company ATS boards are broad, so Greenhouse and Lever jobs pass an additional re
 
 ## Scheduled Email Notifications
 
-The GitHub Actions workflow in `.github/workflows/fetch-and-email.yml` runs every 3 hours and can also be triggered manually from the Actions tab.
+The GitHub Actions workflow in `.github/workflows/fetch-and-email.yml` runs every hour and can also be triggered manually from the Actions tab.
 
 Add these repository secrets in GitHub:
 

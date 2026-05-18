@@ -80,7 +80,7 @@ def build_email_payload(
 
     payload: dict[str, Any] = {
         "from": os.getenv("RESEND_FROM_EMAIL") or DEFAULT_FROM_EMAIL,
-        "to": [_required_env("RESEND_TO_EMAIL")],
+        "to": [email.strip() for email in _required_env("RESEND_TO_EMAIL").split(",") if email.strip()],
         "subject": f"Job Notifier: {matching_job_count:,} matching jobs",
         "html": _render_html(
             fetched_at=fetched_at,

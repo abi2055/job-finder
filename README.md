@@ -138,11 +138,15 @@ RESEND_TO_EMAIL
 RESEND_FROM_EMAIL
 ```
 
-`RESEND_FROM_EMAIL` must be a sender allowed by your Resend account. For early testing, Resend examples use:
+`RESEND_FROM_EMAIL` must be a sender on a domain verified in your Resend account. Verify a domain at [resend.com/domains](https://resend.com/domains) and use any local-part on that domain (no mailbox needed):
 
 ```text
-Job Notifier <onboarding@resend.dev>
+Job Notifier <jobs@yourdomain.com>
 ```
+
+The sandbox sender `onboarding@resend.dev` works only when `RESEND_TO_EMAIL` is the single address registered on your Resend account — any other recipient will 403 with a domain-verification error.
+
+`RESEND_TO_EMAIL` accepts a comma-separated list for multiple recipients (e.g., `alice@example.com,bob@example.com`).
 
 Run a local dry run:
 
@@ -158,7 +162,7 @@ python -m job_notifier.notify_jobs --top-jobs 25 --attach-raw
 
 ### Email Preferences
 
-The scheduled workflow reads `notification_preferences.json` each time it runs. The cron stays fixed at every 3 hours, while the email content changes based on the active profile in that file.
+The scheduled workflow reads `notification_preferences.json` each time it runs. The cron is fixed at every hour (`0 * * * *` UTC), while the email content changes based on the active profile in that file. Note that GitHub Actions schedules are best-effort and runs at the top of the hour are often delayed or skipped during high platform load.
 
 Example active profile:
 

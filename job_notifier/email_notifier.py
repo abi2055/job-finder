@@ -66,7 +66,7 @@ def build_email_payload(
     attach_raw: bool,
     profile: NotificationProfile | None = None,
     sections: list[NotificationSection] | None = None,
-) -> dict[str, Any]:
+) -> tuple[dict[str, Any], set[str]]:
     raw_job_count = sum(_job_count(result.payload) for result in results)
     unique_jobs = collect_latest_jobs(results, limit=raw_job_count)
     email_sections = _build_email_sections(
@@ -76,6 +76,9 @@ def build_email_payload(
         fallback_limit=top_jobs,
     )
     matching_job_count = sum(section["total"] for section in email_sections)
+    matching_record_keys: set[str] = set()
+    for section in email_sections:
+        matching_record_keys.update(section.get("record_keys") or [])
     fetched_at = _format_datetime(datetime.now(timezone.utc))
 
     payload: dict[str, Any] = {
@@ -103,7 +106,7 @@ def build_email_payload(
     if attach_raw:
         payload["attachments"] = [_build_gzip_attachment(output_path)]
 
-    return payload
+    return payload, matching_record_keys
 
 
 def send_resend_email(payload: dict[str, Any]) -> dict[str, Any]:
@@ -222,6 +225,7 @@ def _build_email_sections(
             "description": profile.description if profile else "",
             "total": len(matching_jobs),
             "jobs": matching_jobs[:fallback_limit],
+            "record_keys": _matching_record_keys(matching_jobs),
         }
     ]
 
@@ -239,7 +243,12 @@ def _build_email_section(
         "description": profile.description,
         "total": len(matching_jobs),
         "jobs": matching_jobs[:limit],
+        "record_keys": _matching_record_keys(matching_jobs),
     }
+
+
+def _matching_record_keys(matching_jobs: list[dict[str, Any]]) -> list[str]:
+    return [str(job["record_key"]) for job in matching_jobs if job.get("record_key")]
 
 
 def _render_html_section(section: dict[str, Any]) -> str:

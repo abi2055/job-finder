@@ -22,13 +22,21 @@ jobs:
       - name: Install project
         run: python -m pip install -e .
 
+      - name: Restore/save seen-jobs state
+        uses: actions/cache@v4
+        with:
+          path: data/seen_jobs.json
+          key: job-notifier-state-v1-${{ github.run_id }}
+          restore-keys: |
+            job-notifier-state-v1-
+
       - name: Fetch jobs and send email
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
-        run: python -m job_notifier.notify_jobs --output data/raw_jobs.json --preferences notification_preferences.json --top-jobs 25 --attach-raw
+        run: python -m job_notifier.notify_jobs --output data/raw_jobs.json --preferences notification_preferences.json --top-jobs 25 --attach-raw --state-file data/seen_jobs.json
 
       - name: Upload raw job data artifact
         uses: actions/upload-artifact@v4

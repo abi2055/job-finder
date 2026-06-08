@@ -51,6 +51,13 @@ def build_parser() -> argparse.ArgumentParser:
         help="Attach the raw output JSON as a gzipped file.",
     )
     parser.add_argument(
+        "--state-file",
+        type=Path,
+        default=Path("data/seen_jobs.json"),
+        help="Path to JSON file tracking previously-notified job record_keys. "
+        "If this file exists and no new matching jobs are found, the email is skipped.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Fetch and render the email payload without sending it.",
@@ -75,7 +82,7 @@ def main(argv: list[str] | None = None) -> int:
     profile = load_notification_profile(args.preferences, profile_name=args.profile)
     sections = [] if args.profile else load_notification_sections(args.preferences)
 
-    payload = build_email_payload(
+    payload, matching_record_keys = build_email_payload(
         results=results,
         errors=errors,
         output_path=args.output,
@@ -85,13 +92,55 @@ def main(argv: list[str] | None = None) -> int:
         sections=sections,
     )
 
+    seen_keys, state_exists = _load_seen_keys(args.state_file)
+    new_keys = matching_record_keys - seen_keys
+
+    if state_exists and not new_keys:
+        print(
+            json.dumps(
+                {
+                    "skipped": True,
+                    "reason": "no new matching jobs since previous run",
+                    "matching_jobs": len(matching_record_keys),
+                    "seen_jobs": len(seen_keys),
+                },
+                indent=2,
+            )
+        )
+        return 0
+
     if args.dry_run:
-        print(json.dumps(describe_payload(payload), indent=2))
+        description = describe_payload(payload)
+        description["new_matching_jobs"] = len(new_keys)
+        description["state_file_exists"] = state_exists
+        print(json.dumps(description, indent=2))
         return 0
 
     response = send_resend_email(payload)
+    _write_seen_keys(args.state_file, seen_keys | matching_record_keys)
     print(json.dumps(response, indent=2))
     return 0
+
+
+def _load_seen_keys(state_path: Path) -> tuple[set[str], bool]:
+    if not state_path.exists():
+        return set(), False
+    try:
+        data = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return set(), False
+    keys = data.get("record_keys") if isinstance(data, dict) else None
+    if not isinstance(keys, list):
+        return set(), False
+    return {str(key) for key in keys if isinstance(key, str)}, True
+
+
+def _write_seen_keys(state_path: Path, keys: set[str]) -> None:
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state_path.write_text(
+        json.dumps({"record_keys": sorted(keys)}, indent=2),
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":

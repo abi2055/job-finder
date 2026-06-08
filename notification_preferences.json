@@ -2,13 +2,13 @@
   "active_profile": "north_america_internships",
   "email_sections": [
     {
-      "title": "North America Software Internships",
-      "profile": "north_america_internships",
+      "title": "Canada + US Sponsorship",
+      "profile": "canada_or_us_sponsorship",
       "limit": 25
     },
     {
-      "title": "Canada + US Sponsorship",
-      "profile": "canada_or_us_sponsorship",
+      "title": "North America Software Internships",
+      "profile": "north_america_internships",
       "limit": 25
     }
   ],

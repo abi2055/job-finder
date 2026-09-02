@@ -201,3 +201,5 @@ Preview a different profile without changing `active_profile`:
 ```bash
 python -m job_notifier.notify_jobs --dry-run --preferences notification_preferences.example.json --profile last_24_hours --top-jobs 10
 ```
+
+Note: CI gets disabled after a few months of inactivity on this repo 

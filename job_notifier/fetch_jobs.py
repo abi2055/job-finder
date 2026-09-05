@@ -6,6 +6,7 @@ from pathlib import Path
 
 from job_notifier.config import load_config
 from job_notifier.database import build_engine, save_fetch_results
+from job_notifier.email_notifier import load_dotenv
 from job_notifier.http_client import HttpClient
 from job_notifier.service import fetch_sources, write_output
 
@@ -57,6 +58,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()  # Load environment variables from .env file
     args = build_parser().parse_args(argv)
     config = load_config(args.config)
     client = HttpClient()

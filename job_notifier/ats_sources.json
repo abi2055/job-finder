@@ -54,17 +54,21 @@
     {"type": "greenhouse", "name": "waymo_greenhouse", "board_token": "waymo"},
     {"type": "greenhouse", "name": "xai_greenhouse", "board_token": "xai"},
     {"type": "greenhouse", "name": "zscaler_greenhouse", "board_token": "zscaler"},
-    {"type": "lever", "name": "atlassian_lever", "company": "atlassian"},
+    {"type": "ashby", "name": "plaid_ashby", "company": "plaid"},
     {"type": "lever", "name": "blueorigin_lever", "company": "blueorigin"},
     {"type": "lever", "name": "magnetforensics_lever", "company": "magnetforensics"},
-    {"type": "lever", "name": "netflix_lever", "company": "netflix"},
     {"type": "lever", "name": "palantir_lever", "company": "palantir"},
-    {"type": "lever", "name": "plaid_lever", "company": "plaid"},
     {"type": "lever", "name": "pointclickcare_lever", "company": "pointclickcare"},
     {"type": "lever", "name": "spotify_lever", "company": "spotify"},
     {"type": "lever", "name": "telesat_lever", "company": "telesat"},
     {"type": "lever", "name": "waabi_lever", "company": "waabi"},
     {"type": "lever", "name": "wealthsimple_lever", "company": "wealthsimple"},
-    {"type": "lever", "name": "zoox_lever", "company": "zoox"}
+    {"type": "lever", "name": "zoox_lever", "company": "zoox"},
+    {"type": "ycombinator", "name": "yc_companies", "page": 1},
+    {"type": "himalayas", "name": "himalayas_remote_fulltime", "seniority": "Entry-level", "employment_type": "Full Time"},
+    {"type": "himalayas", "name": "himalayas_remote_internship", "employment_type": "Intern"},
+    {"type": "startupjobs", "name": "startupjobs_engineering", "role": "engineering", "limit": 50},
+    {"type": "startupjobs", "name": "startupjobs_internships", "q": "internship", "limit": 50},
+    {"type": "startupjobs", "name": "startupjobs_all", "limit": 50}
   ]
 }

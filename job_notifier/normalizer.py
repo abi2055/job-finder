@@ -113,6 +113,7 @@ class NormalizedJob:
     company_name: str | None
     company_url: str | None
     title: str | None
+    employment_type: str | None
     job_url: str | None
     category: str | None
     locations: list[Any]
@@ -183,6 +184,7 @@ def _normalize_greenhouse(
         company_name=company_name,
         company_url=f"https://boards.greenhouse.io/{board_token}" if board_token else None,
         title=_string_or_none(payload.get("title")),
+        employment_type=_extract_employment_type(payload),
         job_url=job_url,
         category=category,
         locations=locations,
@@ -221,6 +223,7 @@ def _normalize_lever(
         company_name=company_name,
         company_url=_lever_site_url(result.url),
         title=_string_or_none(payload.get("text")),
+        employment_type=_extract_employment_type(payload),
         job_url=job_url,
         category=_string_or_none(categories.get("team") or categories.get("department")),
         locations=locations,
@@ -244,6 +247,16 @@ def _normalize_generic(
 ) -> NormalizedJob:
     external_id = _string_or_none(payload.get("id") or payload.get("job_id") or payload.get("postingId"))
     job_url = _string_or_none(payload.get("url") or payload.get("absolute_url") or payload.get("hostedUrl"))
+
+    # Extract company name, handling both string and dict formats
+    company = payload.get("company_name") or payload.get("company") or payload.get("companyName")
+    if isinstance(company, dict):
+        company_name = _string_or_none(company.get("name"))
+        company_url = _string_or_none(company.get("url") or company.get("website_url"))
+    else:
+        company_name = _string_or_none(company)
+        company_url = _string_or_none(payload.get("company_url"))
+
     return _build_job(
         result,
         payload,
@@ -251,11 +264,10 @@ def _normalize_generic(
         seen_at=seen_at,
         upstream_source=_string_or_none(payload.get("source")) or result.source_type,
         external_id=external_id,
-        company_name=_string_or_none(
-            payload.get("company_name") or payload.get("company") or payload.get("companyName")
-        ),
-        company_url=_string_or_none(payload.get("company_url")),
+        company_name=company_name,
+        company_url=company_url,
         title=_string_or_none(payload.get("title") or payload.get("text")),
+        employment_type=_extract_employment_type(payload),
         job_url=job_url,
         category=_string_or_none(payload.get("category") or payload.get("department")),
         locations=_list_value(payload.get("locations") or payload.get("location")),
@@ -264,7 +276,7 @@ def _normalize_generic(
         sponsorship=_string_or_none(payload.get("sponsorship")),
         active=_bool_or_none(payload.get("active")),
         is_visible=_bool_or_none(payload.get("is_visible")),
-        date_posted_at=_parse_datetime(payload.get("date_posted") or payload.get("createdAt")),
+        date_posted_at=_parse_datetime(payload.get("date_posted") or payload.get("createdAt") or payload.get("published_at")),
         date_updated_at=_parse_datetime(payload.get("date_updated") or payload.get("updatedAt")),
     )
 
@@ -280,6 +292,7 @@ def _build_job(
     company_name: str | None,
     company_url: str | None,
     title: str | None,
+    employment_type: str | None,
     job_url: str | None,
     category: str | None,
     locations: list[Any],
@@ -310,6 +323,7 @@ def _build_job(
         company_name=company_name,
         company_url=company_url,
         title=title,
+        employment_type=employment_type,
         job_url=job_url,
         category=category,
         locations=_unique_list(locations),
@@ -376,8 +390,14 @@ def _job_search_text(job: NormalizedJob) -> str:
 def _job_payloads(payload: Any) -> list[Any]:
     if isinstance(payload, list):
         return payload
-    if isinstance(payload, dict) and isinstance(payload.get("jobs"), list):
-        return payload["jobs"]
+    if isinstance(payload, dict):
+        # Try different common payload structures
+        if isinstance(payload.get("jobs"), list):
+            return payload["jobs"]
+        if isinstance(payload.get("data"), list):  # startup.jobs uses "data"
+            return payload["data"]
+        if isinstance(payload.get("companies"), list):  # ycombinator uses "companies"
+            return payload["companies"]
     return []
 
 
@@ -516,3 +536,30 @@ def _string_or_none(value: Any) -> str | None:
     if value is None:
         return None
     return str(value)
+
+
+def _extract_employment_type(payload: dict[str, Any]) -> str | None:
+    """Extract employment type from job payload across different ATS formats."""
+    # Try common field names
+    employment_type = payload.get("employment_type") or payload.get("employmentType")
+    if employment_type:
+        employment_type_str = str(employment_type).lower()
+        # Normalize common values
+        if "intern" in employment_type_str:
+            return "Internship"
+        if "full" in employment_type_str or employment_type_str == "full time":
+            return "Full-time"
+        if "part" in employment_type_str:
+            return "Part-time"
+        if "contract" in employment_type_str:
+            return "Contract"
+        return str(employment_type).title()
+
+    # Check title for internship keywords as fallback
+    title = _string_or_none(payload.get("title") or payload.get("text"))
+    if title:
+        title_lower = title.lower()
+        if "intern" in title_lower or "co-op" in title_lower or "coop" in title_lower:
+            return "Internship"
+
+    return None

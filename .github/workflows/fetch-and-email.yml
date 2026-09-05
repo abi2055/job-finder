@@ -36,6 +36,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          STARTUPJOBS_API_KEY: ${{ secrets.STARTUPJOBS_API_KEY }}
         run: python -m job_notifier.notify_jobs --output data/raw_jobs.json --preferences notification_preferences.json --top-jobs 25 --attach-raw --state-file data/seen_jobs.json
 
       - name: Upload raw job data artifact

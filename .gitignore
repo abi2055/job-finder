@@ -6,4 +6,7 @@ __pycache__/
 data/*.db
 data/*.sqlite
 data/*.sqlite3
+data/raw_jobs.json
+data/seen_jobs.json
+data/test_startup_jobs.json
 

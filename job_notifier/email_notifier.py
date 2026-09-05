@@ -184,10 +184,11 @@ def _render_text(
         if section.get("description"):
             lines.append(section["description"])
         for job in section["jobs"]:
+            employment_type = job.get('employment_type') or ''
             lines.append(
                 " - "
                 f"{_job_date(job)} | {job.get('company_name') or ''} | "
-                f"{job.get('title') or ''} | {', '.join(map(str, job.get('locations') or []))} | "
+                f"{job.get('title') or ''} | {employment_type} | {', '.join(map(str, job.get('locations') or []))} | "
                 f"{job.get('source_type') or ''} | {job.get('job_url') or ''}"
             )
     if errors:
@@ -254,7 +255,7 @@ def _matching_record_keys(matching_jobs: list[dict[str, Any]]) -> list[str]:
 def _render_html_section(section: dict[str, Any]) -> str:
     rows = "\n".join(_render_html_job_row(job) for job in section["jobs"])
     if not rows:
-        rows = '<tr><td colspan="6">No matching jobs.</td></tr>'
+        rows = '<tr><td colspan="7">No matching jobs.</td></tr>'
     description = section.get("description") or ""
     description_html = f"<p>{html.escape(description)}</p>" if description else ""
     return f"""
@@ -266,6 +267,7 @@ def _render_html_section(section: dict[str, Any]) -> str:
               <th>Updated</th>
               <th>Company</th>
               <th>Role</th>
+              <th>Type</th>
               <th>Location</th>
               <th>Category</th>
               <th>Source</th>
@@ -277,11 +279,13 @@ def _render_html_section(section: dict[str, Any]) -> str:
 
 
 def _render_html_job_row(job: dict[str, Any]) -> str:
+    employment_type = job.get("employment_type") or ""
     return f"""
         <tr>
           <td>{html.escape(_job_date(job))}</td>
           <td>{html.escape(str(job.get("company_name") or ""))}</td>
           <td><a href="{html.escape(str(job.get("job_url") or ""))}">{html.escape(str(job.get("title") or ""))}</a></td>
+          <td>{html.escape(str(employment_type))}</td>
           <td>{html.escape(", ".join(map(str, job.get("locations") or [])))}</td>
           <td>{html.escape(str(job.get("category") or ""))}</td>
           <td>{html.escape(str(job.get("source_type") or ""))}</td>
@@ -362,6 +366,7 @@ def _email_job(job: Any) -> dict[str, Any]:
         "source_type": job.source_type,
         "company_name": job.company_name,
         "title": job.title,
+        "employment_type": job.employment_type,
         "job_url": job.job_url,
         "category": job.category,
         "locations": job.locations,

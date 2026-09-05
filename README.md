@@ -18,11 +18,20 @@ Use a custom source list:
 python -m job_notifier.fetch_jobs --config sources.example.json --output data/raw_jobs.json
 ```
 
-Optional GitHub token for higher API limits:
+Optional environment variables:
 
 ```bash
-GITHUB_TOKEN=ghp_... python -m job_notifier.fetch_jobs --output data/raw_jobs.json
+# GitHub token for higher API limits
+GITHUB_TOKEN=ghp_...
+
+# Startup.jobs API key (get free key at https://startup.jobs/account/api_keys)
+STARTUPJOBS_API_KEY=sj_...
+
+# Run the fetch
+python -m job_notifier.fetch_jobs --output data/raw_jobs.json
 ```
+
+**Note:** The `startupjobs` sources require a free API key. Sign up at [startup.jobs/account/api_keys](https://startup.jobs/account/api_keys) to get one.
 
 ## API Usage
 
@@ -119,6 +128,10 @@ Main tables:
 - `github_raw`: fetches raw JSON, Markdown, or text files from public GitHub repositories.
 - `greenhouse`: fetches published public jobs from Greenhouse Job Board API via `boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true`.
 - `lever`: fetches published public jobs from Lever Postings API via `api.lever.co/v0/postings/{company}?mode=json`.
+- `ashby`: fetches published public jobs from Ashby ATS API via `api.ashbyhq.com/posting-api/job-board/{company}`.
+- `ycombinator`: fetches Y Combinator companies with hiring status from `api.ycombinator.com/v0.1/companies`. Returns company data with `isHiring` flags rather than individual job postings.
+- `himalayas`: fetches remote jobs from Himalayas.app API via `himalayas.app/jobs/api`. Free public API with no authentication required. Supports filtering by seniority, employment type, location, etc.
+- `startupjobs`: fetches startup jobs from Startup.jobs API via `api.startup.jobs/v1/jobs`. **Requires free API key** (`STARTUPJOBS_API_KEY` environment variable).
 
 Default fetches include the GitHub internship repos plus a curated set of verified Greenhouse/Lever boards in `job_notifier/ats_sources.json`. That ATS list was seeded from `big_tech_internship_companies.txt`; companies without a public Greenhouse/Lever board, or with ambiguous board slugs, are intentionally omitted.
 

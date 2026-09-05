@@ -230,9 +230,38 @@
       ]
     },
     "startup_internships": {
-      "description": "Internships and co-op positions from startup job boards (Himalayas, Startup.jobs).",
+      "description": "Tech internships and co-op positions from startup job boards (Himalayas, Startup.jobs).",
       "max_age_hours": null,
-      "include_any": [],
+      "include_any": [
+        {
+          "title": [
+            "Software",
+            "Developer",
+            "Frontend",
+            "Backend",
+            "Full Stack",
+            "Data",
+            "Machine Learning",
+            "ML",
+            "AI",
+            "Artificial Intelligence",
+            "Computer Science",
+            "Product Manager",
+            "Product Management",
+            "QA",
+            "Quality Assurance",
+            "Test",
+            "Research",
+            "Security",
+            "Cloud",
+            "DevOps",
+            "SRE",
+            "Infrastructure",
+            "Engineer",
+            "Engineering"
+          ]
+        }
+      ],
       "include_all": [
         {
           "source_type": [
@@ -247,12 +276,70 @@
           ]
         }
       ],
-      "exclude_text": []
+      "exclude_text": [
+        "CFO",
+        "Finance",
+        "Financial",
+        "Accounting",
+        "Sales",
+        "Marketing",
+        "Legal",
+        "HR",
+        "Human Resources",
+        "Customer Success",
+        "Operations",
+        "Hardware",
+        "Electrical",
+        "Mechanical",
+        "Manufacturing",
+        "Industrial",
+        "Aerospace",
+        "Firmware",
+        "Silicon",
+        "ASIC",
+        "FPGA",
+        "PCB",
+        "Interconnect",
+        "Medical",
+        "Physician",
+        "Nurse",
+        "Healthcare",
+        "Clinical"
+      ]
     },
     "startup_fulltime": {
-      "description": "Full-time jobs from startup job boards (YC companies, Himalayas, Startup.jobs).",
+      "description": "Tech full-time jobs from startup job boards (YC companies, Himalayas, Startup.jobs).",
       "max_age_hours": null,
-      "include_any": [],
+      "include_any": [
+        {
+          "title": [
+            "Software",
+            "Developer",
+            "Frontend",
+            "Backend",
+            "Full Stack",
+            "Data",
+            "Machine Learning",
+            "ML",
+            "AI",
+            "Artificial Intelligence",
+            "Computer Science",
+            "Product Manager",
+            "Product Management",
+            "QA",
+            "Quality Assurance",
+            "Test",
+            "Research",
+            "Security",
+            "Cloud",
+            "DevOps",
+            "SRE",
+            "Infrastructure",
+            "Engineer",
+            "Engineering"
+          ]
+        }
+      ],
       "include_all": [
         {
           "source_type": [
@@ -266,7 +353,35 @@
         "Internship",
         "Intern",
         "Co-op",
-        "Coop"
+        "Coop",
+        "CFO",
+        "Finance",
+        "Financial",
+        "Accounting",
+        "Sales",
+        "Marketing",
+        "Legal",
+        "HR",
+        "Human Resources",
+        "Customer Success",
+        "Operations",
+        "Hardware",
+        "Electrical",
+        "Mechanical",
+        "Manufacturing",
+        "Industrial",
+        "Aerospace",
+        "Firmware",
+        "Silicon",
+        "ASIC",
+        "FPGA",
+        "PCB",
+        "Interconnect",
+        "Medical",
+        "Physician",
+        "Nurse",
+        "Healthcare",
+        "Clinical"
       ]
     }
   }

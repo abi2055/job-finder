@@ -257,6 +257,21 @@ def _normalize_generic(
         company_name = _string_or_none(company)
         company_url = _string_or_none(payload.get("company_url"))
 
+    # Extract locations, handling both string and dict formats
+    raw_locations = payload.get("locations") or payload.get("location")
+    if isinstance(raw_locations, dict):
+        # Format location dict as "City, State, Country"
+        parts = []
+        if raw_locations.get("city"):
+            parts.append(str(raw_locations["city"]))
+        if raw_locations.get("state"):
+            parts.append(str(raw_locations["state"]))
+        if raw_locations.get("country"):
+            parts.append(str(raw_locations["country"]))
+        locations = [", ".join(parts)] if parts else []
+    else:
+        locations = _list_value(raw_locations)
+
     return _build_job(
         result,
         payload,
@@ -270,7 +285,7 @@ def _normalize_generic(
         employment_type=_extract_employment_type(payload),
         job_url=job_url,
         category=_string_or_none(payload.get("category") or payload.get("department")),
-        locations=_list_value(payload.get("locations") or payload.get("location")),
+        locations=locations,
         terms=_list_value(payload.get("terms")),
         degrees=_list_value(payload.get("degrees")),
         sponsorship=_string_or_none(payload.get("sponsorship")),

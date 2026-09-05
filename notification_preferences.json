@@ -7,6 +7,11 @@
       "limit": 25
     },
     {
+      "title": "Startup Jobs & Internships",
+      "profile": "startup_jobs",
+      "limit": 25
+    },
+    {
       "title": "North America Software Internships",
       "profile": "north_america_internships",
       "limit": 25
@@ -218,6 +223,21 @@
         "PCB",
         "Interconnect"
       ]
+    },
+    "startup_jobs": {
+      "description": "Jobs and internships from startup job boards (YC companies, Himalayas, Startup.jobs).",
+      "max_age_hours": null,
+      "include_any": [],
+      "include_all": [
+        {
+          "source_type": [
+            "himalayas",
+            "startupjobs",
+            "ycombinator"
+          ]
+        }
+      ],
+      "exclude_text": []
     }
   }
 }

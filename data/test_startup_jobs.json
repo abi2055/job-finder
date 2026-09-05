@@ -1,0 +1,1450 @@
+{
+  "results": [
+    {
+      "source_name": "yc_companies_test",
+      "source_type": "ycombinator",
+      "url": "https://api.ycombinator.com/v0.1/companies?page=1",
+      "fetched_at": "2026-09-05T18:28:54.905334+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "payload": {
+        "companies": [
+          {
+            "id": 38061,
+            "name": "Maritime",
+            "slug": "maritime",
+            "website": "https://maritime.sh/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/d8ff801ef7e9094077a292c8bed3e86ce7e01f00.png",
+            "oneLiner": "The managed cloud for AI agents.",
+            "longDescription": "Maritime is cloud infrastructure for AI agents. We help companies give every customer an agent running in its own isolated, persistent computer, starting at $1 per agent per month. Maritime handles hosting, scaling, and sleep/wake automatically, so developers can run thousands of agents without managing the infrastructure.",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/maritime",
+            "batch": "F26",
+            "tags": [
+              "Developer Tools",
+              "Cloud Computing",
+              "Infrastructure"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Infrastructure"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": [
+              "highlightWomen"
+            ]
+          },
+          {
+            "id": 37600,
+            "name": "Redoubt Insurance",
+            "slug": "redoubt-insurance",
+            "website": "https://www.redoubt.agency",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/1ee4cc24084cdd9a8a0fe0d70982248244d6fd3a.png",
+            "oneLiner": "Commercial insurance for small businesses",
+            "longDescription": "Redoubt is a commercial insurance agency for small businesses. We believe our customers are our most important business partners, and they deserve our full attention. Machines can already handle the boring parts, the next step is to continually learn from experience. ",
+            "teamSize": 0,
+            "url": "https://www.ycombinator.com/companies/redoubt-insurance",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Insurance"
+            ],
+            "status": "Active",
+            "industries": [
+              "Fintech",
+              "Insurance"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "Salt Lake City, UT, USA"
+            ],
+            "badges": []
+          },
+          {
+            "id": 37272,
+            "name": "The Subvocal Company",
+            "slug": "the-subvocal-company",
+            "website": "https://subvocal.company",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/cacc4ab40596ece6b5c77c3f350ee25ddf5cb079.png",
+            "oneLiner": "Talk to your computer without talking",
+            "longDescription": "We're building a silent speech wearable that lets you talk to your computer at the speed of voice, but silently and completely imperceptibly to everyone around you.",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/the-subvocal-company",
+            "batch": "F26",
+            "tags": [
+              "Hard Tech"
+            ],
+            "status": "Active",
+            "industries": [
+              "Consumer",
+              "Consumer Electronics"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": [
+              "isHiring"
+            ]
+          },
+          {
+            "id": 36940,
+            "name": "Quippy",
+            "slug": "quippy",
+            "website": "https://quippyapp.com",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/97c02b937035318f812614d4d9362e5c060a6f72.png",
+            "oneLiner": "Helps build social skills through daily practice",
+            "longDescription": "Quippy is a daily practice app for your social life. You run short, realistic practice conversations, like pushing back on a boss or talking during a first date, and get line-by-line feedback on what landed and what backfired. The curriculum adapts to each person's patterns, reshaping itself around their weak spots, ensuring steady improvement in the conversations that matter most.",
+            "teamSize": 1,
+            "url": "https://www.ycombinator.com/companies/quippy",
+            "batch": "F26",
+            "tags": [
+              "AI-Enhanced Learning",
+              "Social",
+              "Health & Wellness"
+            ],
+            "status": "Active",
+            "industries": [
+              "Consumer"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada",
+              "Remote",
+              "Partly Remote"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 36708,
+            "name": "Sinter",
+            "slug": "sinter-systems",
+            "website": "https://sinter.systems",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/392a3938deea813eb9351409e9ac2cd528e737d7.png",
+            "oneLiner": "Accelerating scaled plastics with additive technologies",
+            "longDescription": "Sinter is creating a faster and radically more affordable American plastics pipeline, helping iteration heavy hardware teams evolve from additive prototypes to production parts on week-scale timelines.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/sinter-systems",
+            "batch": "F26",
+            "tags": [
+              "3D Printing",
+              "Manufacturing",
+              "Advanced Materials"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Manufacturing and Robotics"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "El Segundo, CA, USA"
+            ],
+            "badges": []
+          },
+          {
+            "id": 36348,
+            "name": "antimattr",
+            "slug": "antimattr",
+            "website": "https://antimattr.one/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/3266646a9815f7e3ed31c088c4008df6e8fb0101.png",
+            "oneLiner": "voice-first hardware interface for human-agent interaction",
+            "longDescription": "antimattr builds a voice-first hardware interface for human-agent interaction that includes a ring and a pair of earphones. Designed to make more of your voice, the ring can record and summarise your conversations, capture thoughts on the go, or control your agents. The earphones use proprietary voice isolation technology to block out background noise entirely, so you can take a clear call from a loud pub or dictate with real accuracy.\r\n\r\nReserve early access at https://www.antimattr.one/project-mnemosyne\r\n[use code YC at checkout]",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/antimattr",
+            "batch": "F26",
+            "tags": [
+              "Hardware",
+              "Consumer",
+              "AI"
+            ],
+            "status": "Active",
+            "industries": [
+              "Consumer",
+              "Consumer Electronics"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada",
+              "Remote",
+              "Partly Remote"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 36084,
+            "name": "Covera",
+            "slug": "covera",
+            "website": "https://www.covera-agents.com/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/e711e58f600a9ea3c53a45d934c825989e9b5b57.png",
+            "oneLiner": "AI-native OS for insurance brokers",
+            "longDescription": "Covera builds AI agents for insurance brokers. Our ready-to-use agents take over the day-to-day servicing work: submission intake, carrier quoting, quote comparison, claims handling, past-due collections, and account rounding. That means brokers can spend their time advising and selling clients instead of doing data entry. We work with agencies of every size and connect natively to the tools they already use.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/covera",
+            "batch": "F26",
+            "tags": [
+              "AIOps"
+            ],
+            "status": "Active",
+            "industries": [
+              "Fintech",
+              "Insurance"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": [
+              "isHiring"
+            ]
+          },
+          {
+            "id": 35850,
+            "name": "Dreamscale Labs",
+            "slug": "dreamscale-labs",
+            "website": "https://dreamscalelabs.com",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/1a1d1aaa10413e5d45ca3d2aefe2fb4b682e7fb4.png",
+            "oneLiner": "Running robot brains in the cloud",
+            "longDescription": "Dreamscale Labs is building the fastest cloud inference platform for robotics. As complex physical AI models become difficult to fit on expensive on-robot GPUs, we let users offload inference to the cloud and serve them with real-time latency. So far, we've hit 40-50% lower latency than existing neoclouds.\r\n",
+            "teamSize": 4,
+            "url": "https://www.ycombinator.com/companies/dreamscale-labs",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Robotics",
+              "Infrastructure"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Manufacturing and Robotics"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35784,
+            "name": "Vorelios",
+            "slug": "vorelios",
+            "website": "https://vorelios.com",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/c02b36f4ca2283601c8f20e89597a38768ae9db9.png",
+            "oneLiner": "AI that simulates physics 1000x faster",
+            "longDescription": "Engineering is bottlenecked by slow, costly simulations. We're fixing that by building foundation models that learn physics end-to-end and deliver the same results in seconds, at a fraction of the cost.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/vorelios",
+            "batch": "F26",
+            "tags": [
+              "Hard Tech",
+              "B2B",
+              "AI"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35525,
+            "name": "Orca Aerospace",
+            "slug": "orca-aerospace",
+            "website": "https://orcaaerospace.com/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/afa6ce6fe3345bb9e7b6296e9877371ada8e2155.png",
+            "oneLiner": "AI spacecraft operators that lives onboard the vehicle",
+            "longDescription": "At Orca, we are focused on creating the future of spacecraft operations by moving control onto the vehicle. By allowing LLMs to control the satellite using deterministic tooling, we are able to achieve the same holistic, high-quality decisions on \"what\" to do to carry out a mission while maintaining the safety of systems that decide \"how\" to execute it. ",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/orca-aerospace",
+            "batch": "F26",
+            "tags": [
+              "AIOps",
+              "Space Exploration",
+              "Satellites"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Aviation and Space"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": [
+              "isHiring"
+            ]
+          },
+          {
+            "id": 35522,
+            "name": "Hemlock",
+            "slug": "hemlock",
+            "website": "https://hemlock.info",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/bbacf68d8da77e7a11ad346712dd48cf4d50347d.png",
+            "oneLiner": "Force-sensing wristband for training robotic AI",
+            "longDescription": "Every serious robotics lab is bottlenecked on the same thing: demonstration data. The field has converged on egocentric video and hand pose as the substrate, and both are now cheap to collect at scale. What neither of them contains is force. A video of someone picking up an egg and a video of someone picking up a rock are nearly identical in pixel space and nearly identical in joint angles. They differ almost entirely in a quantity nobody is recording. Policies trained without it learn geometry and inherit no sense of touch.\r\n\r\nHemlock closes that gap at the source. Our device, the Bracelet, is a wrist-worn surface EMG band that reads the electrical activity of the forearm muscles that actually drive the hand, which means it recovers contraction force directly rather than inferring it from motion. This distinction is the whole thesis: force cannot be reconstructed downstream of kinematics, because a hand squeezing hard isometrically and a hand resting can occupy the identical pose. Muscle signal is the only non-invasive channel that separates them.",
+            "teamSize": 1,
+            "url": "https://www.ycombinator.com/companies/hemlock",
+            "batch": "F26",
+            "tags": [
+              "Hard Tech",
+              "Hardware"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Manufacturing and Robotics"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": [
+              "isHiring"
+            ]
+          },
+          {
+            "id": 35395,
+            "name": "Workers IO",
+            "slug": "workers-io",
+            "website": "https://workers.io",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/12ec3720a247bad2e5a39d162b68e217ed6b74bd.png",
+            "oneLiner": "Deterministic Virtual Machines",
+            "longDescription": "Workers IO makes sure everything you ship works. Our platform maps every scenario your software can face in production and verifies each release against all of them in simulation environments, every failure comes back as an exact, replayable run.\r\n\r\nEngineering teams stop chasing bugs and ship at agent speed, with certainty that used to be impossible.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/workers-io",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Developer Tools",
+              "B2B",
+              "Infrastructure"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Engineering, Product and Design"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35290,
+            "name": "Antropi Robotics",
+            "slug": "antropi-robotics",
+            "website": "https://www.antropi.world/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/b8c101f20a3b29a6ae368d81297168e49391e75a.png",
+            "oneLiner": "Autonomous CNC factories for faster hardware",
+            "longDescription": "",
+            "teamSize": 0,
+            "url": "https://www.ycombinator.com/companies/antropi-robotics",
+            "batch": "F26",
+            "tags": [
+              "Robotics",
+              "Manufacturing"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Manufacturing and Robotics"
+            ],
+            "regions": [
+              "India",
+              "South Asia"
+            ],
+            "locations": [
+              "Bengaluru"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35265,
+            "name": "Hopper",
+            "slug": "hopper",
+            "website": "https://withhopper.com",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/6640b732eb4efe17f2fb11ff75f6f6bc14184872.png",
+            "oneLiner": "Fast inference for voice",
+            "longDescription": "The best voice model is small, specialized, and yours. Hopper post-trains STT, TTS, and speech LLMs on your production calls, serves them at 100ms to first token (GPT-4.1 is ~700ms), and keeps improving them against your live traffic.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/hopper",
+            "batch": "F26",
+            "tags": [
+              "Infrastructure",
+              "AI"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Infrastructure"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35261,
+            "name": "Asakana",
+            "slug": "asakana",
+            "website": "https://www.asakana.co/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/582ebf9f01453d95f2c02b9bac341aff365af875.png",
+            "oneLiner": "AI order entry for food distributors: emails and texts to ERP",
+            "longDescription": "Restaurants send orders to food distributors by email, text, and photo. Someone at the distributor retypes every one of them into the ERP. Asakana does that entry instead: orders land in the ERP already entered, and anything unclear goes to a person before it goes in. Live at US seafood distributors today, returning 40%+ of order-desk time to selling. Founded by a seafood distributor and a Gemini builder.",
+            "teamSize": 0,
+            "url": "https://www.ycombinator.com/companies/asakana",
+            "batch": "F26",
+            "tags": [
+              "SaaS",
+              "Food & Beverage"
+            ],
+            "status": "Active",
+            "industries": [
+              "Consumer",
+              "Food and Beverage"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35260,
+            "name": "OnePatch",
+            "slug": "onepatch",
+            "website": "https://onepatch.dev",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/7832df887d718a7dbfbcec376ef2b160c31b16da.png",
+            "oneLiner": "Automate on-call at agent-scale.",
+            "longDescription": "OnePatch is a forward-deployed AI SRE. It instruments your services, watches how they actually behave in prod, catches incidents, and drives each one to resolution. Think Datadog, except it doesn't stop at telling you something broke: it keeps going until the fix is shipped.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/onepatch",
+            "batch": "F26",
+            "tags": [
+              "DevOps",
+              "Automation",
+              "AI"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Engineering, Product and Design"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35257,
+            "name": "Nodus Compute",
+            "slug": "nodus-compute",
+            "website": "https://www.nodus-compute.ai/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/cf5d37476e8f7b170957ddb85fd0254d52fa2634.png",
+            "oneLiner": "Intelligent execution layer for AI workloads",
+            "longDescription": "Intelligent execution layer for AI workloads",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/nodus-compute",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Infrastructure"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B"
+            ],
+            "regions": [],
+            "locations": [],
+            "badges": []
+          },
+          {
+            "id": 35190,
+            "name": "Lantern AI",
+            "slug": "lantern-ai",
+            "website": "https://www.lantern.md",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/b98395722e26f62e5f8c6de59c2dd27361270ec7.png",
+            "oneLiner": "Turn Your Taste Into Hires",
+            "longDescription": "Lantern learns what exceptional looks like for your team, pressure-tests the role against the real talent market, then runs the hiring loop: sourcing, inbound applications, interviews, assessments, candidate communication, and offers.",
+            "teamSize": 4,
+            "url": "https://www.ycombinator.com/companies/lantern-ai",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Human Resources",
+              "Recruiting",
+              "HR Tech",
+              "Talent Acquisition"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Human Resources"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35128,
+            "name": "Talos",
+            "slug": "talos-us",
+            "website": "https://www.talos-us.com/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/adf2f2d3e67de554b1df8a77cdc1d6dd943928ec.png",
+            "oneLiner": "Predictive maintenance for power infrastructure.",
+            "longDescription": "At Talos, we are building better, more modern predictive maintenance for the power industry with a focus on large transformers. Our devices continuously monitor critical power equipment and detect problems early on using anomaly-detection models. For each fault, we provide detailed analyses of the problem, exactly where and why it happened, as well as next steps teams should take. ",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/talos-us",
+            "batch": "F26",
+            "tags": [
+              "Deep Learning",
+              "IoT",
+              "Energy"
+            ],
+            "status": "Active",
+            "industries": [
+              "Industrials",
+              "Energy"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "Baltimore, MD, USA"
+            ],
+            "badges": [
+              "highlightWomen"
+            ]
+          },
+          {
+            "id": 35094,
+            "name": "Forward",
+            "slug": "useforward",
+            "website": "https://www.useforward.co/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/717ea600e14829731cf877a194aca957195d9b27.png",
+            "oneLiner": "Unifying Global Private Credit",
+            "longDescription": "An AI platform that connects commercial debt advisors with mandate matching private credit funds. ",
+            "teamSize": 5,
+            "url": "https://www.ycombinator.com/companies/useforward",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Fintech",
+              "B2B"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 35058,
+            "name": "Capveon",
+            "slug": "capveon",
+            "website": "https://capveon.ai",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/55acb7275a696cdf957737bce96b338f2da2d45f.png",
+            "oneLiner": "Turning infrastructure demand into action ",
+            "longDescription": "",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/capveon",
+            "batch": "F26",
+            "tags": [
+              "GovTech"
+            ],
+            "status": "Active",
+            "industries": [
+              "Government"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 34928,
+            "name": "Ascii",
+            "slug": "ascii",
+            "website": "https://box.ascii.dev",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/7ab4963f9bacc76a0a31b94f8773cad5138d2dc3.png",
+            "oneLiner": "The best cloud VMs for billions of agents",
+            "longDescription": "**Problem**\r\n\r\nHumans used to need laptops to do their work. Now they prompt agents instead, and those agents need computers too: always-on, in large quantities, and with unlimited capabilities. \r\n\r\nBuilding and maintaining that yourself is far from trivial.\r\n\r\n**Solution**\r\n\r\nBox provides powerful, simple, permissive Ubuntu VMs in the cloud. In a box, an agent can work for long periods on code or on knowledge work like legal, research, reporting, and auditing.\r\n\r\n**Why Box and not any other cloud VM?**\r\n\r\n1. It is ready out of the box: every box ships with a desktop, chrome, languages, docker, snapshots, and templates, plus a CLI, SDK, API, and control pane for your fleet.\r\n2. It is permissive and paradigm agnostic: any number of agents can use any number of boxes. Agents can run inside or use boxes as an external tool.\r\n3. It is expertly crafted: we manage everything from the individual CPU to the orchestration software, which makes boxes stable, persistent, scalable, and secure.\r\n4. It is the best performance and price in town: our CPUs rank first on HPC benchmarks, and boxes are typically 9x to 18x cheaper than other leading sandboxes.\r\n\r\n**Further notes**\r\n\r\nBoxes are hosted in Europe, which keeps prices low, and more regions are coming. Unless compliance requires it, agents don't notice the region they run in.",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/ascii",
+            "batch": "F26",
+            "tags": [
+              "Developer Tools",
+              "Cloud Computing"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Infrastructure"
+            ],
+            "regions": [
+              "Remote",
+              "Fully Remote"
+            ],
+            "locations": [],
+            "badges": []
+          },
+          {
+            "id": 34794,
+            "name": "Qokedas",
+            "slug": "qokedas",
+            "website": "https://qokedas.com/",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/db2b316be3ecf24cfbcfc09074b3e2b8a1f3bb05.png",
+            "oneLiner": "Data for AI Science",
+            "longDescription": "Models are trained on the entire internet, but most of what happens on Earth is never written down. We turn those signals into training data so labs can make models better at science",
+            "teamSize": 3,
+            "url": "https://www.ycombinator.com/companies/qokedas",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence",
+              "Deep Learning"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          },
+          {
+            "id": 34761,
+            "name": "Veeza AI",
+            "slug": "veeza-ai",
+            "website": "https://veeza.ai",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/1ff98253605935aaa53bb31e8330be6a74309c6d.png",
+            "oneLiner": "AI travel agent for people with weak passports, starting with visas.",
+            "longDescription": "Billions of people need tourist visas to travel the world. We use AI agents to prepare applications, verify documents, secure appointments, and handle the visa process end to end.\r\n",
+            "teamSize": 1,
+            "url": "https://www.ycombinator.com/companies/veeza-ai",
+            "batch": "F26",
+            "tags": [
+              "AIOps",
+              "Consumer",
+              "AI"
+            ],
+            "status": "Active",
+            "industries": [
+              "Consumer",
+              "Travel, Leisure and Tourism"
+            ],
+            "regions": [],
+            "locations": [],
+            "badges": []
+          },
+          {
+            "id": 34629,
+            "name": "Simulithic",
+            "slug": "simulithic",
+            "website": "https://simulithic.com",
+            "smallLogoUrl": "https://bookface-images.s3.amazonaws.com/small_logos/58a972cb3cb171dd4300267d241cc6705539f906.png",
+            "oneLiner": "Simulate how any product change will perform before shipping.",
+            "longDescription": "We build simulations of your real users, grounded in your session data, so you can predict how any product change will perform before you ship it.",
+            "teamSize": 2,
+            "url": "https://www.ycombinator.com/companies/simulithic",
+            "batch": "F26",
+            "tags": [
+              "Artificial Intelligence"
+            ],
+            "status": "Active",
+            "industries": [
+              "B2B",
+              "Engineering, Product and Design"
+            ],
+            "regions": [
+              "United States of America",
+              "America / Canada"
+            ],
+            "locations": [
+              "San Francisco"
+            ],
+            "badges": []
+          }
+        ],
+        "nextPage": "https://api.ycombinator.com/v0.1/companies?page=2",
+        "page": 1,
+        "totalPages": 249
+      }
+    },
+    {
+      "source_name": "himalayas_entry_level_test",
+      "source_type": "himalayas",
+      "url": "https://himalayas.app/jobs/api/search?limit=20&seniority=Entry-level&employment_type=Full+Time",
+      "fetched_at": "2026-09-05T18:28:55.030478+00:00",
+      "status": 200,
+      "content_type": "application/json",
+      "payload": {
+        "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "updatedAt": 1788632720,
+        "offset": 0,
+        "limit": 20,
+        "totalCount": 9121,
+        "jobs": [
+          {
+            "title": "Software Engineer, Associate - NASA",
+            "excerpt": "INNOVIM is seeking a full-stack Software Engineer, Associate to support NASA’s Earth Observing System Data and Information System (EOSDIS) Evolution and Development 3 (EED-3) contract based out of Annapolis, Maryland.",
+            "companyName": "Innovim",
+            "companySlug": "innovim",
+            "companyLogo": "https://cdn-images.himalayas.app/f6w55gcexdavwmizcts6uldddiyj",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Fullstack-Development",
+              "Web-Development",
+              "Software-Engineer",
+              "Cloud-Engineer",
+              "Agile-Development",
+              "Aerospace-Software-Engineer",
+              "Associate-Software-Engineer",
+              "Software-Engineering-Associate",
+              "Space-Software-Engineering",
+              "Software-Developer-Associate",
+              "Mission-Software-Engineer",
+              "Aerospace-Software-Engineering",
+              "Scientific-Software-Engineer"
+            ],
+            "parentCategories": [
+              "Developer"
+            ],
+            "description": "<p>INNOVIM is seeking a full-stack Software Engineer, Associate to support NASA’s Earth Observing System Data and Information System (EOSDIS) Evolution and Development 3 (EED-3) contract based out of Annapolis, Maryland.<br><br><strong>Location: Based out of Annapolis, MD</strong><br><strong>Relocation Assistance: None available at this time</strong><br><strong>Remote/Telework: YES<br>Travel: Quarterly to Annapolis, MD for 3 days due to PI Planning</strong></p><h3>Primary Responsibilities: </h3><p>The candidate will work in a fast-paced Agile development environment performing operations, design, and development for the NASA Earthdata Search Client (EDSC) and the Common Metadata Repository (CMR). As a member of the EED-3 team, the software developer will build and support innovative tools allowing scientists and students alike to discover, transform, update, and improve the quality of earth science data in the pursuit of solving a wide range of environmental and socio-economic issues. This includes leading the deployment of product updates, to identify production issues and construct scalable architecture.</p><h3>Responsibilities include:</h3><ul>\n<li>Participate in all aspects of the software development lifecycle from user story generation, through design, development, automated testing and operational support </li>\n<li>Develop new feature ideas to meet the ever-evolving needs of our end-users </li>\n<li>Continually help the team grow by sharing new ideas and industry best practices </li>\n<li>Suggest improvements to processes and tools to help the team be more efficient </li>\n</ul><h3>REQUIRED SKILLS/EXPERIENCE: </h3><ul>\n<li>Experience in cloud environments (AWS preferred) EC2, Lambda, S3, RDS, API Gateway.</li>\n<li>Proficiency in programming languages, front-end technologies and frameworks such as TypeScript, JavaScript (Node.JS/React), Python.</li>\n<li>Hands-on experience with Elasticsearch for search and data operations.</li>\n<li>Strong grounding in Agile/Scrum methodologies and use of tools like Jira, Confluence, Bitbucket.</li>\n<li>Experience with automated testing, CI/CD pipelines, and software development lifecycle practices.</li>\n</ul><h3>REQUIRED EDUCATION/EXPERIENCE: </h3><ul>\n<li>Bachelor’s degree in Computer Science, Information Systems, Data Analytics, Engineering, or a related discipline</li>\n<li>0-3 years of software development experience.  </li>\n</ul><h3>DESIRED SKILLS/EXPERIENCE: </h3><ul>\n<li>Experience with geospatial/GIS data formats and tools (GeoJSON, KML, ArcGIS, QGIS).</li>\n<li>Familiarity with machine learning/AI concepts.</li>\n<li>Experience with containerization and orchestration (Docker, Kubernetes).</li>\n<li>Knowledge of monitoring tools such as CloudWatch, Datadog, Prometheus.</li>\n<li>Strong problem-solving and debugging skills for large-scale distributed systems.</li>\n<li>Prior experience presenting at technical conferences or leading knowledge-sharing sessions.</li>\n</ul><p>INNOVIM is committed to providing superior work in the fields of science, engineering, data analytics and technology to government agencies. We offer competitive compensation packages, including comprehensive nationwide Medical/Dental/Vision insurance programs, life insurance, matching 401k contribution and Educational/Training support.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788632720,
+            "expiryDate": 1793816720,
+            "applicationLink": "https://himalayas.app/companies/innovim/jobs/software-engineer-associate-nasa",
+            "guid": "https://himalayas.app/companies/innovim/jobs/software-engineer-associate-nasa"
+          },
+          {
+            "title": "Mission Associate",
+            "excerpt": "Sales Associate (Mission Associate)Location: McLean, VA Reports to: Director of Revenue Operations Type: Full time About Defense UnicornsDefense Unicorns delivers secure software capabilities to national security missions across the Department of Defense, the Intelligence Community, and the federal government.",
+            "companyName": "Defense Unicorns",
+            "companySlug": "defense-unicorns",
+            "companyLogo": "https://cdn-images.himalayas.app/i4a48914crr7x91i7bnzvbk6np5u",
+            "employmentType": "Full Time",
+            "minSalary": 83300,
+            "maxSalary": 112700,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Sales-Support",
+              "Sales-Operations",
+              "Revenue-Operations",
+              "Sales-Administration",
+              "Deal-Coordination",
+              "Ministry-Associate",
+              "Missions-Coordinator",
+              "Mission-Support-Specialist",
+              "Associate-Ministry",
+              "Team-Associate",
+              "Campus-Ministry-Associate"
+            ],
+            "parentCategories": [
+              "Sales"
+            ],
+            "description": "<h3>Sales Associate (Mission Associate)</h3><p><strong>Location:</strong> McLean, VA <strong>Reports to:</strong> Director of Revenue Operations <strong>Type:</strong> Full time</p><h3>About <a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a>\n</h3><p><a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a> delivers secure software capabilities to national security missions across the Department of Defense, the Intelligence Community, and the federal government. Our sales team spends its time in the field with the people who own those missions. [Replace with standard company boilerplate as needed.]</p><h3>About the role</h3><p>Our sellers close deals in rooms, on bases, and at customer sites, not behind a laptop doing data entry. This role exists to protect their selling time. As a Mission Associate, you support account executives and deal owners across our federal, DoD, and Intelligence Community territories, along with our work with commercial independent software vendors (ISVs), federal systems integrators (FSIs), and the broader defense industrial base (DIB). You take on the administrative work that surrounds every deal. You are their eyes and ears when they are on the road, the person who keeps the record straight in HubSpot, and the one who makes sure nothing slips while they are mobile.</p><p>You will also carry a second mandate: figure out where seller time actually goes. You will track the recurring administrative tasks that eat the most hours, quantify them, and bring recommendations to our sales operations and enablement teams so we can streamline and automate the work rather than just absorb it.</p><h3>What you will do</h3><h3>Deal support and CRM ownership</h3><ul>\n<li>Capture meeting notes, next steps, new contacts, and deal updates in HubSpot within one business day of every customer interaction, working from seller voice memos, Slack messages, and call debriefs.</li>\n<li>Make sure seller email is synced to HubSpot, with inboxes connected and customer threads logged to the right contacts and deals, and fix gaps when logging breaks.</li>\n<li>Keep deal records current ahead of weekly deal meetings and monthly deal reviews, including stages, close dates, forecast categories, and qualification fields.</li>\n<li>Maintain contact and account data quality, including new contact creation, role changes, org structure updates, and ownership hygiene.</li>\n</ul><h3>Calendaring and meeting logistics</h3><ul>\n<li>Own scheduling for customer meetings, demos, and internal deal calls, including invites, confirmations, reschedules, and reminders.</li>\n<li>Coordinate meeting logistics such as visitor requests, base access paperwork, demo setup, travel details, and conference schedules.</li>\n<li>Prepare short pre-meeting briefs covering attendees, account history, open action items, and relevant recent activity.</li>\n</ul><h3>Quoting and order support</h3><ul>\n<li>Draft quotes and pricing documents for seller review, track internal approvals, and keep paperwork moving so deals never stall on administration.</li>\n<li>Route RFIs, RFQs, and proposal requests to the proposal team, then track them through to submission so the seller always knows status.</li>\n</ul><h3>Field support</h3><ul>\n<li>Monitor inbound customer email and Slack for sellers who are traveling, flag anything time sensitive, and handle routine responses at the seller's direction.</li>\n<li>Turn field debriefs into same-day CRM updates and draft follow-up emails for the seller to review and send, using AI tools to keep turnaround fast and quality high.</li>\n<li>Track open action items across each seller's deals and follow up with internal owners so commitments made in the field get met.</li>\n</ul><h3>Process improvement</h3><ul>\n<li>Maintain a running log of the administrative tasks that consume the most seller time, with time estimates.</li>\n<li>Deliver a monthly summary to sales operations and enablement identifying the top time drains, with specific recommendations for templates, automation, or process changes.</li>\n<li>Help implement approved improvements such as email templates, HubSpot workflows, sequences, checklists, and AI-assisted automations.</li>\n</ul><h3>What success looks like</h3><ul>\n<li>Sellers in your coverage group measurably gain field selling time within your first two quarters.</li>\n<li>Every customer meeting is logged in HubSpot within one business day.</li>\n<li>Quotes are drafted within two business days of request, and scheduling requests turn around same day.</li>\n<li>Your monthly time report leads to at least one implemented process improvement per quarter.</li>\n</ul><h3>Qualifications</h3><h3>Required</h3><ul>\n<li>One to three years in sales support, inside sales, sales operations, or a similar coordination role.</li>\n<li>Strong written communication. Much of this job is turning rough inputs into clean, professional notes and emails.</li>\n<li>Experience with a CRM. HubSpot experience is a plus, and you will be expected to become fluent quickly.</li>\n<li>Highly organized with strong attention to detail, and comfortable managing many small threads across multiple sellers at once.</li>\n<li>Proficient at using generative AI tools to transcribe, draft, summarize, and streamline routine administrative tasks, with an expectation of using these tools daily to increase team efficiency.</li>\n<li>Discretion handling sensitive customer and deal information.</li>\n<li>U.S. citizenship, required for work supporting our federal and defense customer base.</li>\n</ul><h3>Preferred</h3><ul>\n<li>Exposure to federal, DoD, or Intelligence Community sales cycles, government contracting, or the commercial ISV, federal systems integrator, and defense industrial base ecosystem.</li>\n<li>Familiarity with sales qualification frameworks such as MEDDPICC.</li>\n<li>Experience preparing quotes or supporting proposal workflows.</li>\n</ul><h3>Growth path</h3><p>This role is built as a launch point. Mission Associates who master the mechanics of deal support are strong candidates for future quota-carrying sales roles, revenue operations, or sales enablement positions as the team grows.</p><h3>Compensation</h3><p>Base salary plus an annual performance bonus targeted at approximately 10 percent of base salary, tied to individual performance and company achievement of sales targets.</p><div class=\"content-pay-transparency\"><div class=\"pay-input\">\n<div class=\"description\"><p>Full compensation packages are based on candidate experience. Compensation ranges are established using national benchmarking data and apply across all geographic locations within the United States. </p></div>\n<div class=\"title\">Remote - USA</div>\n<div class=\"pay-range\">$83,300—$112,700 USD</div>\n</div></div><div class=\"content-conclusion\">\n<h3>Who We Are</h3>\n<p><a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a> delivers mission value by streamlining software delivery so our customers can focus on the most important challenges. We share a vision of freedom and security for the advancement of progress and innovation. Our commitment to this vision, and to our mission-driven customers, means a commitment to speed, user experience and optionality, without compromising security. Our team is composed of innovators, software engineers, and veterans with decades of experience delivering technology programs across the federal market.</p>\n<h3>What We Do</h3>\n<p>We create and deliver secure solutions for continuous software integration and delivery. <a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a> consolidates the best practices for security pipelines, testing, and deployment automation in order to meet the high security requirements valued by mission owners. Our solutions are agnostic by design and we believe that growing a robust ecosystem of secure, cloud-native software solutions can help enterprise customers inside and outside the federal market buy and integrate software more easily.</p>\n<h3>Who We Serve</h3>\n<p><a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a>’ customers are mission-focused leaders across public and private enterprises. We proudly support defense and civil agencies across the U.S. government and we work closely with the creators of leading-edge software solutions to deliver value to the mission-owner by improving the security and consumability of commercial software products.</p>\n<h3><strong>What We Work On</strong></h3>\n<ul>\n<li>Kubernetes</li>\n<li>Cloud Environments (AWS/GCP and Azure)</li>\n<li>Infrastructure-as-code (like Terraform/Pulumi)</li>\n<li>Continuous Delivery and automation tooling</li>\n<li>GitOps</li>\n<li>Containers</li>\n<li>CNCF projects and open source products and packages</li>\n<li>Helm/Kustomize-Value Stream Mapping</li>\n<li>Building and improving security delivery</li>\n<li>Building Kubernetes and cloud native applications</li>\n</ul>\n<h3><strong>Benefits Our Unicorns Enjoy</strong></h3>\n<h4>Health:</h4>\n<ul>\n<li>Medical/Dental/Vision</li>\n<li>Premiums are 100% Company Paid</li>\n<li>Health Savings Account</li>\n<li>Life Insurance</li>\n<li>Disability Insurance</li>\n</ul>\n<h4>Financial:</h4>\n<ul>\n<li>401k Retirement Plan</li>\n<li>Company Stock Options</li>\n<li>Home Office Budget</li>\n</ul>\n<h4>Leave:</h4>\n<ul>\n<li>We offer all full-time Unicorns Flexible Time Off (FTO) plus all Federal Holidays, one week for Thanksgiving, and two weeks for Christmas and New Year’s</li>\n<li>Paid Parental Leave</li>\n</ul>\n<h4>Learning:</h4>\n<ul>\n<li>Reimbursement for approved trainings/subscriptions</li>\n<li>Conferences (travel, lodging, and fees)</li>\n</ul>\n<p><em>Don’t have all the preferred experience or qualifications? Studies show that underrepresented groups like women and people of color are less likely to apply to jobs if they don't meet every requirement listed. </em></p>\n<p><em>At <a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a>, we're committed to diversity. If you're enthusiastic about the role but don't match every criteria, we encourage you to apply. You could be the perfect fit for this or another role! <a href=\"https://himalayas.app/companies/defense-unicorns\">Defense Unicorns</a> is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, disability, sex, sexual orientation, gender identity or expression, age, national origin, veteran status, genetic information, union status and/or beliefs, or any other characteristic protected by federal, state, or local law.</em></p>\n<p><strong>CCPA DISCLOSURE</strong></p>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788632129,
+            "expiryDate": 1793816129,
+            "applicationLink": "https://himalayas.app/companies/defense-unicorns/jobs/mission-associate-8420284528",
+            "guid": "https://himalayas.app/companies/defense-unicorns/jobs/mission-associate-8420284528"
+          },
+          {
+            "title": "Wholesale Processor - Remote",
+            "excerpt": "The Reverse Processor responsibilities include under general supervision verification of data integrity in our loan origination software.",
+            "companyName": "Longbridge Financial",
+            "companySlug": "longbridge-financial",
+            "companyLogo": "https://cdn-images.himalayas.app/801cuj0gsvon6fjnegquq4z59zfa",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Finance",
+              "Financial-Services",
+              "Mortgage-Processing",
+              "Loan-Processing",
+              "Reverse-Mortgage",
+              "Wholesale-Processing",
+              "Remote-Senior-Loan-Processor-Wholesale",
+              "Remote-Loan-Processor"
+            ],
+            "parentCategories": [
+              "Finance"
+            ],
+            "description": "<p>The Reverse Processor responsibilities include under general supervision verification of data integrity in our loan origination software. File gathering and submission to underwriting. Clear loan conditions for final approval to submit to closing.  </p><h3>Primary Job Duties: </h3><ul>\n<li>Process applications for submission to underwriting</li>\n<li>Work with loan officers, borrowers, underwriters, closers, AMC’s and title companies</li>\n<li>Scanning and uploading file documentation into LOS</li>\n<li>Clear loan conditions with applicants and communicating with loan officers</li>\n<li>Analyze Credit, income, tax returns and asset documents</li>\n<li>Other duties and/or mortgage or company related tasks as assigned by management</li>\n<li>Ensure confidentiality of client files</li>\n<li>The employee shall work well under pressure, meet multiple and sometimes competing deadlines and shall, at all times, demonstrate professional behavior with colleagues and supervisors</li>\n<li>Must be able to work independently and as part of a team</li>\n</ul><h3>Required Experience:</h3><ul>\n<li>1-2 years’ experience in reverse mortgage processing required</li>\n<li>Strong time management and prioritization skills and ability to meet deadlines</li>\n<li>Must be able to read, analyze, and interpret procedures, manuals, policies, and regulations.</li>\n<li>Above average oral and written communication skills.</li>\n<li>Above average customer service, and analytical skills.</li>\n<li>Intermediate working knowledge of PC applications (Word, Excel, MS Outlook)</li>\n</ul><ul>\n<li>Working in a growing and dynamic industry</li>\n<li>Full benefits: Medical, Dental, Vision, FSA/HSA, and wide array of voluntary products and discounts</li>\n<li>401(k) with company match</li>\n<li>Paid time off</li>\n<li>This is a non-exempt role</li>\n<li>Target base salary range is 57-67K, which is based on various factors including skills and work experience.</li>\n<li>In addition to base salary, this role is eligible for a competitive additional compensation program via monthly bonus that is based on performance.</li>\n<li>LBF is an EEO/AA/Vet/Disabled Employer</li>\n<li>Please note that salaries that are estimated on various job sites may not reflect the actual compensation. Job sites, set the estimated salary, not <a href=\"https://himalayas.app/companies/longbridge-financial\">Longbridge Financial</a>.</li>\n</ul><p>Important Note: When you click on a video, certain personal information may be sent to the video provider (such as YouTube, Vimeo, etc.). To learn more about our privacy practices, please review our company Privacy Notice.</p><p>At Longbridge, we love seniors and we’re passionate about helping them unlock the power of one of their greatest assets—their home equity.</p><p>As a leading provider of home equity solutions for seniors, we’re committed to helping older homeowners make the most of what they’ve worked hard to build, so they can live the retirement they imagined.</p><p>And we don’t just do it well, we do it <em>really</em> well. With an “Excellent” rating on Trustpilot and over a thousand customer testimonials, we’ve earned a reputation for making it easy and stress-free to access home equity—with guidance every step of the way.</p><p>But it’s not just our customers who love us—our team does, too! We’ve been named a Great Place to Work® three years in a row because we believe that when people enjoy what they do and where they do it, <em>everyone</em> wins.</p><h3>Why Longbridge?</h3><p>At Longbridge, we don’t just offer jobs, we offer careers that grow with you. Here’s why you’ll love being part of our team:</p><ul>\n<li>\n<strong>Grow With Us</strong> – We’re big believers in investing in our people. From top-notch training to clear career paths, we support your professional growth every step of the way. Plus, we love promoting from within—because when you succeed, we all do.</li>\n<li>\n<strong>A Culture That Clicks</strong> – We work hard, but we have fun doing it! Whether it’s team-building events, friendly competitions, or just an atmosphere of open communication and collaboration, we make sure work feels less like “just work.”</li>\n<li>\n<strong>Benefits That Have Your Back</strong> – We’ve got you covered with best-in-class health plans (medical, dental, vision, HSA, and FSA), generous PTO, paid holidays, company-paid life insurance, and a competitive 401(k) match. Because taking care of our team is just as important as taking care of our customers.</li>\n</ul><p>If you’re looking for a place where your work truly makes a difference, we’d love to have you on board. Apply today and let’s do great things together!</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788632112,
+            "expiryDate": 1793816111,
+            "applicationLink": "https://himalayas.app/companies/longbridge-financial/jobs/wholesale-processor-remote-1388418518",
+            "guid": "https://himalayas.app/companies/longbridge-financial/jobs/wholesale-processor-remote-1388418518"
+          },
+          {
+            "title": "Australian Junior Bookkeeper",
+            "excerpt": "About UsRecruitGo is a leading Employer of Record (EOR) company specializing in bridging top talent in emerging markets with global clients.",
+            "companyName": "RecruitGo",
+            "companySlug": "recruitgo",
+            "companyLogo": "https://cdn-images.himalayas.app/0nfnxtl1ve7nnhtf8wubo70azmq8",
+            "employmentType": "Full Time",
+            "minSalary": 25000,
+            "maxSalary": 35000,
+            "salaryPeriod": "monthly",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "PHP",
+            "locationRestrictions": [
+              "Philippines"
+            ],
+            "timezoneRestrictions": [
+              8
+            ],
+            "categories": [
+              "Junior-Bookkeeper",
+              "Australian-Bookkeeper",
+              "Payroll-Bookkeeper",
+              "Cloud-Accounting-Professional",
+              "Remote-Bookkeeper",
+              "Australian-Bookkeeping",
+              "Entry-Level-Bookkeeper",
+              "Assistant-Bookkeeper",
+              "Accounting-Bookkeeper",
+              "Entry-Level-Bookkeeping",
+              "Part-Time-Bookkeeper"
+            ],
+            "parentCategories": [],
+            "description": "<h3>About Us</h3><p><a href=\"https://himalayas.app/companies/recruitgo\">RecruitGo</a> is a leading Employer of Record (EOR) company specializing in bridging top talent in emerging markets with global clients. Our services enable businesses to hire, manage, and pay employees internationally with ease. We are committed to providing seamless and efficient solutions to our clients and fostering a dynamic and inclusive work environment for our team.</p><h3>Position Overview</h3><p><a href=\"https://himalayas.app/companies/recruitgo\">RecruitGo</a> is seeking an Australian Junior Bookkeeper to manage end-to-end bookkeeping for Australian clients using Xero, including reconciliations, payroll, invoicing, and reporting, with strong attention to detail and cloud accounting experience.</p><h3>Responsibilities</h3><ul>\n<li><p>Undertaking daily tasks in the Xero cloud accounting system</p></li>\n<li><p>Sending client expense invoices to ReceiptBank/Hubdoc for electronic processing</p></li>\n<li><p>Processing of invoices from ReceiptBank/Hubdoc into Xero</p></li>\n<li><p>Preparation of expense pay runs, including the provision of bank ABA file</p></li>\n<li><p>Processing of unreconciled bank transactions to the general ledger</p></li>\n<li><p>Raising client sales invoices as instructed</p></li>\n<li><p>Preparation and processing of wages, including maintenance of employee records</p></li>\n<li><p>Preparation and processing of employer superannuation obligations</p></li>\n<li><h3>Preparation of manual journals in Xero</h3></li>\n<li><p>Processing of payroll data electronically to the ATO under Single Touch Payroll requirements</p></li>\n<li><p>Client debtor management, through the provision of automatic reminders and statements</p></li>\n<li><p>Reconciliation of balance sheet accounts, including the provision of month-end journals</p></li>\n<li><p>Preparation of financial reports from Xero</p></li>\n<li><p>Undertaking of any processing with third-party integrated apps</p></li>\n<li><p>Any other data entry requirements as requested</p></li>\n</ul><h3>Qualifications</h3><ul>\n<li><p>Intermediate/advanced MS Excel working skills</p></li>\n<li><p>Experience using (or if no experience familiarity with) cloud-based accounting Add On tools such as Dext, Deputy</p></li>\n<li><p>Effective time management and prioritisation skills</p></li>\n<li><h3>Strong communication skills</h3></li>\n<li><h3>Thorough attention to detail</h3></li>\n<li><h3>Strong customer focus</h3></li>\n<li><p><strong>At least 1 year experience with Australian accounting as a requirement</strong></p></li>\n</ul><h3>Why <a href=\"https://himalayas.app/companies/recruitgo\">RecruitGo</a>?</h3><p><a href=\"https://himalayas.app/companies/recruitgo\">RecruitGo</a> seamlessly links world-class business partners with top-tier global talent in emerging markets. Secure legal employment through our Employer of Record services and embark on a journey to unparalleled professional opportunities.</p><ul>\n<li><p><strong>Salary Range:</strong>PHP 25,000 to PHP 35,000</p></li>\n<li><p><strong>Work Setup:</strong>Work-from-home in the Philippines</p></li>\n<li><p><strong>Work Schedule:</strong>40 hrs per week, 8 hours per day from 8:30 AM to 5:30 PM South Australian Time with 1 hour break (work hours will adjust for daylight savings time)</p></li>\n<li><p><strong>Diverse Challenges:</strong>Each day offers fresh opportunities and unique challenges that keep your work engaging and rewarding.</p></li>\n<li><p><strong>Team Collaboration:</strong>Join forces with a supportive team, where your insights and contributions are valued.</p></li>\n<li><p><strong>Inclusivity:</strong>Be part of an inclusive and diverse workplace that values your contributions. Work with the internal team to ensure timely delivery of services to clients and ensure that client expectations are met.</p></li>\n</ul><h3>RQ1313</h3><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788631978,
+            "expiryDate": 1793815977,
+            "applicationLink": "https://himalayas.app/companies/recruitgo/jobs/australian-junior-bookkeeper",
+            "guid": "https://himalayas.app/companies/recruitgo/jobs/australian-junior-bookkeeper"
+          },
+          {
+            "title": "Junior Applied AI Engineer",
+            "excerpt": "We’re looking for an Applied AI Engineer to support the design and delivery of AI-powered systems for our clients.",
+            "companyName": "Colibri Digital",
+            "companySlug": "colibri-digital",
+            "companyLogo": "https://cdn-images.himalayas.app/o9he4rh8m7n8lu827viq5lus8b42",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United Kingdom"
+            ],
+            "timezoneRestrictions": [
+              0
+            ],
+            "categories": [
+              "AI-Engineer",
+              "Machine-Learning-Engineer",
+              "Junior-Software-Engineer",
+              "Software-Engineer",
+              "Applied-AI",
+              "Generative-AI-Engineer",
+              "Junior-AI-Engineer",
+              "Entry-Level-Applied-AI-Engineer",
+              "Junior-AI-ML-Engineer",
+              "Junior-ML-Engineer",
+              "Junior-Machine-Learning-Engineer",
+              "Junior-AI-Developer",
+              "Junior-AI-ML-Engineer-Jobs",
+              "Applied-AI-Engineer"
+            ],
+            "parentCategories": [
+              "Data Science",
+              "Developer"
+            ],
+            "description": "<div>We’re looking for an Applied AI Engineer to support the design and delivery of AI-powered systems for our clients. You’ll work alongside experienced engineers, data scientists and delivery teams to help build, test and deploy intelligent applications, while developing your technical depth in modern AI engineering practices.</div><div>\n<div>This role is ideal for someone who combines AI/ ML expertise with practical problem solving skills and ability to translate concepts into real world applications. </div>\n<h3>Key Responsibilities</h3>\n<div><ul>\n<li>Work closely with clients to understand business challenges, define AI use cases, and guide them toward the most appropriate solutions across machine learning and generative AI. Translate technical concepts into clear, actionable recommendations and support clients throughout the delivery lifecycle.</li>\n<li>Design, build, and deploy AI systems, including predictive models, NLP solutions, and generative AI applications such as LLM-based solutions, retrieval-augmented generation pipelines, and agentic workflows.</li>\n<li>Work with large structured and unstructured datasets to prepare, clean, and transform data for both traditional machine learning and generative AI use cases.</li>\n<li>Implement and maintain pipelines for deploying, monitoring, and managing the lifecycle of machine learning models and AI applications using cloud-native tools and frameworks.</li>\n<li>Collaborate with data engineers, data scientists, and cross-functional teams to deliver end-to-end AI solutions, from proof-of-concept and MVP through to production.</li>\n<li>Stay up to date with emerging AI and generative AI technologies, actively pursuing continuous learning, certifications, and hands-on experimentation to enhance delivery capability. Recommend improvements to tools, frameworks, and delivery approaches.</li>\n</ul></div>\n<h3>Skills, Knowledge and Expertise</h3>\n<div>\n<ul>\n<li>Degree in Computer Science, Data Science, Artificial Intelligence, or a related field.</li>\n<li>Experience developing and deploying machine learning and/or generative AI solutions in production environments.</li>\n<li>Experience delivering end-to-end AI solutions, from proof-of-concept and MVP through to production</li>\n<li>Experience working with cloud platforms (e.g. Azure, AWS, or GCP).</li>\n<li>Strong programming skills in Python and experience with relevant AI/ML frameworks (e.g. TensorFlow, PyTorch, Scikit-learn). </li>\n<li>Experience working with large structured and unstructured datasets. </li>\n<li>Understanding of machine learning, predictive analytics, and generative AI concepts.</li>\n<li>Clear communication skills and ability to work effectively in a team environment.</li>\n</ul>\n<div>\n<h3>Benefits</h3>\n<div><ul>\n<li>Remote-first working with flexibility around client needs.</li>\n<li>Private Medical Insurance. </li>\n<li>Opportunity to work on meaningful AI projects across multiple industries.</li>\n<li>A collaborative culture focused on learning, excellence and continuous improvement.</li>\n<li>Competitive salary with clear progression pathways.</li>\n</ul></div>\n</div>\n</div>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788631822,
+            "expiryDate": 1793815821,
+            "applicationLink": "https://himalayas.app/companies/colibri-digital/jobs/junior-applied-ai-engineer-7186225599",
+            "guid": "https://himalayas.app/companies/colibri-digital/jobs/junior-applied-ai-engineer-7186225599"
+          },
+          {
+            "title": "Junior Sales Development Representative",
+            "excerpt": "We're looking for a confident communicator to join our sales team.",
+            "companyName": "Spiralyze",
+            "companySlug": "spiralyze",
+            "companyLogo": "https://cdn-images.himalayas.app/hdi8au51qvi4ezfhrud91qp39dbd",
+            "employmentType": "Full Time",
+            "minSalary": 4,
+            "maxSalary": 8,
+            "salaryPeriod": "hourly",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "Nigeria"
+            ],
+            "timezoneRestrictions": [
+              1
+            ],
+            "categories": [
+              "Sales-Development-Representative",
+              "Business-Development",
+              "Lead-Generation",
+              "Cold-Calling",
+              "Outbound-Sales",
+              "Junior-Sales-Development-Representative",
+              "Entry-Level-Sales-Development-Representative",
+              "Junior-Sales-Representative",
+              "Sales-Development-Associate",
+              "Junior-Business-Development",
+              "Junior-Sales-Specialist",
+              "Sales-Development",
+              "Sales"
+            ],
+            "parentCategories": [
+              "Sales"
+            ],
+            "description": "<div>We're looking for a confident communicator to join our sales team. In this role, you'll introduce our services to marketing executives across the United States, identify potential opportunities, and schedule qualified meetings for our sales team.<div>Previous cold-calling or B2B sales experience is helpful but not essential. We welcome applications from recent graduates, career changers, and motivated individuals with excellent communication skills.</div>\n<h3>Key Responsibilities</h3>\n<div><ul>\n<li>\n<strong>Prospect.</strong> Make outbound cold calls to marketing executives and business decision-makers across the United States.</li>\n<li>\n<strong>Engage.</strong> Speak with decision-makers such as Marketing Directors, Marketing Managers, Chief Marketing Officers (CMOs), Digital Marketing Managers, Growth Marketing Managers, Brand Managers, and business owners.</li>\n<li>\n<strong>Present.</strong> Introduce our services in a clear, professional, and conversational manner.</li>\n<li>\n<strong>Qualify.</strong> Build rapport, ask thoughtful qualifying questions, and identify prospective clients who are a good fit for our services.</li>\n<li>\n<strong>Handle objections.</strong> Respond professionally to common questions and objections while maintaining a positive customer experience.</li>\n<li>\n<strong>Book meetings.</strong> Schedule qualified appointments for our sales team and ensure accurate calendar coordination.</li>\n<li>\n<strong>Maintain records.</strong> Keep accurate CRM records, including call outcomes, notes, and follow-up activities.</li>\n<li>\n<strong>Improve continuously.</strong> Participate in call reviews, role-play sessions, and ongoing coaching to strengthen your sales skills.</li>\n</ul></div>\n<h3>Skills, Knowledge and Expertise</h3>\n<div>\n<ul>\n<li>\n<strong>Excellent communication.</strong> Clear spoken English that can be easily understood by customers in the United States.</li>\n<li>\n<strong>Confidence.</strong> Comfortable speaking with senior business decision-makers over the phone.</li>\n<li>\n<strong>Active listening.</strong> Able to ask insightful questions and understand customer needs.</li>\n<li>\n<strong>Coachability.</strong> Welcomes feedback and applies it to improve performance.</li>\n<li>\n<strong>Resilience.</strong> Maintains a positive attitude and persistence when facing rejection.</li>\n<li>\n<strong>Curiosity.</strong> Enjoys learning about businesses and uncovering opportunities through conversation.</li>\n<li>\n<strong>Organisation.</strong> Strong attention to detail with the ability to accurately maintain CRM records and follow-up activities.</li>\n<li>\n<strong>Fast learner.</strong> Quickly understands new products, services, and sales techniques.</li>\n<li>\n<strong>Professionalism.</strong> Represents the company with confidence and integrity in every interaction.</li>\n<li>\n<strong>Natural communication.</strong> Able to follow a structured sales process while sounding authentic and conversational, rather than reading mechanically from a script.</li>\n</ul>\n<div><strong>Nice to Have</strong></div>\n<ul><li>\n<strong>Experience.</strong> Previous experience in marketing, cold calling, telesales, appointment setting, customer service, or B2B sales is preferred but not required. We believe communication skills, coachability, and a willingness to learn are stronger predictors of success than experience alone.</li></ul>\n</div>\n<h3>Benefits</h3>\n<div><ul>\n<li>\n<strong>Comprehensive training.</strong> Learn our products, services, and proven outbound sales process.</li>\n<li>\n<strong>Ongoing coaching.</strong> Receive regular feedback, call reviews, and mentoring to help you succeed.</li>\n<li>\n<strong>Career development.</strong> Build highly transferable communication, negotiation, and business development skills.</li>\n<li>\n<strong>Remote flexibility.</strong> Work remotely with a supportive team.</li>\n<li>\n<strong>Competitive pay.</strong> Earn USD $4–$8 per hour, depending on relevant experience, communication skills, demonstrated sales ability, and overall fit for the role. Bonuses are available for strong performance, including qualified meetings successfully booked. </li>\n<li>\n<strong>Growth opportunities.</strong> This role has the potential to become an ongoing position for the right candidate, with opportunities for growth as you develop your skills and contribute to the team's success. </li>\n</ul></div>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788631594,
+            "expiryDate": 1793815594,
+            "applicationLink": "https://himalayas.app/companies/spiralyze/jobs/junior-sales-development-representative-3692502559",
+            "guid": "https://himalayas.app/companies/spiralyze/jobs/junior-sales-development-representative-3692502559"
+          },
+          {
+            "title": "Intern - AI Agentic Systems Engineer",
+            "excerpt": "Our vision is to transform how the world uses information to enrich life for all.",
+            "companyName": "Micron Technology",
+            "companySlug": "micron-technology",
+            "companyLogo": "https://cdn-images.himalayas.app/3yfj32h15xyetuzd71isc10tidzj",
+            "employmentType": "Full Time",
+            "minSalary": 50.24,
+            "maxSalary": 55.82,
+            "salaryPeriod": "hourly",
+            "seniority": [
+              "Entry-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "AI-Agentic-Systems-Engineer",
+              "AI-Platform-Engineering",
+              "Multi-Agent-Systems-Development",
+              "LLM-Engineering",
+              "Cloud-AI-Engineering",
+              "AI-Engineering-Intern",
+              "AI-Engineering-Internship",
+              "AI-Development-Intern",
+              "AI-Software-Developer-Intern",
+              "Artificial-Intelligence-Intern",
+              "Junior-Agentic-AI-Solutions-Engineer",
+              "AI-Intern",
+              "AI-and-Prompt-Engineering-Intern",
+              "Agentic-Systems-Engineer"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<p><b>Our vision is to transform how the world uses information to enrich life for <i>all</i>.</b></p><p><a href=\"https://himalayas.app/companies/micron-technology\">Micron Technology</a> is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and advance faster than ever.</p><div>\n<h3>Our Cloud Memory Business Unit is pioneering next-generation memory for datacenter and AI workloads. In this internship you will help build an <b>AI-powered research and simulation platform</b> — a multi-agent system that turns large volumes of external and internal technical signals into evidence-backed, simulation-validated architectural insights that guide our long-term technology and product strategy.</h3>\n<p>We are seeking a software-centric <b>AI Agentic Systems Engineer Intern</b> to help design, build, and productize an internal agentic AI platform. You will develop and harden multi-agent workflows, contribute to an automated hypothesis-generation and test-planning capability, and help deploy the platform on managed cloud infrastructure. This is a hands-on development role for someone comfortable with modern AI tooling, agentic frameworks, large language model (LLM) APIs, and cloud services. Applying Artificial Intelligence is expected and central to this position.</p>\n<h3>Key Responsibilities</h3>\n<ul>\n<li>\n<b>Agent development:</b> Design, build, and evaluate AI agents that automate multi-stage research and analysis workflows.</li>\n<li>\n<b>LLM workflows:</b> Implement agentic patterns — prompt design, tool/function calling, and orchestration — with an emphasis on reliability, traceability, and output quality.</li>\n<li>\n<b>Cloud deployment:</b> Help deploy AI workloads onto managed cloud infrastructure, partnering with IT on identity, security, and cost governance.</li>\n<li>\n<b>Data &amp; knowledge integration:</b> Integrate structured and unstructured data sources to support retrieval, reasoning, and persistent memory across analyses.</li>\n<li>\n<b>Tooling:</b> Develop reusable software tools and services that extend the platform's capabilities.</li>\n<li>\n<b>AI integration:</b> Incorporate AI methods across the development flow and document designs and evaluation criteria for reproducibility.</li>\n</ul>\n<h3>Minimum Qualifications</h3>\n<ul>\n<li>Currently pursuing an M.S. or Ph.D. in Computer Science, Computer Engineering, Electrical Engineering, or a related field.</li>\n<li>Strong software engineering skills in Python; comfortable building and debugging non-trivial systems.</li>\n<li>Working knowledge of LLMs and agentic AI — prompt design, tool/function calling, and multi-agent or workflow frameworks (e.g., LangGraph, AutoGen, or similar).</li>\n<li>Familiarity with cloud services and containers (Azure preferred; AWS/GCP acceptable), REST APIs, and version control (Git).</li>\n<li>Good verbal and written communication and problem-solving abilities.</li>\n</ul>\n<h3>Preferred Qualifications</h3>\n<ul>\n<li>Experience with cloud AI platforms, managed Kubernetes, graph/document databases, or enterprise search.</li>\n<li>Exposure to knowledge graphs, retrieval-augmented generation (RAG), or vector databases.</li>\n<li>Experience productizing research code into governed, auditable services (RBAC, CI/CD, observability).</li>\n<li>Interest in memory/AI systems and the datacenter/AI infrastructure landscape.</li>\n</ul>\n<h3>What You'll Gain</h3>\n<p>Ship production-grade agentic AI workflows in a secure, governed cloud environment, and gain end-to-end experience in AI platform engineering while working alongside senior memory and systems architects.</p>\n</div><p>The US base salary range that <a href=\"https://himalayas.app/companies/micron-technology\">Micron Technology</a> estimates it could pay for this full-time position is:</p>$50.24 - $55.82 an hour<p>Additional compensation may include benefits, bonuses and equity.<br>Our salary ranges are determined by role, level, and location. The range displayed on each job posting reflects the minimum and maximum target base pay for new hire salaries of the position across all US locations. Within the range, individual pay is determined by work location and additional job-related factors, including knowledge, skills, experience, tenure and relevant education or training. The pay scale is subject to change depending on business needs. Your recruiter can share more about the specific salary range for your preferred location during the hiring process. <br><br>Please note that the compensation details listed in US role postings reflect the base salary only, and do not include bonus, equity, or benefits.</p><p>As a world leader in the semiconductor industry, Micron is dedicated to your personal wellbeing and professional growth. Micron benefits are designed to help you stay well, provide peace of mind and help you prepare for the future. We offer a choice of medical, dental and vision plans in all locations enabling team members to select the plans that best meet their family healthcare needs and budget. Micron also provides benefit programs that help protect your income if you are unable to work due to illness or injury, and paid family leave. Additionally, Micron benefits include a robust paid time-off program and paid holidays.For additional information regarding the Benefit programs available, please see the Benefits Guide posted onmicron.com/careers/benefits.</p><p>Micron is proud to be an equal opportunity workplace and is an affirmative action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, age, national origin, citizenship status, disability, protected veteran status, gender identity or any other factor protected by applicable federal, state, or local laws.</p><p>To learn about your<b><b>right to work click here.</b></b></p><p>To learn more about Micron, please visit micron.com/careers</p><p>US Sites Only: To request assistance with the application process and/or for reasonable accommodations, please contact Micron’s People Organization at  or 1-800-336-8918 (select option #3)</p><p>Micron Prohibits the use of child labor and complies with all applicable laws, rules, regulations, and other international and industry labor standards.</p><p>Micron does not charge candidates any recruitment fees or unlawfully collect any other payment from candidates as consideration for their employment with Micron.</p><p>AI alert<b>:</b> Candidates are encouraged to use AI tools to enhance their resume and/or application materials. However, all information provided must be accurate and reflect the candidate's true skills and experiences. Misuse of AI to fabricate or misrepresent qualifications will result in immediate disqualification.</p><p>Fraud alert: Micron advises job seekers to be cautious of unsolicited job offers and to verify the authenticity of any communication claiming to be from Micron by checking the official Micron careers website in the About <a href=\"https://himalayas.app/companies/micron-technology\">Micron Technology</a>, Inc.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1788631356,
+            "expiryDate": 1793815356,
+            "applicationLink": "https://himalayas.app/companies/micron-technology/jobs/intern-ai-agentic-systems-engineer",
+            "guid": "https://himalayas.app/companies/micron-technology/jobs/intern-ai-agentic-systems-engineer"
+          }
+        ]
+      }
+    },
+    {
+      "source_name": "startupjobs_test",
+      "source_type": "startupjobs",
+      "url": "https://api.startup.jobs/v1/jobs?limit=10",
+      "fetched_at": "2026-09-05T18:28:55.370042+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "payload": {
+        "data": [
+          {
+            "id": 9920012,
+            "title": "Bilingual English and Spanish Member Loyalty Representative (R14218)",
+            "url": "https://startup.jobs/bilingual-english-and-spanish-member-loyalty-representative-r14218-oportun-9920012?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:28:50Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Modesto",
+              "state": "California",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [],
+            "salary": null,
+            "company": {
+              "name": "Oportun",
+              "slug": "oportun",
+              "url": "https://startup.jobs/company/oportun?utm_source=job+search&utm_medium=api",
+              "website_url": "https://www.oportun.com/",
+              "logo_url": "https://startup.jobs/logos/30172",
+              "active_jobs_count": 42
+            },
+            "description_html": "<div class=\"content-intro\"><h3 style=\"margin: 0in;\"><span style=\"font-size: 12pt;\"><strong><span style=\"font-family: 'Arial',sans-serif; color: black;\">ABOUT OPORTUN<br></span></strong></span></h3>\n<p style=\"text-align: justify;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">Oportun (Nasdaq: OPRT) is a mission-driven financial services company that puts its members' financial goals within reach. With intelligent borrowing, savings, and budgeting capabilities, Oportun empowers members with the confidence to build a better financial future. Since inception, Oportun has provided more than $22.7 billion in responsible and affordable credit, saved its members more than $2.5 billion in interest and fees, and helped its members set aside an average of more than $1,800 annually.</span></p></div><h3 style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>POSITION OVERVIEW</strong></span></h3>\n<p style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Oportun is currently seeking qualified candidates with customer service, cashier, sales, or hospitality experience to work Full-Time. At Oportun, we consider our customers to be our members, and the primary focus of our Member Loyalty Representatives is to create and generate a rewarding and unique member service experience. Our Member Loyalty Representatives are passionate about listening, helping, and connecting with people at all touchpoints, such as in our stores and in the communities around our stores through personal outreach activities. As a key member of our team, you will make the mission of Oportun come to life by educating our members and communities about our inclusive, affordable financial services that empower them to build a better future.</span></p>\n<h3 style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>WHAT YOU’LL DO</strong></span></h3>\n<ul style=\"text-align: justify;\">\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Welcome members with a warm greeting and provide quality member service.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Seamlessly process all transactions, while following company policies &amp; procedures and protecting our members’ information.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Work as a team or independently, including time alone in the store without direct supervision or with coworkers, while exceeding daily goals in our lending and servicing activities.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Enjoy informing and educating potential members about Oportun’s services by engaging in outreach efforts more than 50% of the time at Oportun locations, partner locations and/or community events. Activities include:</span>\n<ul>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">&nbsp;Building relationships with local businesses (e.g., mechanic shops, dental offices, furniture stores) and speaking with local business owners and their employees about how Oportun’s services can help their customers.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Conducting outreach efforts at local flea markets, community events, and at our Lending As A Service (LAAS) partner locations to increase awareness, capture leads, and assist with starting applications;</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Actively engaging with people at and around Oportun’s retail locations, encouraging store visits, and assisting with applications.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Supporting community outreach and marketing events, by passing out flyers and educating the local community about Oportun and its products and services; and</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Using iPads or assisting potential members with scanning QR codes during outreach efforts to start new applications.</span></li>\n</ul>\n</li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Light housekeeping to keep the work area and store location inviting and presentable to all who visit, including daily collection of trash, sweeping, mopping, and window cleaning as needed.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Use a computer intermittently (approx. 3-6 hours per day) for administrative tasks and for servicing members.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Stand while assisting members; sitting is allowed during non-member-facing tasks.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Occasionally unpack and store office or cleaning supplies.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must have the ability to travel between designated work locations (including outreach activities) within a reasonable commuting distance as part of standard job duties. Travel will be limited to sites considered part of an ordinary commute.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Be a role model for Oportun’s Core Values: On a Mission, As One, to Make it Better, Now.</span></li>\n</ul>\n<h3 style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>WHO YOU ARE / WHAT YOU BRING</strong></span></h3>\n<ul style=\"text-align: justify;\">\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must be bilingual (English/Spanish).</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must be outgoing, sales-focused, and enjoy speaking with people.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must love to help members, including prospective members through outreach and educational activities.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must be available to work weekends and be flexible with a rotating work schedule of hours based on store needs. Schedules are set every two weeks.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must have regular, reliable, and predictable attendance to support store operations.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Must be willing and able to work outdoors year-round to identify new sales opportunities and promote company products and services through designated outreach activities.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Ability to lift and/or move objects up to 25 pounds, as needed.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Basic computer skills and ability to operate office equipment such as, phones, scanners, and iPads.</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Ability to organize and file paper documents.</span></li>\n</ul>\n<h1 style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>AS A VALUABLE MEMBER OF OUR TEAM, YOU’LL RECEIVE</strong></span></h1>\n<ul style=\"text-align: justify;\">\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Medical, Dental, Vision, Flexible Spending Accounts (FSAs), EAP, Life and Disability insurance</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Accident coverage</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Paid Time Off</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">16 paid hours (VTO) to participate in volunteer activities each year</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Employee Assistance Fund (OEAF)</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">401(k) retirement savings</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Travel Assistance</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Paid Training</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Competitive pay, plus sales incentives $$$</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Growth opportunities</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Flexible schedules</span></li>\n<li style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">Opportunity to positively impact your community</span></li>\n</ul>\n<p style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>The base hourly rate for this full-time position is $20.00 - $23.00.</strong></span></p>\n<p style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>Our hourly rates are determined by role, location and experience. The hourly range displayed on each job posting reflects a minimum and maximum for new hire rates for this position, specific to the location of this job posting.</strong></span></p>\n<p style=\"text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\"><strong>Please note that the compensation details listed in this posting reflects only the hourly rate for this position and does not include other compensation elements or benefits.</strong></span></p><div class=\"content-conclusion\"><p style=\"margin: 0in; text-align: justify;\"><span style=\"font-family: Arial, sans-serif; font-size: 12pt;\">We are proud to be an Equal Opportunity Employer and consider all qualified applicants for employment opportunities without regard to race, age, color, religion, gender, national origin, disability, sexual orientation, veteran status or any other category protected by the laws or regulations in the locations where we operate.</span></p>\n<p style=\"margin: 0in; text-align: justify;\"><span style=\"font-family: Arial, sans-serif; font-size: 12pt;\">&nbsp;</span></p>\n<p style=\"margin: 0in; text-align: justify;\"><span style=\"font-family: Arial, sans-serif; font-size: 12pt;\">California applicants can find a copy of Oportun's CCPA Notice here:&nbsp; <a href=\"https://oportun.com/privacy/california-privacy-notice/\">https://oportun.com/privacy/california-privacy-notice/</a>.</span></p>\n<p style=\"margin: 0in; text-align: justify;\"><span style=\"font-size: 12pt; font-family: Calibri, sans-serif;\">&nbsp;</span></p>\n<p style=\"margin: 0in; text-align: justify;\"><span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif;\">We will never request personal identifiable information (bank, credit card, etc.) before you are hired. We do not charge you for pre-employment fees such as background checks, training, or equipment. If you think you have been a victim of fraud by someone posing as us, please report your experience to the FBI’s Internet Crime Complaint Center (IC3).</span></p></div>\n<p>Originally posted on <a href=\"https://startup.jobs/bilingual-english-and-spanish-member-loyalty-representative-r14218-oportun-9920012\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9928317,
+            "title": "Service Manager",
+            "url": "https://startup.jobs/service-manager-equipmentshare-9928317?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:28:09Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Stillwater",
+              "state": "Oklahoma",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Management",
+                "slug": "management"
+              },
+              {
+                "title": "Manager",
+                "slug": "manager"
+              },
+              {
+                "title": "Service Manager",
+                "slug": "service-manager"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "EquipmentShare",
+              "slug": "equipmentshare",
+              "url": "https://startup.jobs/company/equipmentshare?utm_source=job+search&utm_medium=api",
+              "website_url": "http://www.equipmentshare.com/",
+              "logo_url": "https://startup.jobs/logos/21414",
+              "active_jobs_count": 1027
+            },
+            "description_html": "<div style=\"line-height: 1;\">\n<h1 style=\"line-height: 1;\"><strong>Build the Future with Us —&nbsp;</strong><strong>EquipmentShare is Hiring a Service Manager</strong></h1>\n<p>At EquipmentShare, we’re not just filling a role — <strong>we’re assembling the best team on the planet to build something that’s never been built before</strong>. We’re on a mission to transform an industry that’s been stuck in the past by empowering contractors and communities through innovative technology, real-time support, and a team that truly cares.</p>\n<p style=\"line-height: 1;\">We’re hiring a&nbsp;<strong>Service Manager</strong> at our rental facility in Stillwater, OK, and we’re looking for someone who’s ready to grow with us, bring energy and drive to their work, and help us build the future of construction. This position will&nbsp;be responsible for leading a team of Heavy Equipment Maintenance Technicians (Mechanics).&nbsp;</p>\n<p style=\"line-height: 1;\"><strong>Schedule:&nbsp;</strong>Monday to Friday, 7:00 AM to 5:00 PM&nbsp;</p>\n<h3 style=\"line-height: 1;\"><strong>Primary Responsibilities</strong></h3>\n<p>As a Service Manager, you’ll use our tech to create, assign, and monitor work orders, track machine service intervals, order parts, and diagnose issues faster by pulling data from hundreds of makes and models. With real-time information at your fingertips, you can determine the root cause and corrective action for each issue quickly, enabling you to work smarter, not harder.</p>\n<ul>\n<li>\n<p>Coordination and supervision of quality performance of our equipment mechanics and service personnel</p>\n</li>\n<li>\n<p>Scheduling repairs for customer and company owned rental equipment</p>\n</li>\n<li>\n<p>Maintain and nurture existing customer relationships to ensure that our customers are 100% satisfied with the level of service and support they are receiving from EquipmentShare and are being kept up-to-date about new or additional ways in which EquipmentShare can help improve their business</p>\n</li>\n<li>\n<p>Promptly respond to and resolve customer inquiries, requests, complaints or other communications</p>\n</li>\n<li>\n<p>Employee training and development and maintaining a safe work environment</p>\n</li>\n<li>\n<p>Other duties, assigned as needed</p>\n</li>\n</ul>\n<h3><strong>Why EquipmentShare?</strong></h3>\n<p>Because we do things differently — and we think you’ll feel it from day one. We’re a people-first company powered by cutting-edge technology. That means our proprietary T3 platform doesn’t just run our business — it also makes your job easier, safer, and more connected. Whether you’re behind the wheel, under the hood, leading a branch, or closing deals — tech supports <em>you</em>, and you drive <em>us</em> forward.</p>\n<p>We’re a team of problem-solvers, go-getters, and builders. And we’re looking for teammates who take pride in doing meaningful work and want to be part of <strong>building something special</strong>.</p>\n<h4><strong>Perks &amp; Benefits</strong></h4>\n<ul>\n<li style=\"line-height: 1;\"><strong>Monthly Family Dinner Night</strong> — We treat you <em>and your family</em> to dinner every month, because family comes first. <em>(An employee favorite!) *restrictions apply</em></li>\n<li>\n<p>Competitive compensation: Base salary plus Company Profit Sharing Plan</p>\n</li>\n<li>\n<p>Company provided truck</p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Full medical, dental, and vision coverage for full-time employees</p>\n</li>\n<li>\n<p>401(k) and company match</p>\n</li>\n<li>\n<p>Generous PTO + paid holidays</p>\n</li>\n<li>\n<p>Gym membership stipend + wellness programs (earn PTO and prizes!)</p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Annual tool and boot reimbursements for those in applicable jobs</p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Company events, food truck nights, and monthly team dinners</p>\n</li>\n<li>\n<p>16 hours of paid volunteer time per year — give back to the community you call home</p>\n</li>\n<li>\n<p>Career advancement, leadership training, and professional development opportunities</p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Access to industry leading diagnostic tools</p>\n</li>\n</ul>\n<h3><strong>About You</strong></h3>\n<p>You want to be part of a team that’s not just changing an industry for the sake of change — we’re transforming it to make it safer, more secure, and more productive. You bring grit, heart, and humility to your work, and you’re excited about the opportunity to grow within a fast-paced, mission-driven environment.</p>\n<p>We’re looking for people who:</p>\n<ul>\n<li>See challenges as opportunities<br><br></li>\n<li>Embrace change and continuous improvement<br><br></li>\n<li>Bring energy, effort, and optimism every day</li>\n</ul>\n</div>\n<h3 style=\"line-height: 1;\"><strong>Skills and Qualifications&nbsp;</strong></h3>\n<h3><strong>Required Skills/Abilities:&nbsp;</strong></h3>\n<ul>\n<li>\n<p>Industry knowledge (this can be in the rental industry or a related construction field), innovative and dependable. Ideally three years of maintenance and service experience.</p>\n</li>\n<li>\n<p>Strong interpersonal and problem solving skills.</p>\n</li>\n<li>\n<p>Adaptable to the fast pace of a growing company and be able to quickly educate themselves about and stay up-to-date on the latest EquipmentShare products and services.</p>\n</li>\n<li>\n<p>Competitive, but thrive in a team oriented environment. Preference will be given to applicants with experience and/or a background in the construction industry.&nbsp;</p>\n</li>\n<li>\n<p>Superior customer service, teamwork and verbal/written communication skills</p>\n</li>\n</ul>\n<h3><strong>Education and Experience:</strong></h3>\n<ul>\n<li>\n<p>High School diploma, Trade school certificate preferred&nbsp;</p>\n</li>\n<li>\n<p>Experience in field service, maintenance and repair preferred</p>\n</li>\n<li>Experience leading maintenance teams</li>\n<li>\n<p><span style=\"font-weight: 400;\">Valid driver's license with acceptable driving record. Must be at least 21 years old to operate company vehicle</span></p>\n</li>\n</ul>\n<h3 style=\"line-height: 1;\"><strong>Physical Requirements:</strong></h3>\n<ul>\n<li>\n<p>Must be able to move, stand, stoop and bend freely</p>\n</li>\n<li>\n<p>Must be able to lift up to 50 pounds at times</p>\n</li>\n<li>\n<p>This is a safety sensitive position and any offer of employment will be contingent on passing a 10 panel&nbsp;drug&nbsp;screen</p>\n</li>\n</ul>\n<h3><strong>A Workplace For All</strong></h3>\n<p>At EquipmentShare, we believe the best solutions come from a team that reflects the world around us. Our initiative — <em>A Workplace For All</em> — is rooted in the belief that we must work together to solve some of the toughest problems in construction. That means attracting, developing, and retaining great people from all walks of life.</p>\n<p>We value different backgrounds, talents, and perspectives. We want you to feel like you belong here — because you do.</p>\n<p><strong>EquipmentShare is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, national origin, disability, or status as a protected veteran.</strong></p>\n<p><strong><em>Employment is contingent on passing a background check. Additionally, some roles require passing a drug test, depending on the job responsibilities.</em></strong></p>\n<p style=\"line-height: 1;\">&nbsp;</p>\n<p>Originally posted on <a href=\"https://startup.jobs/service-manager-equipmentshare-9928317\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9928023,
+            "title": "Senior RF Engineer",
+            "url": "https://startup.jobs/senior-rf-engineer-vast-9928023?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:28:09Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Long Beach",
+              "state": "California",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Engineering",
+                "slug": "engineering"
+              },
+              {
+                "title": "RF Engineer",
+                "slug": "rf-engineer"
+              },
+              {
+                "title": "Senior RF Engineer",
+                "slug": "senior-rf-engineer"
+              }
+            ],
+            "salary": "$120,540 – $209,520 per year",
+            "company": {
+              "name": "Vast",
+              "slug": "vast",
+              "url": "https://startup.jobs/company/vast?utm_source=job+search&utm_medium=api",
+              "website_url": "https://vastspace.com",
+              "logo_url": "https://startup.jobs/logos/23213",
+              "active_jobs_count": 199
+            },
+            "description_html": "<div class=\"content-intro\"><div style=\"font-family: 'Instrument Sans', 'Segoe UI', Trebuchet MS, Tahoma, sans-serif;\">\n<p style=\"line-height: 1.4;\">Vast is developing next-generation <strong>space stations and space infrastructure</strong> using an incremental, hardware-rich, and low-cost approach. Vast is rapidly developing its multi-module Haven Station to ensure a continuous human presence in space for America and its allies, enabling advanced microgravity research and manufacturing, and unlocking a new space economy for government, corporate, and private customers. Haven Demo’s 2025 success made Vast the only operational commercial space station company to fly and operate its own spacecraft. Next, Haven-1 is expected to become the world’s first commercial space station when it launches in 2027, followed by additional Haven modules. Additionally, the company recently announced <strong>Vast Satellite</strong>, a high-power satellite product line leveraging its space station components and the heritage of Haven Demo.</p>\n<p style=\"line-height: 1.4;\">Headquartered in<strong> Long Beach, California</strong>, and with more than 1,000 employees and over a billion dollars in private capital, Vast has built the facilities required to manufacture and operate America’s next space station. The company plans to develop future habitats and systems for the Moon and Mars, dedicated space stations for government partners, and other crewed systems that will unlock the expanding long-term space economy.</p>\n</div></div><p>Vast is looking for a <strong>Senior RF Engineer</strong>, reporting to the<strong> Director of RF Engineering</strong>, to support the development of the systems that will be required for the design and build of human-rated space stations.</p>\n<p>This will be a <strong>full-time</strong>,&nbsp;<strong>exempt</strong> position located in our&nbsp;<strong>Long Beach </strong>location.&nbsp;</p>\n<p><strong>Responsibilities:&nbsp;</strong></p>\n<ul>\n<li>Own one or more RF products from development testing through mission service</li>\n<li>Own subject matter expertise over the purpose and function of your RF components in the context of the overall RF system</li>\n<li>Plan the design, manufacturing, testing, integration, and delivery to the vehicle and coordinate the schedule with interfacing teams and project management</li>\n<li>Document and review your work output with peers through trade studies and design reviews</li>\n<li>Manage relationships with cross-functional teams including mechanical engineers, test engineers, manufacturing engineers, thermal engineers, and avionics engineers</li>\n<li>Manage vendors and clearly communicate requirements, deliverables, and schedule</li>\n<li>Define test plans and procedures for acceptance and qualification testing</li>\n<li>Define and document checkout tests to validate proper operation during and after integration at the vehicle level</li>\n<li>Support mission operations as a subject matter expert on your components</li>\n</ul>\n<p><strong>Minimum Qualifications:</strong></p>\n<ul>\n<li>Bachelor of Science degree in Electrical Engineering, Physics, or other relevant engineering or science discipline</li>\n<li>Familiarity with RF test equipment</li>\n<li>Familiarity with digital RF communication theory, components, and fundamentals</li>\n<li>Familiarity with programming</li>\n<li>Product management experience</li>\n</ul>\n<p><strong>Preferred Skills &amp; Experience:</strong></p>\n<ul>\n<li>Expertise with detailed concepts in RF communication</li>\n<li>Expertise with lab measurements for RF systems</li>\n<li>Familiarity with RF antenna and propagation concepts</li>\n<li>Familiarity with design for space environments</li>\n<li>Experience using standard CAD/EDA tools</li>\n</ul>\n<p><strong>Additional Requirements:</strong></p>\n<ul>\n<li>Familiarity with design for space environments</li>\n<li>Detailed familiarity with RF components</li>\n</ul>\n<p><strong>Pay Range:&nbsp;</strong></p>\n<ul>\n<li>RF Engineer Level II: $120,540 - $171,108</li>\n<li>Senior RF Engineer: $147,600 - $209,520</li>\n</ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"title\">Pay Range: California</div><div class=\"pay-range\"><span>$120,540</span><span class=\"divider\">—</span><span>$209,520 USD</span></div></div></div><div class=\"content-conclusion\"><div style=\"font-family: 'Instrument Sans', 'Segoe UI', Trebuchet MS, Tahoma, sans-serif;\">\n<p style=\"line-height: 1; font-size: 14px;\"><em>We calibrate level and compensation to the selected candidate's experience and demonstrated capability. We welcome applicants across a range of experience levels to apply.</em></p>\n<p style=\"line-height: 1;\">&nbsp;</p>\n<p style=\"line-height: 1;\"><strong>COMPENSATION AND BENEFITS<br></strong><br>Base salary will vary depending on job-related knowledge, education, skills, experience, business needs, and market demand. Salary is just one component of our comprehensive compensation package. Full-time employees also receive company equity, as well as access to a full suite of compelling benefits and perks, including: medical, dental, and vision coverage for employees and dependents, generous paid time off; up to 20+ days of vacation for exempt staff and up to 10+ days of vacation for non-exempt staff with the ability to cash-out unused vacation annually, paid parental leave, short and long-term disability insurance, life insurance, access to a 401(k) retirement plan, ClassPass credits, personalized mental healthcare through Spring Health, and other discounts and perks. We also take pride in offering exceptional food perks, with snacks, drip coffee &amp; onsite barista, cold drinks, and dinner meals remaining free of charge, and lunch subsidized as part of Vast’s ongoing commitment to providing high-quality meals for employees.</p>\n<p style=\"line-height: 1;\"><strong><br>U.S. EXPORT CONTROL COMPLIANCE STATUS<br><br></strong>The person hired will have access to information and items subject to U.S. export controls, and therefore, must either be a “U.S. person” as defined by&nbsp;<a href=\"https://www.ecfr.gov/current/title-22/section-120.62\">22 C.F.R. § 120.62</a> or otherwise eligible for deemed export licensing. This status includes U.S. citizens, U.S. nationals, lawful permanent residents (green card holders), and asylees and refugees with such status granted, not pending.<br><br></p>\n<p style=\"line-height: 1;\"><strong>EQUAL OPPORTUNITY</strong><br><br>Vast is an Equal Opportunity Employer; employment with Vast is governed on the basis of merit, competence and qualifications and will not be influenced in any manner by race, color, religion, gender, national origin/ethnicity, veteran status, disability status, age, sexual orientation, gender identity, marital status, mental or physical disability or any other legally protected status.</p>\n</div></div>\n<p>Originally posted on <a href=\"https://startup.jobs/senior-rf-engineer-vast-9928023\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9934316,
+            "title": "Client Success Manager",
+            "url": "https://startup.jobs/client-success-manager-paynearme-inc-9934316?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:28:06Z",
+            "employment_type": "full-time",
+            "workplace_type": "remote",
+            "location": {
+              "city": null,
+              "state": null,
+              "country": null,
+              "country_code": null
+            },
+            "roles": [
+              {
+                "title": "Management",
+                "slug": "management"
+              },
+              {
+                "title": "Client Success Manager",
+                "slug": "client-success-manager"
+              },
+              {
+                "title": "Manager",
+                "slug": "manager"
+              }
+            ],
+            "salary": "$110,000 – $130,000 per year",
+            "company": {
+              "name": "PayNearMe, Inc.",
+              "slug": "paynearme-inc",
+              "url": "https://startup.jobs/company/paynearme-inc?utm_source=job+search&utm_medium=api",
+              "website_url": "https://home.paynearme.com/about/careers/",
+              "logo_url": "https://startup.jobs/logos/52403",
+              "active_jobs_count": 6
+            },
+            "description_html": "<div class=\"content-intro\"><p>&nbsp;</p>\n<div>\n<h2 class=\"title\">Company Description</h2>\n</div>\n<div class=\"wysiwyg\">\n<p>At PayNearMe, we’re on a mission to make paying and getting paid as simple as possible. We build innovative technology that transforms the way businesses and their customers experience payments. Our industry-leading platform, PayXM™, is the first of its kind—designed to manage the entire payment experience from start to finish. Every click, swipe or tap is seamless, fast and secure, helping non-commerce businesses boost customer satisfaction, accelerate payments, and reduce costs.</p>\n<p>Our single platform handles it all: cards, ACH, digital wallets such as PayPal, Venmo, Cash App Pay, Apple Pay and Google Pay, and even cash at more than 62,000 retail locations nationwide. Today, thousands of businesses across consumer lending, iGaming and online sports betting, property management, and tolling trust PayNearMe to deliver a payment experience that drives real results.</p>\n<p>In September 2025, we raised a $50 million Series E funding round to accelerate our growth.&nbsp;</p>\n<p>We’re a team of 300+ employees across 41 states, headquartered in Silicon Valley with satellite offices in Dallas, TX and Holmdel, NJ.</p>\n<p>Join us and be part of a team that’s shaping the future of payments—one experience at a time.</p>\n</div>\n<p>&nbsp;</p></div><p>The Client Success Manager will oversee the most critical customer accounts, driving strategic initiatives and leading high-impact projects. This role involves substantial client-facing responsibilities, including giving product demos, setting up presentations, and proposing solutions that transform the merchant payment experience. The ideal candidate will manage complex, high-value relationships while aligning client success strategies with overall business objectives.</p>\n<p><strong>Qualifications:</strong></p>\n<p>Revenue Growth &amp; Expansion:</p>\n<ul>\n<li>Identify opportunities to grow account value and drive revenue through consultative selling and strategic engagement with customers.</li>\n<li>Achieve or exceed revenue targets by delivering value-based solutions that meet customer goals.</li>\n</ul>\n<p>Technical Expertise &amp; Platform Knowledge:</p>\n<ul>\n<li>Maintain an in-depth understanding of PayNearMe’s technical architecture, APIs, and integration processes to effectively guide clients through enhancements and customization.</li>\n<li>Assist clients in troubleshooting complex technical challenges, coordinating with internal engineering and support teams as needed.</li>\n<li>Continuously monitor and analyze system performance for assigned accounts, ensuring optimal usage and recommending enhancements when applicable.</li>\n<li>Provide training and documentation to clients on technical functionalities, enabling self-service capabilities and reducing reliance on support teams.</li>\n</ul>\n<p>Client Demos &amp; Presentations:</p>\n<ul>\n<li>Deliver engaging demos of the PayNearMe platform to clients, showcasing its features and benefits.</li>\n<li>Set up and lead presentations to explain PayNearMe’s products and services, tailoring the content to the client’s needs.</li>\n</ul>\n<p>Propose Transformative Payment Solutions:</p>\n<ul>\n<li>Collaborate with clients to identify their unique challenges and propose solutions that enhance their payment experience, ensuring a seamless integration with PayNearMe’s platform.</li>\n<li>Provide expert-level guidance to drive system adoption and operational improvements.</li>\n</ul>\n<p>Strategic Account Management:</p>\n<ul>\n<li>Oversee high-value customer accounts, providing strategic direction to ensure customer success, retention, and satisfaction.</li>\n<li>Build and maintain strong relationships with key stakeholders, acting as a trusted advisor to align customer needs with PayNearMe’s offerings.</li>\n</ul>\n<p>Cross-Functional Project Management:</p>\n<ul>\n<li>Manage complex cross-functional projects that deliver significant business impact, working with internal teams to implement solutions that align with overall business objectives.</li>\n</ul>\n<p><strong>Requirements:</strong></p>\n<ul>\n<li>Proven success in driving revenue growth and meeting sales targets through consultative sales and account expansion in payments industry.</li>\n<li>Strong understanding of payments platforms, including batch processing, API integration, and data exchange.&nbsp;</li>\n<li>A minimum of 7 years of experience in client success, account management, or sales, with a focus on managing high-value, complex customer relationships in a B2B environment.</li>\n<li>Ability to give technical product demos and explain complex payment solutions in a clear, engaging manner.</li>\n<li>Demonstrated experience in leading high-impact projects that align with broader business goals.</li>\n<li>Ability to think strategically, manage cross-functional teams, and drive initiatives that enhance customer relationships.</li>\n<li>Strong interpersonal skills with the ability to build relationships and influence executive-level stakeholders.</li>\n<li>Excellent verbal and written communication skills, with the ability to articulate value propositions and negotiate effectively.</li>\n<li>Bachelor’s or Master’s degree in Business, Marketing, or a related field.</li>\n</ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"><p>&nbsp;</p>\n<div><em>The annual base salary range for this role represents PayNearMe's good-faith estimate of the base salary it reasonably expects to offer for this position at the time of hire. Actual compensation may vary based on factors including the candidate's experience, </em><em>qualifications, skills, and work location. PayNearMe may offer compensation outside of this range in certain circumstances. This position will remain posted until filled.</em></div></div><div class=\"title\">Annual Salary Range</div><div class=\"pay-range\"><span>$110,000</span><span class=\"divider\">—</span><span>$130,000 USD</span></div></div></div><div class=\"content-conclusion\"><p>&nbsp;</p>\n<p><strong>Why Join Us?:</strong></p>\n<ul>\n<li>Competitive salary and benefits with growth-company options grant</li>\n<li>Fast- paced and professional work culture</li>\n<li>Stock options with standard startup vesting - 1 year cliff; 4 years total</li>\n<li>$50 monthly communication expense stipend to go towards your phone/internet bill</li>\n<li>$250 stipend to enhance your WFH setup</li>\n<li>Reimbursement for peripheral equipment: monitor (up to $400), keyboard and mouse (up to $200)</li>\n<li>Premium medical benefits including vision and dental (100% coverage for employees)</li>\n<li>Company-sponsored life and disability insurance</li>\n<li>Paid parental bonding leave</li>\n<li>Paid sick leave, jury duty, bereavement</li>\n<li>401k plan</li>\n<li>Flexible Time Off (our team members typically take off ~3-4 weeks per year)</li>\n<li>Volunteer Time Off</li>\n<li>13 scheduled holidays<br><br></li>\n</ul>\n<p>&nbsp;</p>\n<p>PayNearMe strives to create a workplace where all employees thrive. Our&nbsp;<a href=\"https://home.paynearme.com/about/careers/\">core values</a>&nbsp;represent who we are today and we take pride in the way we work with each other as well as with our stakeholders.</p>\n<p>We’re in this&nbsp;<strong>together&nbsp;</strong>to&nbsp;<strong>do the right thing</strong>. We deliver&nbsp;<strong>real results&nbsp;</strong>we are proud of while remaining&nbsp;<strong>respectful</strong>,&nbsp;<strong>transparent</strong>, and&nbsp;<strong>flexible</strong>.</p>\n<p><em>PayNearMe is an equal opportunity employer. We are diligently and thoughtfully working towards cultivating a diverse workforce which in turn, enhances our products and services for the communities we serve. Applicants who represent all backgrounds are strongly encouraged to apply.</em></p>\n<p>Candidate information will be treated in accordance with our job applicant privacy notice found at: <a href=\"https://home.paynearme.com/ccpa-privacy-notice-jobs-employees/\">https://home.paynearme.com/ccpa-privacy-notice-jobs-employees/</a></p>\n<p>&nbsp;</p></div>\n<p>Originally posted on <a href=\"https://startup.jobs/client-success-manager-paynearme-inc-9934316\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9928076,
+            "title": "Heavy Equipment Field Technician (Mechanic)",
+            "url": "https://startup.jobs/heavy-equipment-field-technician-mechanic-equipmentshare-9928076?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:27:49Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Stillwater",
+              "state": "Oklahoma",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Field Technician",
+                "slug": "field-technician"
+              },
+              {
+                "title": "Technician",
+                "slug": "technician"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "EquipmentShare",
+              "slug": "equipmentshare",
+              "url": "https://startup.jobs/company/equipmentshare?utm_source=job+search&utm_medium=api",
+              "website_url": "http://www.equipmentshare.com/",
+              "logo_url": "https://startup.jobs/logos/21414",
+              "active_jobs_count": 1027
+            },
+            "description_html": "<h1 style=\"line-height: 1;\"><strong>Build the Future with Us — EquipmentShare is Hiring a Heavy Equipment Field Technician (Mechanic)&nbsp;</strong></h1>\n<p>At EquipmentShare, we’re not just filling a role — <strong>we’re assembling the best team on the planet to build something that’s never been built before</strong>. We’re on a mission to transform an industry that’s been stuck in the past by empowering contractors and communities through innovative technology, real-time support, and a team that truly cares.</p>\n<p style=\"line-height: 1.5;\"><span style=\"font-weight: 400;\">We’re hiring a&nbsp;<strong>Heavy Equipment Field Technician (Mechanic)</strong> at our rental facility in Stillwater, OK, and we’re looking for someone who’s ready to grow with us, bring energy and drive to their work, provide maintenance and repair for a variety of customer and company owned heavy equipment machinery and aerial lifts and help us build the future of construction. Mechanics will have the opportunity to work on the newest fleet in the industry.</span></p>\n<p style=\"line-height: 1;\"><strong>Schedule:&nbsp;</strong>Monday to Friday, 7:00 AM to 5:00 PM, and offers overtime pay after working 40 hours. (This role is subject to on-call scheduling with additional compensation provided)</p>\n<h3 style=\"line-height: 1;\"><strong>Primary Responsibilities</strong></h3>\n<p>As a Field Technician, you’ll use our tech to create, assign, and monitor work orders, track machine service intervals, order parts, and diagnose issues faster by pulling data from hundreds of makes and models. With real-time information at your fingertips, you can determine the root cause and corrective action for each issue quickly, enabling you to work smarter, not harder.</p>\n<ul>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Practice safe job practices for repairing equipment</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Use technology (laptops and tablets) comfortably</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Maintenance and repair of complex mechanical, electrical, hydraulic, and diesel systems on a variety of rental and customer equipment and tools while using a high degree of independent judgment</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Assist in the training of lower level technicians as needed</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Maintain paperwork/electronic documentation of work performed (work orders) in a complete and timely manner on a daily basis</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Assist with pick-up and delivery of equipment &amp; parts</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Be knowledgeable of OSHA requirements (preferred)</span></p>\n</li>\n<li><span style=\"font-weight: 400;\">Field Mechanic: When required, travel to customer job sites for repair/maintenance of rental or customer owned equipment; must maintain service vehicle in a clean and professional manner</span></li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Year-round company provided OEM training</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Other duties, assigned as needed</span></p>\n</li>\n</ul>\n<h3><strong>Why EquipmentShare?</strong></h3>\n<p>Because we do things differently — and we think you’ll feel it from day one. We’re a people-first company powered by cutting-edge technology. That means our proprietary T3 platform doesn’t just run our business — it also makes your job easier, safer, and more connected. Whether you’re behind the wheel, under the hood, leading a branch, or closing deals — tech supports <em>you</em>, and you drive <em>us</em> forward.</p>\n<p>We’re a team of problem-solvers, go-getters, and builders. And we’re looking for teammates who take pride in doing meaningful work and want to be part of <strong>building something special</strong>.</p>\n<h4><strong>Perks &amp; Benefits</strong></h4>\n<ul>\n<li><strong>Monthly Family Dinner Night</strong> — We treat you <em>and your family</em> to dinner every month, because family comes first. <em>(An employee favorite!) *restrictions apply</em><em><br><br></em></li>\n<li>Competitive compensation<br><br></li>\n<li>Full medical, dental, and vision coverage for full-time employees<br><br></li>\n<li>Generous PTO + paid holidays<br><br></li>\n<li>401(k) + company match<br><br></li>\n<li>Tool and boot reimbursements (role dependent)<br><br></li>\n<li>Gym membership stipend + wellness programs (earn PTO and prizes!)<br><br></li>\n<li>Company events, food truck nights, and monthly team dinners<br><br></li>\n<li>16 hours of paid volunteer time per year — give back to the community you call home<br><br></li>\n<li>Career advancement, leadership training, and professional development opportunities</li>\n</ul>\n<ul>\n<li>\n<p><span style=\"font-weight: 400;\">Access to industry leading diagnostic tools</span></p>\n</li>\n</ul>\n<h3><strong>About You</strong></h3>\n<p>You want to be part of a team that’s not just changing an industry for the sake of change — we’re transforming it to make it safer, more secure, and more productive. You bring grit, heart, and humility to your work, and you’re excited about the opportunity to grow within a fast-paced, mission-driven environment.</p>\n<p>We’re looking for people who:</p>\n<ul>\n<li>See challenges as opportunities<br><br></li>\n<li>Embrace change and continuous improvement<br><br></li>\n<li>Bring energy, effort, and optimism every day</li>\n</ul>\n<h3 style=\"line-height: 1;\"><strong>Skills &amp; Qualifications</strong><span style=\"font-weight: 400;\">&nbsp;</span></h3>\n<h3 style=\"line-height: 1;\"><strong>Required Skills/Abilities:&nbsp;</strong></h3>\n<ul>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Must own tools applicable to position</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Advanced mechanical aptitude and working knowledge of tools</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Extensive knowledge of construction equipment with an advanced understanding of schematics and diagrams</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Superior customer service, teamwork and verbal/written communication skills</span></p>\n</li>\n</ul>\n<h3 style=\"line-height: 1;\"><strong>Education and Experience:</strong></h3>\n<ul>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">High School diploma, Trade school certificate preferred&nbsp;</span></p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Experience in field service, maintenance and repair preferred</span></p>\n</li>\n<li><span style=\"font-weight: 400;\">Valid driver's license with acceptable driving record. Must be at least 21 years old to operate company vehicle.</span></li>\n</ul>\n<h3 style=\"line-height: 1;\"><strong>Physical Requirements:</strong></h3>\n<ul>\n<li>\n<p>Must be able to move, stand, stoop and bend freely</p>\n</li>\n<li style=\"font-weight: 400;\">\n<p><span style=\"font-weight: 400;\">Must be able to lift up to 50 pounds at times<br></span></p>\n</li>\n<li><span style=\"font-weight: 400;\">Field Technicians may be required to be clean shaven in order to enter worksites for EquipmentShare customers who have this requirement</span></li>\n<li>\n<p><span style=\"font-weight: 400;\">This is a safety sensitive position and any offer of employment will be contingent on passing a 10 panel&nbsp;<span class=\"il\">drug</span> screen</span></p>\n</li>\n</ul>\n<h3><strong>A Workplace For All</strong></h3>\n<p>At EquipmentShare, we believe the best solutions come from a team that reflects the world around us. Our initiative — <em>A Workplace For All</em> — is rooted in the belief that we must work together to solve some of the toughest problems in construction. That means attracting, developing, and retaining great people from all walks of life.</p>\n<p>We value different backgrounds, talents, and perspectives. We want you to feel like you belong here — because you do.</p>\n<p><strong>EquipmentShare is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, national origin, disability, or status as a protected veteran.</strong></p>\n<p><strong><em>Employment is contingent on passing a background check. Additionally, some roles require passing a drug test, depending on the job responsibilities.</em></strong></p>\n<p style=\"line-height: 1;\">&nbsp;</p>\n<p>Originally posted on <a href=\"https://startup.jobs/heavy-equipment-field-technician-mechanic-equipmentshare-9928076\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9927729,
+            "title": "Senior Mechanisms Systems Engineer",
+            "url": "https://startup.jobs/senior-mechanisms-systems-engineer-relativity-2-9927729?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:27:25Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Long Beach",
+              "state": "California",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Engineering",
+                "slug": "engineering"
+              },
+              {
+                "title": "Systems Engineer",
+                "slug": "systems-engineer"
+              }
+            ],
+            "salary": "$132,000 – $198,000 per year",
+            "company": {
+              "name": "Relativity",
+              "slug": "relativity-2",
+              "url": "https://startup.jobs/company/relativity-2?utm_source=job+search&utm_medium=api",
+              "website_url": "http://www.relativityspace.com/",
+              "logo_url": "https://startup.jobs/logos/21341",
+              "active_jobs_count": 354
+            },
+            "description_html": "<div class=\"content-intro\"><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">At Relativity Space, we’re building rockets to serve today’s needs and tomorrow’s breakthroughs. Our&nbsp;Terran R vehicle will deliver customer payloads to orbit, meeting the growing demand for launch&nbsp;capacity. But that’s just the start. Achieving commercial success with Terran R will unlock new&nbsp;opportunities to advance science, exploration, and innovation, pioneering progress that reaches beyond&nbsp;the known.</span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Joining Relativity means becoming part of something where autonomy, ownership, and impact exist at every level. Here, you're not just executing tasks; you're solving problems that haven’t been solved before, helping develop a rocket, a factory, and a business from the ground up. Whether you’re in propulsion, manufacturing, software, avionics, or a corporate function, you’ll collaborate across teams, shape decisions, and see your work come to life in record time. Relativity is a place where creativity and </span><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">technical rigor go hand in hand, and your voice will help define the stories we’re writing together. Now&nbsp;is a unique moment in time where it’s early enough to leave your mark on the product, the process, and&nbsp;the culture, but far enough along that Terran R is tangible and picking up momentum. The most&nbsp;meaningful work of your career is waiting. Join us.</span></p></div><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"none\">About the Team:&nbsp;</span></strong></span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">The&nbsp;Mechanisms Team&nbsp;at Relativity Space designs and delivers the complex, high-performance mechanical systems that enable launch-vehicle flight, landing, and reusability. We own the full lifecycle of mission-critical hardware—actuators, latches, and thrust vector control (TVC) systems—while partnering deeply with Guidance, Navigation &amp; Control (GNC), Avionics, and Software to create integrated, operable solutions. Our work spans concept development through design, analysis, test, flight operations, and recovery, always balancing performance, reliability, and build rate.</span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"none\">About the Role:</span></strong></span></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">As a&nbsp;Senior Mechanisms Systems Engineer, you will be the technical and programmatic owner for large, cross-discipline mechanism systems such as thrust vector control. Reporting directly to the Mechanisms team, you will lead system-level design and integration, guiding requirements, architecture, and verification across hardware and software interfaces.</span><br><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">You will:</span></p>\n<ul>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Define system concepts of operations (CONOPS), requirements, and verification plans</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Lead integrated product activities across mechanical design, actuators, GNC, avionics, and software teams to ensure seamless system performance</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Drive development tests, functional verification, and flight readiness by authoring test plans, executing tests, and establishing success criteria</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Anticipate technical and logistical risks, develop mitigation strategies, and align priorities across engineering disciplines and schedules</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Coordinate the design, manufacturing, integration, and test schedules for complex mechanism systems</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Take hands-on ownership of emergent challenges—whether designing test fixtures, specifying sensors, writing test automation, or leading root-cause investigations</span></li>\n</ul>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">This role occasionally requires travel to test and launch sites and may involve shifted or weekend schedules to support critical milestones</span><br><br></p>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"none\">About You:</span></strong></span></p>\n<ul>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Bachelor’s degree in Mechanical, Aerospace, or related engineering field and 5+ years of relevant experience in design, manufacturing, assembly, or test of complex mechanical or electromechanical systems</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Proven ability to lead multi-disciplinary projects and deliver on ambitious schedules</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Strong technical judgment and the ability to communicate complex concepts across engineering and leadership audiences</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Demonstrated experience balancing requirements, cost, and schedule while driving system integration and verification</span></li>\n</ul>\n<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong><span data-contrast=\"none\">Nice to haves but not required:&nbsp;</span></strong><span data-ccp-props=\"{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;201341983&quot;:0,&quot;335559740&quot;:240}\">&nbsp;</span></span></p>\n<ul>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Background in actuator systems, flight mechanisms, or thrust vector control</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Experience with motor-control tuning and model-based design using MATLAB/Simulink</span></li>\n<li style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Experience with integrated hardware/software testing and verification</span></li>\n<li><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\">Familiarity with reusability and rapid-iteration development environments</span></li>\n</ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"><p><span style=\"font-size: 14px;\">At Relativity Space, we are committed to transparency and fairness in our compensation practices. Actual compensation will be determined based on experience, qualifications, and other job-related factors.</span><br><br><span style=\"font-size: 14px;\">Compensation is only one part of our total rewards package. Relativity Space offers competitive salary and equity, a generous PTO and sick leave policy, parental leave, an annual learning and development stipend, and more!&nbsp;To see some of the benefits &amp; perks we offer, please visit <a href=\"https://px.sequoia.com/relativityspace\">here.</a></span></p></div><div class=\"title\">Hiring Range:</div><div class=\"pay-range\"><span>$132,000</span><span class=\"divider\">—</span><span>$198,000 USD</span></div></div></div><div class=\"content-conclusion\"><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong>We are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.</strong></span></p>\n<p><em><span style=\"font-family: arial, helvetica, sans-serif; font-size: 10pt;\"><strong>If you need a reasonable accommodation, please contact us at <a href=\"mailto:accommodations@relativityspace.com\">accommodations@relativityspace.com</a>.</strong></span></em></p>\n<p><em><strong><span style=\"font-size: 10pt;\">Please note: Relativity Space does not accept unsolicited resumes, candidate profiles, or referrals from recruitment agencies or search firms. Any unsolicited submission - via email, our website, social media, or directly to an employee - will be deemed the property of Relativity Space, and no fee will be owed absent a current, fully executed agreement with Talent Acquisition that specifically authorizes submissions for the applicable role.</span></strong></em></p></div>\n<p>Originally posted on <a href=\"https://startup.jobs/senior-mechanisms-systems-engineer-relativity-2-9927729\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9918126,
+            "title": "Manufacturing Engineer 3",
+            "url": "https://startup.jobs/manufacturing-engineer-3-intuitive-9918126?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:27:19Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Mexicali",
+              "state": "Baja California",
+              "country": "Mexico",
+              "country_code": "MX"
+            },
+            "roles": [
+              {
+                "title": "Engineering",
+                "slug": "engineering"
+              },
+              {
+                "title": "Manufacturing Engineer",
+                "slug": "manufacturing-engineer"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "Intuitive",
+              "slug": "intuitive",
+              "url": "https://startup.jobs/company/intuitive?utm_source=job+search&utm_medium=api",
+              "website_url": "http://benefits.intuitive.com",
+              "logo_url": "https://startup.jobs/logos/19308",
+              "active_jobs_count": 715
+            },
+            "description_html": "<p><strong>Primary Function of Position </strong></p><p>Contribute your leadership and technical skills in the areas of manufacturing process technologies, problem-solving, training, and project management in a growing medical device company. In this key role, you will be the driving force behind Lean tool implementation and continuous improvement projects site-wide. Your combination of training, motivational skills, analytical problem-solving ability, and passion for Lean manufacturing will be just the right fit for the manufacturing environment of precision instruments for minimally invasive robotic surgery.</p><p><strong>Essential Job Duties</strong></p><ul><li>Manufacturing responsibility for tooling/fixtures, manufacturing equipment, and design improvements in production.</li><li>Evaluate and challenge mechanism designs for reliability, functionality, and manufacturability. Provide suggested change proposals.</li><li>Approve design releases to manufacturing, review engineering documentation, and provide vendor and in-house DFM inputs.</li><li>Review/approve and determine the impact of ECOs from manufacturing and field perspectives.</li><li>Take responsibility for developing and maintaining compliance with the quality system.</li><li>Evaluate and help in the selection of suppliers for mechanical parts if required. Help resolve supplier quality issues.</li><li>Update and revise Manufacturing Process Instructions (MPIs) to ensure accuracy and completeness.</li><li>Address line support issues as they arise .</li><li>Document and report any variances, problems, issues, or concerns on all aspects of the manufacturing process.</li><li>Provide production personnel with expectations and performance feedback regularly in the production process.</li><li>Drive improvements in safety, quality, production, and cost.</li><li>Understand, train personnel, and enforce strict adherence to the applicable Department Operating Procedures (DOPs) and Standard Operating Procedures (SOPs) of the Quality System.</li><li>Maintain up-to-date and accessible training records for MPIs and Quality System documents.</li><li>Assist in setting and attaining quarterly and annual production goals.</li><li>Learn and enforce company safety policies and practices.</li><li>Review and disposition of discrepant material in the manufacturing line. Implement corrective actions to prevent recurrences.</li><li>Active participant in quality improvement initiatives, providing feedback to find the root cause and problem-solving.</li><li>Design and documentation responsibilities for custom and standard production tooling/fixtures.</li><li>Process and part design/documentation duties for cost reduction programs.</li></ul>\n\n<p><strong>Required Skills and Experience</strong></p><ul><li>Must be able to speak, read and write in English 90%.</li><li>3 to 4 years as Manufacturing engineer&nbsp;</li><li>Strong communications skills across team organizations and cultures.</li><li>Strong sustaining background experience</li><li>ECO's ,BOM is a must</li><li>IQ,PQ,OQ is a must</li><li>VR,NCR knowledge</li></ul><p><strong>Required Education and Training</strong></p><ul><li>Bachelor of Engineering in Mechanical Engineering, Mechatronics Engineering, Electrical Engineering, Electronic Engineering or equivalent.</li><li>Strong passion for engineering</li><li>RCA Tools is a must</li><li>Lean manufacturing tools</li></ul><p><strong>Preferred Skills and Experience</strong></p><ul><li>3 to 4 years as Manufacturing engineer&nbsp;</li><li>Mexico – US Customs and supply chain knowledge.</li><li>Mid/high volume complex mechanism manufacturing engineering experience.</li><li>Experienced in ISO 13485, or medical device manufacturing environment.</li></ul>\n\n<div sr-tagline=\"\"></div><p>Intuitive es un empleador que brinda igualdad de oportunidades de empleo. Proporcionamos igualdad de oportunidades de empleo a todos los solicitantes y empleados cualificados, y prohibimos cualquier tipo de discriminación y acoso, independientemente de su raza, sexo, condición de embarazo, orientación sexual, identidad de género, origen nacional, color, edad, religión, condición de veterano protegido o de discapacidad, información genética o cualquier otra condición protegida por las leyes federales, estatales o locales aplicables.</p><p><strong>Aviso sobre los Controles de Exportación de EE. UU.:</strong> De acuerdo con las Regulaciones de Administración de Exportaciones de EE. UU. (15 CFR §743.13(b)), algunos puestos en Intuitive Surgical pueden estar sujetos a controles de exportación de EE. UU. para candidatos que sean nacionales de países actualmente bajo embargo o sanciones.</p><p>Cierta información que usted proporcione como parte de la solicitud será utilizada para determinar si Intuitive Surgical necesitará (i) obtener una licencia de exportación del gobierno de EE. UU. en su nombre (nota: el proceso de obtención de la licencia puede tardar entre 3 y más de 6 meses) o (ii) implementar un Plan de Control de Tecnología (“TCP”, por sus siglas en inglés) (nota: normalmente este paso agrega 2 semanas al proceso de contratación).<br>\nPara cualquier puesto en Intuitive sujeto a controles de exportación, las ofertas finales están condicionadas a la obtención de una licencia de exportación aprobada y/o a la ejecución de un TCP antes de la fecha de inicio del empleado potencial, la cual puede o no ser flexible, y dentro de un plazo que no obstaculice de manera irrazonable la necesidad de contratación. Si aplica, los candidatos serán notificados e instruidos sobre cualquier requisito relacionado con estos fines.</p><p>Este puesto puede cubrirse con un nivel de puesto diferente al indicado aquí, según las necesidades del negocio y/o la experiencia, los conocimientos y las habilidades del candidato o la candidata seleccionado. La compensación se basará principalmente en el nivel del puesto en el que se cubra el rol y en las cualificaciones del candidato o la candidata, de conformidad con la legislación aplicable.</p>\n<p>Originally posted on <a href=\"https://startup.jobs/manufacturing-engineer-3-intuitive-9918126\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9931756,
+            "title": "Android Team Lead, Dallas, TX (Contractor)",
+            "url": "https://startup.jobs/android-team-lead-dallas-tx-contractor-iongroup-9931756?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:27:03Z",
+            "employment_type": "contractor",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "New York",
+              "state": "New York",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Team Lead",
+                "slug": "team-lead"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "ION Group",
+              "slug": "iongroup",
+              "url": "https://startup.jobs/company/iongroup?utm_source=job+search&utm_medium=api",
+              "website_url": "http://iongroup.com",
+              "logo_url": "https://startup.jobs/logos/4832",
+              "active_jobs_count": 69
+            },
+            "description_html": "<div>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><strong><span style=\"font-family: Aptos, sans-serif;\">Lab49</span></strong><span style=\"font-family: Aptos, sans-serif;\">&nbsp;is an award-winning specialist consultancy that creates bespoke technology in partnership with the world's leading financial institutions. Founded in 2002 to bring Silicon Valley engineering practices to Wall Street, we have delivered hundreds of high-impact projects across global investment banks and buy-side firms, spanning distributed systems, high-performance automation, enterprise UX, cloud, and data-driven platforms.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\">&nbsp;</p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">At&nbsp;<strong>Lab49,</strong>&nbsp;engineers work directly with clients to design and deliver production systems. We combine technology, design, and business expertise to solve real problems where quality, performance, and clarity matter.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\">&nbsp;</p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><strong><span style=\"font-family: Aptos, sans-serif; color: black;\">Lab49&nbsp;</span></strong><span style=\"font-family: Aptos, sans-serif; color: black;\">is seeking an&nbsp;<strong>Android Team Lead (Contractor)</strong>&nbsp;who will play a critical role on key projects for Lab49 clients. Working in a collaborative and innovative project team, with direct client-facing interactions, you will have an opportunity to apply your skills and expertise to design innovative applications that solve complex problems and enhance performance and productivity. In particular,&nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">you will help build and modernize large-scale consumer banking experiences, focusing on areas such as customer onboarding, account management, and money movement. As part of a greenfield initiative, you will lead the development of new mobile capabilities designed to support expansion into new markets and evolving regulatory requirements.</span></p>\n</div>\n\n<h3>THE ROLE</h3><div>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">As an&nbsp;<strong>Android Team Lead</strong>, you are a true project leader. You own the technical direction and delivery of client engagements while multiplying the effectiveness of the engineers around you.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">This is a hands-on leadership role. You will design systems, write code when it matters most, guide architectural decisions, and ensure the team delivers high-quality outcomes even when you are not directly contributing code.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">You will work closely with client stakeholders, designers, product partners, and Lab49 leadership to ensure solutions are technically sound, aligned with business objectives, and delivered with excellence.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\">&nbsp;</p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">This is an on-site role – 5 days/ week in Richardson, TX</span></p>\n</div>\n\n<h3>WHAT YOU'LL BE DOING</h3><div>\n<ul style=\"list-style-type: disc;\">\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Design, implement, deliver, and test innovative Android applications while understanding our products &nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">from both a technical and product perspective in the context of our client’s business.</span></li>\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Communicate with leadership, product owners, other</span><span style=\"font-family: Aptos, sans-serif; color: black;\">&nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">technologists</span><span style=\"font-family: Aptos, sans-serif; color: black;\">&nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">and users to create working software &nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">based on an understanding of business and technical priorities. </span></li>\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Break down complex problems into elegant technical solutions to intelligently solve problems for Lab49's &nbsp;</span><span style=\"font-family: Aptos, sans-serif; color: black;\">clients. </span></li>\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Actively contribute to the adoption of strong software architecture, development best practices and new &nbsp;technologies. We are always improving the process of building software; we’ll need your help to do that.</span></li>\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Bring a passion to stay on top of tech trends. </span></li>\n<li style=\"font-size: 12pt; font-family: 'Times New Roman', serif; text-indent: 4.4px;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Experiment with and learn new technologies.&nbsp;</span></li>\n\n</ul></div>\n\n<h3>WHAT SUCCESS LOOKS LIKE</h3><p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\">&nbsp;</p>\n<ul style=\"margin-top: 0px; margin-bottom: 0px;\">\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Your teams consistently deliver high-quality software that meets user and client objectives.</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Engineers around you become more autonomous, capable, and effective because of your leadership.</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Clients trust your judgment and rely on you for technical direction and clarity.</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">You demonstrate strong ownership of outcomes, proactively addressing risks before they become issues.</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">You can step away from day-to-day coding when needed without compromising delivery quality or team performance.</span></li>\n</ul>\n\n<h3>WHAT YOU SHOULD HAVE</h3><div>\n<ul style=\"margin-top: 0px; margin-bottom: 0px;\">\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><strong><span style=\"font-family: Aptos, sans-serif;\">10-12+ years</span></strong><span style=\"font-family: Aptos, sans-serif;\">&nbsp;of experience designing and building complex, commercial-grade software systems with&nbsp;<strong>4+ years</strong>&nbsp;leading Agile teams</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Expert-level skills building production&nbsp;<strong>Android&nbsp;</strong>applications using&nbsp;<strong>Kotlin</strong>&nbsp;and&nbsp;<strong>Jetpack Compose</strong></span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Experience in consumer banking including account management and onboarding.</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Familiarity with integrating RESTful APIs and third-party libraries&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Understanding of mobile UI/UX principles and best practices to create intuitive and engaging user experiences&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Experience with agile development methodologies&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Knowledge of continuous integration and continuous deployment (CI/CD) pipelines for mobile applications&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Excellent communication skills with the ability to influence both technical and non-technical stakeholders.</span></li>\n\n</ul></div>\n\n<h3>BONUS POINTS</h3><div>\n<ul style=\"margin-top: 0px; margin-bottom: 0px;\">\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Experience in fraud management/KYC/AML and regulatory reporting</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Experience using on device biometrics for authentication</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Published app(s), downloadable from the Google Play Store.&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Experience with agile development methodologies&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">Knowledge of continuous integration and continuous deployment (CI/CD) pipelines for mobile applications&nbsp;</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif; color: black;\">College degree in Computer Science or related field of study or equivalent experience</span></li>\n<li style=\"margin: 0cm 0cm 0cm 0px; font-size: 12pt; font-family: 'Times New Roman', serif;\"><span style=\"font-family: Aptos, sans-serif;\">Leverage AI-assisted development tools (e.g., Claude, Claude Code, Copilot) to improve team velocity and code quality, and help the team adopt them responsibly</span><span style=\"font-family: Aptos, sans-serif; color: black;\">&nbsp;</span></li>\n\n</ul></div>\n\n<h3>WHY LAB49</h3><div>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">At Lab49, you'll work on complex, meaningful challenges alongside talented engineers, designers, and consultants. You'll gain exposure to a wide range of technologies, business domains, and client environments while continuing to grow your career.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><span style=\"font-family: Aptos, sans-serif;\">We value curiosity, judgment, and ownership. If you care about quality, enjoy helping others succeed, and want your work to have a meaningful impact, Lab49 is a place where you can thrive.</span></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\">&nbsp;</p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\">&nbsp;</p>\n</div>\n\n<div>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><strong><span style=\"font-family: Aptos, sans-serif; color: black;\">Lab49/ION is committed to maintaining a supportive and inclusive environment for people with diverse backgrounds and experiences. We respect the varied identities, abilities, cultures, and traditions of the individuals who comprise our organization and recognize the value that different backgrounds and points of view bring to our business.</span></strong></p>\n<p style=\"margin: 0cm; font-size: medium; font-family: 'Times New Roman', serif; color: #000000; font-style: normal; font-weight: 400; text-align: start; text-decoration-line: none; text-decoration-thickness: auto; text-decoration-style: solid;\" class=\"MsoNormal\"><strong><span style=\"font-family: Aptos, sans-serif; color: black;\">Lab49/ION adheres to an equal employment opportunity policy that prohibits discriminatory practices or harassment against applicants or employees based on any legally impermissible factor.&nbsp;</span></strong></p>\n</div>\n<p>Originally posted on <a href=\"https://startup.jobs/android-team-lead-dallas-tx-contractor-iongroup-9931756\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9929427,
+            "title": "General Manager",
+            "url": "https://startup.jobs/general-manager-carvana-9929427?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:26:56Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": "Tulsa",
+              "state": "Oklahoma",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Management",
+                "slug": "management"
+              },
+              {
+                "title": "General Manager",
+                "slug": "general-manager"
+              },
+              {
+                "title": "Manager",
+                "slug": "manager"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "Carvana",
+              "slug": "carvana",
+              "url": "https://startup.jobs/company/carvana?utm_source=job+search&utm_medium=api",
+              "website_url": "https://carvana.com",
+              "logo_url": "https://startup.jobs/logos/114",
+              "active_jobs_count": 1826
+            },
+            "description_html": "<p></p>\n<p><strong>Schedule: 8:00-5:00 M-F/Salary</strong></p>\n<p></p>\n<p><strong>About Us</strong></p>\n<p>ADESA, a Carvana owned company, currently operating over 50 locations throughout the US. Our auto auctions, some up to 200 acres, provide a wide array of vehicle services including repair &amp; reconditioning, auction remarketing, and many of our sites serve as market hub distribution centers. Our inventory comprises hundreds of thousands of vehicles across North America from retail to commercial, OEM &amp; more.</p>\n<p>We work in a service industry and embrace a “we” versus “I” culture – help others, and they will help you. Our industry is fun, fast-paced, and competitive – and filled with the best people who are passionate about what they do.</p>\n<p>We’re excited about the future! As an industry leader, ADESA is poised for a multi-year expansion including huge investments in facilities, massive sales growth, and an ever-increasing inventory of vehicles! We are looking for great people who want to take this journey with us!&nbsp;</p>\n<p><strong>Role and Team</strong></p>\n<p>Reporting to the Regional Director, the General Manager is responsible for driving the Auction to success through effective leadership.&nbsp; This role is the primary leader for the site, setting the tone for customer and employee experience and executing strategies to support financial performance and company initiatives. &nbsp; The General Manager is expected to embody the company values and influence and lead others as a people, customer, and business manager for their location.</p>\n<p><strong>Responsibilities</strong></p>\n<ul>\n<li>Identify opportunities for business growth.&nbsp; Regularly meet with customers, attend sales visits with Sales staff and other customer engagement opportunities.&nbsp; Make sure customers receive prompt, efficient and courteous attention for all contacts and transactions.</li>\n<li>Act as change champion for the site.&nbsp; Understand, navigate, communicate, and ensure successful adaptation of change initiatives.&nbsp; Ensure proper follow-through on all directives, bulletins and schedules from the Corporate Office and Regional Director.&nbsp; Maintain a good flow of communication with Corporate Office, RD, key contacts within the company, and external contacts.</li>\n<li>Attend a Profit and Loss Statement review each accounting period with the RD.&nbsp; Ensure accurate and timely reconciliation of accounting with weekly and monthly corporate reports.&nbsp; Initiate and follow up on discrepancies.&nbsp; Monitor accounts receivable and report variances to RD, Controller and Central Office.&nbsp; Control regular and overtime payroll and other business expenses to support business operations and financial objectives.</li>\n<li>Monitor KPI’s and expectations.&nbsp; Leverage technology and tools available.&nbsp; As appropriate, develop and implement action plans to support improvements, and celebrate successes.&nbsp;&nbsp;</li>\n<li>Be familiar with procedures for handling all aspects of customer disputes and resolve any customer complaints in a friendly, courteous manner.&nbsp; Escalate issues to RD as necessary.</li>\n<li>Identify, hire, train, and mentor the management of today and the future for the auction.&nbsp; Support recruiting, hiring and onboarding initiatives to meet business needs and corporate/legal requirements. Promote, develop and train all employees according to company guidelines.&nbsp;&nbsp;</li>\n<li>Maintain positive employee relations and morale.&nbsp; Practice sound leadership and human relations principles to promote teamwork at all times.&nbsp; Set a good personal example of attitude and performance. &nbsp; Follow-through and communicate employee relations problems to the Regional Vice President and Human Resource team as appropriate.&nbsp; Evaluate and take positive, consistent, disciplinary action on infractions of company policies and procedures as defined in the employee disciplinary policy.&nbsp; Prepare and conduct performance appraisals for direct report employees and support the performance appraisal process for the team.</li>\n<li>Conduct employee meetings at least once a month or as necessary to communicate Company and Department issues and build teamwork among the employees.&nbsp; Maintain a good flow of communication with Regional Vice President,&nbsp; and other pertinent personnel.</li>\n<li>Account for and identify all auction inventory; monitor and report unusual activity and notify RD and appropriate corporate teams as necessary.</li>\n<li>Monitor and control all site related conditions, vehicles, property and equipment within corporate standards for cleanliness, proper maintenance and safety.&nbsp; Advise Maintenance of all breakdowns and maintenance immediately.&nbsp; Ensure good routine preventive maintenance.&nbsp;</li>\n<li>Make sure all Department area conditions do not threaten employee or customer safety.&nbsp; Respond to and follow proper procedures on employee and customer accidents, injuries, and loss or damage to any property.&nbsp; Report all incidents immediately.&nbsp; Ensure functional specifications are sound, efficient and support ADESA goals.&nbsp; Practice and instruct all employees in proper loss prevention and reaction procedures.&nbsp; Account for and identify all keys, codes or other safety or security information.&nbsp; Report all incidents properly and immediately.&nbsp;</li>\n<li>Direct proper record keeping and follow-through on all sales promotions, advertising and telemarketing.&nbsp; Monitor and ensure compliance with sale plan layouts, corporate requirements with all contractual customers, contractors, and supplier agreements and other directives.&nbsp; Advise and assist with corrective procedures, if needed.&nbsp; Initiate and complete accurate vehicle transfers as instructed.&nbsp; Ensure the use of marketing tools on selected customer accounts as instructed.&nbsp;</li>\n<li>Make sure company driving safety standards are met and substance abuse prevention and control procedures are followed for all activity.&nbsp;</li>\n<li>Must know, practice and ensure that company policies and procedures and state and federal laws are followed at all times. Ensure that no company or customer information is inappropriately divulged to unauthorized parties.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Skills and Attributes</strong></p>\n<ul>\n<li>Servant Leadership Philosophy</li>\n<li>Sales and Marketing Skills</li>\n<li>Change Management Skills</li>\n<li>Human Relations and Leadership Skills</li>\n<li>Communication Skills</li>\n<li>Accounting and Financial Skills</li>\n<li>Technical Skills</li>\n</ul>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Bachelor's degree with auction and automotive experience or High School diploma/GED with at least 5 years auction experience with 5 years automotive of similar work experience required.</li>\n<li>Minimum 5 years of leadership/supervisory experience</li>\n<li>Excellent verbal and written communication skills</li>\n<li>Proven ability to multitask while maintaining attention to detail</li>\n<li>Confidentiality and integrity while handling sensitive information</li>\n<li>Proven ability to manage deliverables and metrics against aggressive targets and timelines</li>\n<li>Proficiency with computer systems and applications</li>\n<li>Must be 18 years of age and have a valid driver’s license that meets requirements</li>\n</ul>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p><span style=\"text-decoration: underline;\"><strong>ADESA Benefits and Perks</strong></span><br>Competitive Pay | Quality Benefits | Holiday and Paid Time Off | Education and Equipment Reimbursement Programs | Matching 401(k) | Career Path Opportunities | And More!</p>\n<p>&nbsp;</p>\n<p><span style=\"text-decoration: underline;\"><strong>Other Requirements</strong></span><br>To be able to do your job at ADESA, there are some basic requirements we want to share with you. Of course, we’ll make any reasonable accommodations for those with disabilities to perform the essential functions of their jobs.&nbsp;</p>\n<ul>\n<li>The physical activity requirements of the position range from Light to Medium Physical Work.&nbsp;\n<ul>\n<li>Frequent – standing, watching, touching, listening, walking, talking</li>\n<li>Potential – running, jumping, yelling or other rapid or forceful movement in emergency situations</li>\n</ul>\n</li>\n<li>Visual acuity requirements include color, depth perception and field of vision comparable to definitions for Clerical, Administrative, Machine Operators (including inspection) positions.&nbsp;</li>\n</ul>\n<p><span style=\"text-decoration: underline;\"><strong>Physical Working Conditions</strong></span></p>\n<p>This position is subject to both inside and outside environmental working conditions, including temperature changes, outside weather conditions, slightly elevated ambient noise levels, and minor atmospheric conditions affecting skin or respiratory systems, such as fumes, odors and dusts associated with internal and external service station/convenience food and petroleum dispensing operations.</p>\n<ul>\n<li>\n<ul>\n<li>Note:&nbsp; Refer to the Handbook and Policy Manuals for important addendum requirements to all job descriptions.&nbsp; This job description in no way states or implies that these are the only duties to be performed by the employee(s) incumbent in this position.&nbsp; Employee(s) will be required to follow any other job-related instructions and to perform any other job-related duties requested by any person authorized to give instructions or assignments. The requirements listed in this document are the minimum levels of knowledge, skills, or abilities.</li>\n</ul>\n</li>\n</ul>\n<p>To be able to do your job at ADESA, you must be able to read, write, speak, and understand English. Of course, we’ll make any reasonable accommodations for those with disabilities to perform the essential functions of their jobs.</p>\n<p>&nbsp;</p>\n<p><span style=\"text-decoration: underline;\"><strong>Legal Stuff</strong></span><br>Hiring is contingent on passing a complete background check.&nbsp; This role is not eligible for visa sponsorship.<br>ADESA is an equal employment opportunity employer.&nbsp; All applicants receive consideration for employment without regard to race, color, religion, gender, sexual orientation, gender identity or expression, marital status, national origin, age, mental or physical disability, protected veteran status, or genetic information, or any other basis protected by applicable law.&nbsp; ADESA also prohibits harassment of applicants or employees based on any of these protected categories.<br>Please note this job description is not designed to contain a comprehensive listing of activities, duties, or responsibilities that are required of the employee for this job. Duties, responsibilities, and activities may change at any time with or without notice.&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>Originally posted on <a href=\"https://startup.jobs/general-manager-carvana-9929427\">startup.jobs</a></p>"
+          },
+          {
+            "id": 9934424,
+            "title": "Enrollment Specialist",
+            "url": "https://startup.jobs/enrollment-specialist-delfina-9934424?utm_source=job+search&utm_medium=api",
+            "published_at": "2026-09-04T18:26:40Z",
+            "employment_type": "full-time",
+            "workplace_type": "on-site",
+            "location": {
+              "city": null,
+              "state": "Texas",
+              "country": "U.S.",
+              "country_code": "US"
+            },
+            "roles": [
+              {
+                "title": "Specialist",
+                "slug": "specialist"
+              }
+            ],
+            "salary": null,
+            "company": {
+              "name": "Delfina",
+              "slug": "delfina",
+              "url": "https://startup.jobs/company/delfina?utm_source=job+search&utm_medium=api",
+              "website_url": "https://www.delfina.com",
+              "logo_url": "https://startup.jobs/logos/52208",
+              "active_jobs_count": 18
+            },
+            "description_html": "<p><strong>Objective:</strong> Support sales, marketing, and growth initiatives through data analysis, market research, prospecting, and other key activities.</p>\n<p><strong>About Us</strong>: Delfina provides a leading pregnancy care data platform to improve maternal and child health outcomes‍.</p>\n<p><strong>About You:</strong> As a Delfina Enrollment Specialist, you will be the face of our program within our partner OB/GYN practices in specified geographies within the Rio Grande Valley, Texas. You’ll meet expectant mothers in the waiting room or during their visit to educate them about Delfina’s program, answer questions, and guide them through a simple digital enrollment process. This is a highly patient-facing role that combines compassion, communication, and attention to detail. You’ll work closely with clinic staff and Delfina’s implementation team to ensure a seamless experience for patients and providers.</p>\n<p><strong>Responsibilities:&nbsp;</strong></p>\n<ul>\n<li>Engage with patients onsite at OB/GYN partner clinics to introduce the Delfina program and assist with enrollment.</li>\n<li>Educate patients about the benefits of continuous support through Delfina’s platform, using clear and empathetic communication.</li>\n<li>Guide patients through secure enrollment, ensuring accurate data entry and patient consent in compliance with HIPAA.</li>\n<li>Collaborate with clinic staff (front desk, nurses, and providers) to integrate Delfina enrollment smoothly into patient flow.</li>\n<li>Document daily activity, including number of patients approached, enrollments completed, and feedback received.</li>\n<li>Relay insights from the field to Delfina’s growth and implementation teams to improve messaging and workflow.</li>\n<li>Champion the patient experience — build trust, answer questions, and represent Delfina’s mission with professionalism and empathy.</li>\n</ul>\n<p><strong>Qualifications:&nbsp;</strong></p>\n<ul>\n<li>Experience in healthcare or patient-facing roles, such as medical assistant, patient navigator, community health worker, or customer service in a clinical setting.</li>\n<li>Excellent communication and interpersonal skills — you’re warm, approachable, and confident engaging patients and clinic staff.</li>\n<li>Organizational strength and reliability — you can manage multiple conversations and maintain accurate records.</li>\n<li>Comfort with technology, including tablets, mobile apps, and HIPAA-compliant digital forms.</li>\n<li>Empathy and cultural sensitivity — ability to connect with patients of diverse backgrounds.</li>\n<li>Preferred: Experience in maternal health, OB/GYN clinics, or women’s health programs.</li>\n<li>Preferred: Bilingual (English/Spanish)</li>\n</ul>\n<p>We value that everyone at Delfina brings a unique background and perspective. Prospective applicants are encouraged to apply even if they do not meet 100% of the listed qualifications and are encouraged to use their resume and other application materials to demonstrate how their skills meet, or are equivalent to, the listed qualifications.</p>\n<p><strong>Compensation:</strong> $20 - $30 USD per hour</p>\n<p>The compensation range for this contract position represents a wide variety of factors, including location, skills, experience, education, and training. Candidates who meet most of the qualifications above should expect to earn near the middle of the posted compensation range.</p>\n<p><strong>Time Commitment: </strong>10-30 hours per week</p>\n<p>&nbsp;</p>\n<p>Delfina provides equal opportunities without regard to race, color, religion, sex, sexual orientation, gender identity, pregnancy or family status, national origin, age, veteran or disability status.</p>\n<p>Note that Delfina does not currently sponsor or facilitate any U.S. work authorization for this position.&nbsp; All applicants must have unrestricted and independent authorization to work at Delfina.</p>\n<p>&nbsp;</p>\n<p>Originally posted on <a href=\"https://startup.jobs/enrollment-specialist-delfina-9934424\">startup.jobs</a></p>"
+          }
+        ],
+        "total_count": 46651,
+        "has_more": true,
+        "next_cursor": 9934424
+      }
+    }
+  ],
+  "errors": []
+}

@@ -63,6 +63,11 @@
     {"type": "lever", "name": "telesat_lever", "company": "telesat"},
     {"type": "lever", "name": "waabi_lever", "company": "waabi"},
     {"type": "lever", "name": "wealthsimple_lever", "company": "wealthsimple"},
-    {"type": "lever", "name": "zoox_lever", "company": "zoox"}
+    {"type": "lever", "name": "zoox_lever", "company": "zoox"},
+    {"type": "ycombinator", "name": "yc_companies", "page": 1},
+    {"type": "himalayas", "name": "himalayas_remote_startup", "seniority": "Entry-level", "employment_type": "Full Time"},
+    {"type": "himalayas", "name": "himalayas_remote_all"},
+    {"type": "startupjobs", "name": "startupjobs_engineering", "role": "engineering", "limit": 100},
+    {"type": "startupjobs", "name": "startupjobs_all", "limit": 100}
   ]
 }

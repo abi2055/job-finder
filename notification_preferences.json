@@ -7,8 +7,13 @@
       "limit": 25
     },
     {
-      "title": "Startup Jobs & Internships",
-      "profile": "startup_jobs",
+      "title": "Startup Internships",
+      "profile": "startup_internships",
+      "limit": 25
+    },
+    {
+      "title": "Startup Jobs (Full-time)",
+      "profile": "startup_fulltime",
       "limit": 25
     },
     {
@@ -224,8 +229,28 @@
         "Interconnect"
       ]
     },
-    "startup_jobs": {
-      "description": "Jobs and internships from startup job boards (YC companies, Himalayas, Startup.jobs).",
+    "startup_internships": {
+      "description": "Internships and co-op positions from startup job boards (Himalayas, Startup.jobs).",
+      "max_age_hours": null,
+      "include_any": [],
+      "include_all": [
+        {
+          "source_type": [
+            "himalayas",
+            "startupjobs"
+          ]
+        },
+        {
+          "employment_type": [
+            "Intern",
+            "Internship"
+          ]
+        }
+      ],
+      "exclude_text": []
+    },
+    "startup_fulltime": {
+      "description": "Full-time jobs from startup job boards (YC companies, Himalayas, Startup.jobs).",
       "max_age_hours": null,
       "include_any": [],
       "include_all": [
@@ -237,7 +262,12 @@
           ]
         }
       ],
-      "exclude_text": []
+      "exclude_text": [
+        "Internship",
+        "Intern",
+        "Co-op",
+        "Coop"
+      ]
     }
   }
 }

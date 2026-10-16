@@ -1,0 +1,180 @@
+%-------------------------
+% Resume in Latex
+% Author : YOUR NAME
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+% 10pt is what makes this fit on one page with 4 roles + 2 projects.
+% Going back to 11pt costs roughly 7 lines; cut bullets to compensate.
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+%\usepackage{fontawesome5} % unused now (plain-text GitHub links parse better in ATS); uncomment if you want icons back
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \small \textbf{#3} & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape YOUR NAME} \\[5pt]
+    \small
+    555-555-5555 $|$
+    \href{mailto:you@example.com}{\underline{you@example.com}} $|$
+    \href{https://linkedin.com/in/USERNAME}{\underline{linkedin.com/in/USERNAME}} $|$
+    \href{https://github.com/USERNAME}{\underline{github.com/USERNAME}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {UNIVERSITY}{CITY, PROV}
+      {DEGREE}{MONTH YEAR -- \textbf{Expected MONTH YEAR}}
+      \resumeItemListStart
+        \resumeItem{\textbf{Awards:} AWARD 1, AWARD 2}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {ROLE TITLE}{MONTH YEAR -- Present}
+      {COMPANY}{CITY, PROV}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{SYSTEM} in \textbf{TECHNOLOGY}, achieving MEASURABLE RESULT.}
+        \resumeItem{Cut \textbf{COST/LATENCY} by WHAT YOU CHANGED, reducing METRIC \textbf{N\%}.}
+        % SWAP-IN for CONDITION (replace the bullet above):
+        % \resumeItem{ALTERNATE BULLET for a specific kind of employer.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {ROLE TITLE}{MONTH YEAR -- MONTH YEAR}
+      {COMPANY}{CITY, PROV}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{SYSTEM} in \textbf{TECHNOLOGY}, achieving MEASURABLE RESULT.}
+        \resumeItem{Built \textbf{SYSTEM} in \textbf{TECHNOLOGY}, achieving MEASURABLE RESULT.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\textbf{PROJECT NAME} $|$ \href{https://github.com/USERNAME/REPO}{\underline{GitHub}} $|$ \emph{STACK}}{}
+            \resumeItemListStart
+              \resumeItem{What it is and how it works, with \textbf{KEY TECH}.}
+              \resumeItem{A result, decision, or tradeoff worth noting.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: LANGUAGE, LANGUAGE} \\
+     \textbf{Frameworks \& Libraries}{: FRAMEWORK, FRAMEWORK} \\
+     \textbf{Cloud \& Infrastructure}{: TOOL, TOOL} \\
+     \textbf{Data \& Tools}{: TOOL, TOOL} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+
+\end{document}

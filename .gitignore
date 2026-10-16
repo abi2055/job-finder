@@ -10,3 +10,8 @@ data/raw_jobs.json
 data/seen_jobs.json
 data/test_startup_jobs.json
 
+
+# tailor-resume skill: private candidate data (see skills/tailor-resume/SKILL.md)
+skills/tailor-resume/references/profile.md
+skills/tailor-resume/references/master-resume.tex
+skills/tailor-resume/references/cover-letter.tex
